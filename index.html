@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Survival Field Guide — Everything You Need to Stay Alive</title>
+<meta name="description" content="A complete, practical survival guide: the Rule of Threes, shelter, water, fire, food, first aid, navigation, signaling, gear and a skills quiz.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><text y='20' font-size='20'>🔥</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&family=Oswald:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============ FIELD GUIDE DESIGN SYSTEM ============ */
+:root{
+  --pine:#0c110b;        /* page background — deep pine night */
+  --pine2:#111710;       /* raised panels */
+  --pine3:#161d13;       /* hover / wells */
+  --bone:#e8e3d3;        /* primary ink */
+  --muted:#a4a78f;       /* secondary ink */
+  --dim:#717662;         /* tertiary ink */
+  --ember:#f07d33;       /* firelight accent */
+  --ember2:#ffc27a;      /* firelight highlight */
+  --moss:#96b06a;        /* moss green */
+  --red:#e0564a;         /* danger */
+  --line:rgba(232,227,211,.11);
+  --line2:rgba(232,227,211,.22);
+  --font-stencil:'Saira Stencil One', 'Arial Black', sans-serif;
+  --font-disp:'Oswald', 'Arial Narrow', sans-serif;
+  --font-body:'Source Serif 4', Georgia, serif;
+  --font-mono:'IBM Plex Mono', ui-monospace, 'Courier New', monospace;
+  --wrap:1160px;
+  --r:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--pine);
+  color:var(--bone);
+  font-family:var(--font-body);
+  font-size:17px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+::selection{background:var(--ember);color:#1a0e04}
+::-webkit-scrollbar{width:11px}
+::-webkit-scrollbar-track{background:var(--pine)}
+::-webkit-scrollbar-thumb{background:#2a3324;border-radius:6px;border:2px solid var(--pine)}
+a{color:inherit}
+img,svg{display:block}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+:focus-visible{outline:2px solid var(--ember);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 clamp(18px,4vw,36px)}
+.icon{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* ---------- callout bar ---------- */
+.callout-bar{background:var(--ember);color:#1d1005;font-family:var(--font-mono);font-size:11.5px;letter-spacing:.06em;text-align:center;padding:6px 14px}
+.callout-bar b{font-weight:500}
+@media (max-width:700px){.callout-extra{display:none}}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+.nav.solid{background:rgba(12,17,11,.88);backdrop-filter:blur(12px);border-bottom-color:var(--line)}.nav-inner{max-width:var(--wrap);margin:0 auto;padding:0 clamp(18px,4vw,36px);height:64px;display:flex;align-items:center;gap:22px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--font-stencil);font-size:15px;letter-spacing:.05em;white-space:nowrap}
+.brand .icon{color:var(--ember);width:20px;height:20px}
+.brand em{font-style:normal;color:var(--dim);font-family:var(--font-mono);font-size:10.5px;letter-spacing:.14em;margin-left:2px}
+.nav-links{display:flex;gap:2px;margin-left:auto;flex-wrap:wrap;justify-content:flex-end}
+.nav-links a{font-family:var(--font-disp);font-size:12px;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;color:var(--muted);padding:7px 9px;border-radius:7px;transition:color .2s}
+.nav-links a:hover{color:var(--bone)}
+.nav-links a.active{color:var(--ember)}
+.nav-links a.hot{color:var(--ember)}
+.progress{position:fixed;top:0;left:0;height:2.5px;background:var(--ember);width:0;z-index:60}
+.burger{display:none;margin-left:auto;padding:8px}
+.burger .icon{width:24px;height:24px}
+@media (max-width:1020px){
+  .nav-links{position:absolute;top:100%;left:0;right:0;background:rgba(12,17,11,.97);backdrop-filter:blur(14px);flex-direction:column;padding:14px 22px 22px;gap:4px;border-bottom:1px solid var(--line);display:none}
+  .nav-links.open{display:flex}
+  .nav-links a{font-size:15px;padding:11px 10px;border-bottom:1px dashed var(--line)}
+  .burger{display:block}
+}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;padding:120px 0 90px}
+.hero-topo{position:absolute;inset:auto 0 0 0;height:52%;opacity:.5;pointer-events:none}
+.hero-topo path{fill:none;stroke:var(--line2);stroke-width:1}
+.hero-glow{position:absolute;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(240,125,51,.14),transparent 62%);top:-330px;right:-220px;pointer-events:none}
+.embers{position:absolute;inset:0;pointer-events:none}
+.hero-inner{position:relative;display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center;width:100%}
+.hero-kicker{display:flex;align-items:center;gap:12px;font-family:var(--font-mono);font-size:11.5px;letter-spacing:.18em;color:var(--moss);margin-bottom:26px}
+.hero-kicker::before{content:"";width:44px;height:1px;background:var(--moss)}
+.hero-title{font-family:var(--font-stencil);font-weight:400;font-size:clamp(52px,9.5vw,118px);line-height:.98;letter-spacing:.01em;text-transform:uppercase}
+.hero-title .outline{color:transparent;-webkit-text-stroke:1.5px var(--bone)}
+.hero-title .amp{color:var(--ember)}
+.hero-sub{max-width:56ch;color:var(--muted);font-size:clamp(17px,1.6vw,19.5px);margin:26px 0 34px}
+.hero-sub b{color:var(--bone);font-weight:600}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--font-disp);font-size:13.5px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:15px 26px;border-radius:10px;background:var(--ember);color:#1d1005;font-weight:500;transition:transform .18s,background .18s}
+.btn:hover{background:var(--ember2);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--bone);border:1px solid var(--line2)}
+.btn.ghost:hover{border-color:var(--ember);color:var(--ember2);background:transparent}
+.hero-meta{display:flex;gap:26px;flex-wrap:wrap;margin-top:46px;font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;color:var(--dim)}
+.hero-meta span b{color:var(--muted);font-weight:500}
+.compass-wrap{position:relative;display:flex;justify-content:center}
+.compass{width:min(320px,26vw)}
+.compass .rose{transform-origin:150px 150px;animation:spin 90s linear infinite}
+.compass .needle{filter:drop-shadow(0 0 14px rgba(240,125,51,.35))}
+@keyframes spin{to{transform:rotate(360deg)}}
+.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-family:var(--font-mono);font-size:10.5px;letter-spacing:.22em;color:var(--dim);display:flex;flex-direction:column;align-items:center;gap:8px}
+.scroll-hint::after{content:"";width:1px;height:34px;background:linear-gradient(var(--ember),transparent);animation:drip 1.8s ease-in-out infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}55%{transform:scaleY(1);transform-origin:top}56%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@media (max-width:900px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero{padding-top:150px}
+  .compass-wrap{display:none}
+  .scroll-hint{display:none}
+}
+
+/* ---------- sections ---------- */
+.sec{padding:clamp(72px,9vw,120px) 0;position:relative}
+.sec.alt{background:var(--pine2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+[id]{scroll-margin-top:118px}
+.sec-head{max-width:760px;margin-bottom:clamp(38px,5vw,58px)}
+.folio{display:flex;align-items:baseline;gap:16px;margin-bottom:18px}
+.folio .num{font-family:var(--font-stencil);font-size:clamp(40px,6vw,64px);line-height:1;color:transparent;-webkit-text-stroke:1.3px var(--ember)}
+.folio .lab{font-family:var(--font-mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--moss);border:1px solid rgba(150,176,106,.35);padding:5px 10px;border-radius:100px;white-space:nowrap}
+.sec-title{font-family:var(--font-disp);font-weight:600;text-transform:uppercase;letter-spacing:.015em;font-size:clamp(30px,4.4vw,46px);line-height:1.08}
+.sec-title small{display:block;font-family:var(--font-body);text-transform:none;letter-spacing:0;font-size:.52em;color:var(--muted);font-weight:400;margin-top:10px;line-height:1.5}
+.lead{color:var(--muted);margin-top:18px;font-size:18px;max-width:62ch}
+.lead b{color:var(--bone)}
+
+/* grids & cards */
+.grid{display:grid;gap:16px}
+.cols-2{grid-template-columns:repeat(2,1fr)}
+.cols-3{grid-template-columns:repeat(3,1fr)}
+.cols-4{grid-template-columns:repeat(4,1fr)}
+@media (max-width:960px){.cols-3,.cols-4{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.cols-2,.cols-3,.cols-4{grid-template-columns:1fr}}
+.split{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(20px,3vw,36px);align-items:start}
+@media (max-width:900px){.split{grid-template-columns:1fr}}
+.card{background:var(--pine2);border:1px solid var(--line);border-radius:var(--r);padding:26px;transition:border-color .25s}
+.card:hover{border-color:var(--line2)}
+.card h3{font-family:var(--font-disp);font-weight:500;text-transform:uppercase;letter-spacing:.05em;font-size:17.5px;margin:14px 0 8px}
+.card p{color:var(--muted);font-size:15.5px}
+.card-icon{width:42px;height:42px;border-radius:11px;background:rgba(240,125,51,.1);color:var(--ember);display:flex;align-items:center;justify-content:center}
+.card-icon .icon{width:21px;height:21px}
+.card.green .card-icon{background:rgba(150,176,106,.12);color:var(--moss)}
+.panel{background:var(--pine3);border:1px solid var(--line);border-radius:var(--r);padding:clamp(22px,3vw,32px)}
+.panel-title{font-family:var(--font-disp);text-transform:uppercase;letter-spacing:.1em;font-size:13px;color:var(--ember2);margin-bottom:16px;display:flex;align-items:center;gap:9px}
+.panel-title::before{content:"";width:8px;height:8px;background:var(--ember);border-radius:2px;transform:rotate(45deg)}
+ul.ticks{list-style:none;display:grid;gap:9px}
+ul.ticks li{padding-left:26px;position:relative;color:var(--muted);font-size:15.5px}
+ul.ticks li b{color:var(--bone)}
+ul.ticks li::before{content:"";position:absolute;left:2px;top:9px;width:10px;height:6px;border-left:2px solid var(--moss);border-bottom:2px solid var(--moss);transform:rotate(-45deg)}
+ul.cross{list-style:none;display:grid;gap:9px}
+ul.cross li{padding-left:26px;position:relative;color:var(--muted);font-size:15.5px}
+ul.cross li::before{content:"×";position:absolute;left:2px;top:0;color:var(--red);font-family:var(--font-disp);font-size:16px}
+.note{border-radius:12px;padding:18px 20px;font-size:15px;display:flex;gap:13px;align-items:flex-start;margin-top:18px}
+.note .icon{width:19px;height:19px;margin-top:3px}
+.note.warn{background:rgba(224,86,74,.08);border:1px solid rgba(224,86,74,.3);color:#f0c9c4}
+.note.warn .icon{color:var(--red)}
+.note.tip{background:rgba(150,176,106,.08);border:1px solid rgba(150,176,106,.3);color:#dfe8cf}
+.note.tip .icon{color:var(--moss)}
+.note b{color:#fff}
+
+/* rule of threes stats */
+.stat-card{background:var(--pine2);border:1px solid var(--line);border-radius:var(--r);padding:30px 26px;position:relative;overflow:hidden;transition:border-color .25s,transform .25s}
+.stat-card:hover{border-color:rgba(240,125,51,.5);transform:translateY(-4px)}
+.stat-card::after{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,var(--ember),transparent)}
+.stat-card .big{font-family:var(--font-stencil);font-size:clamp(56px,6vw,76px);line-height:1;color:var(--ember)}
+.stat-card .unit{font-family:var(--font-disp);text-transform:uppercase;letter-spacing:.2em;font-size:13px;color:var(--muted);margin:6px 0 14px}
+.stat-card h3{font-family:var(--font-disp);font-weight:500;text-transform:uppercase;letter-spacing:.06em;font-size:18px}
+.stat-card p{color:var(--muted);font-size:15px;margin-top:8px}
+
+/* STOP steps */
+.stop-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.stop-cell{padding:30px 26px;background:var(--pine2);border-right:1px solid var(--line);position:relative}
+.stop-cell:last-child{border-right:none}
+.stop-cell .ltr{font-family:var(--font-stencil);font-size:52px;line-height:1;color:var(--ember)}
+.stop-cell h3{font-family:var(--font-disp);text-transform:uppercase;letter-spacing:.08em;font-size:15px;margin:12px 0 8px;color:var(--bone)}
+.stop-cell p{color:var(--muted);font-size:14.5px}
+@media (max-width:960px){.stop-row{grid-template-columns:repeat(2,1fr)}.stop-cell:nth-child(2){border-right:none}.stop-cell:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+@media (max-width:560px){.stop-row{grid-template-columns:1fr}.stop-cell{border-right:none;border-bottom:1px solid var(--line)}.stop-cell:last-child{border-bottom:none}}
+
+/* tabs */
+.tabs{display:flex;gap:6px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin-bottom:24px}
+.tab-btn{font-family:var(--font-disp);text-transform:uppercase;letter-spacing:.1em;font-size:12.5px;color:var(--muted);padding:12px 16px;border-bottom:2px solid transparent;margin-bottom:-1px;transition:color .2s,border-color .2s}
+.tab-btn:hover{color:var(--bone)}
+.tab-btn.active{color:var(--ember);border-bottom-color:var(--ember)}
+.tab-panel{display:none;animation:fadein .35s ease}
+.tab-panel.active{display:block}
+@keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* timeline steps */
+.steps{list-style:none;position:relative;display:grid;gap:0}
+.steps::before{content:"";position:absolute;left:21px;top:14px;bottom:14px;width:1px;background:repeating-linear-gradient(var(--line2) 0 5px,transparent 5px 11px)}
+.step{position:relative;padding:0 0 30px 66px}
+.step:last-child{padding-bottom:0}
+.step .n{position:absolute;left:0;top:0;width:44px;height:44px;border-radius:50%;background:var(--pine3);border:1px solid var(--line2);display:flex;align-items:center;justify-content:center;font-family:var(--font-stencil);font-size:17px;color:var(--ember)}
+.step h3{font-family:var(--font-disp);font-weight:500;text-transform:uppercase;letter-spacing:.06em;font-size:17px;margin:10px 0 6px}
+.step p{color:var(--muted);font-size:15.5px;max-width:62ch}
+.step p b{color:var(--bone)}
+
+/* tables */
+.table{width:100%;border-collapse:collapse;font-size:15px}
+.table th{font-family:var(--font-disp);text-transform:uppercase;letter-spacing:.09em;font-size:12px;color:var(--ember2);text-align:left;padding:10px 14px;border-bottom:1px solid var(--line2);font-weight:500}
+.table td{padding:11px 14px;border-bottom:1px dashed var(--line);color:var(--muted);vertical-align:top}
+.table td:first-child{color:var(--bone);white-space:nowrap}
+.table tr:last-child td{border-bottom:none}
+
+/* checklist */
+.kit-top{display:flex;align-items:center;gap:18px;margin-bottom:22px;flex-wrap:wrap}
+.kit-count{font-family:var(--font-mono);font-size:12.5px;color:var(--muted);letter-spacing:.06em}
+.kit-count b{color:var(--ember);font-weight:500}
+.kit-bar{flex:1;min-width:180px;height:8px;background:var(--pine3);border-radius:99px;overflow:hidden;border:1px solid var(--line)}
+.kit-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--ember),var(--ember2));border-radius:99px;transition:width .4s ease}
+.kit-reset{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;color:var(--dim);border:1px solid var(--line);border-radius:8px;padding:7px 12px;transition:color .2s,border-color .2s}
+.kit-reset:hover{color:var(--red);border-color:var(--red)}
+.kit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:960px){.kit-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.kit-grid{grid-template-columns:1fr}}
+.kit-group{background:var(--pine2);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.kit-group h4{font-family:var(--font-disp);text-transform:uppercase;letter-spacing:.1em;font-size:13px;color:var(--ember2);display:flex;align-items:center;gap:8px;margin-bottom:14px;font-weight:500}
+.kit-group h4 .icon{width:16px;height:16px;color:var(--ember)}
+.kit-item{display:flex;gap:10px;align-items:flex-start;padding:7px 4px;border-radius:8px;cursor:pointer;transition:background .15s;font-size:15px;color:var(--muted)}
+.kit-item:hover{background:var(--pine3)}
+.kit-item input{accent-color:var(--ember);width:16px;height:16px;margin-top:4px;cursor:pointer;flex:none}
+.kit-item input:checked + span{color:var(--dim);text-decoration:line-through;text-decoration-color:rgba(240,125,51,.5)}
+
+/* quiz */
+.quiz-shell{max-width:720px;margin:0 auto}
+.quiz-box{background:var(--pine2);border:1px solid var(--line);border-radius:var(--r);padding:clamp(24px,4vw,40px)}
+.q-track{font-family:var(--font-mono);font-size:11.5px;letter-spacing:.16em;color:var(--moss);margin-bottom:14px}
+.q-text{font-family:var(--font-disp);font-weight:500;font-size:clamp(20px,2.6vw,25px);text-transform:uppercase;letter-spacing:.02em;line-height:1.25;margin-bottom:22px}
+.q-opts{display:grid;gap:10px}
+.q-opt{text-align:left;font-family:var(--font-body);font-size:16px;color:var(--muted);background:var(--pine3);border:1px solid var(--line);border-radius:11px;padding:14px 18px;display:flex;gap:12px;align-items:center;transition:border-color .2s,color .2s,background .2s}
+.q-opt .key{font-family:var(--font-mono);font-size:11px;color:var(--dim);border:1px solid var(--line);border-radius:6px;padding:2px 7px;flex:none}
+.q-opt:hover:not(:disabled){border-color:var(--ember);color:var(--bone)}
+.q-opt:disabled{cursor:default}
+.q-opt.ok{border-color:var(--moss);background:rgba(150,176,106,.12);color:#e4eecf}
+.q-opt.ok .key{border-color:var(--moss);color:var(--moss)}
+.q-opt.bad{border-color:var(--red);background:rgba(224,86,74,.1);color:#f0c9c4}
+.q-explain{margin-top:16px;font-size:15px;color:var(--muted);border-left:2px solid var(--ember);padding:4px 0 4px 16px;display:none}
+.q-explain.show{display:block}
+.q-foot{margin-top:22px;display:flex;justify-content:flex-end}
+.q-result{text-align:center;display:none}
+.q-score{font-family:var(--font-stencil);font-size:74px;color:var(--ember);line-height:1}
+.q-verdict{font-family:var(--font-disp);text-transform:uppercase;letter-spacing:.12em;font-size:19px;margin:12px 0 10px}
+.q-result p{color:var(--muted);max-width:44ch;margin:0 auto 24px}
+
+/* faq */
+.faq-list{max-width:820px;margin:0 auto;display:grid;gap:12px}
+.faq-item{background:var(--pine2);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:border-color .25s}
+.faq-item.open{border-color:var(--line2)}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:18px;text-align:left;padding:19px 22px;font-family:var(--font-disp);font-weight:500;font-size:17px;letter-spacing:.02em}
+.faq-q .pm{width:26px;height:26px;flex:none;border:1px solid var(--line2);border-radius:50%;position:relative;transition:transform .3s,background .3s}
+.faq-q .pm::before,.faq-q .pm::after{content:"";position:absolute;background:var(--ember);top:50%;left:50%;transform:translate(-50%,-50%)}
+.faq-q .pm::before{width:11px;height:1.6px}
+.faq-q .pm::after{width:1.6px;height:11px;transition:opacity .2s}
+.faq-item.open .pm{transform:rotate(45deg);background:rgba(240,125,51,.12)}
+.faq-a{overflow:hidden;max-height:0;transition:max-height .35s ease}
+.faq-a p{padding:0 22px 20px;color:var(--muted);font-size:15.5px;max-width:70ch}
+
+/* footer */
+.foot{border-top:1px solid var(--line);padding:64px 0 40px;position:relative;overflow:hidden;background:#0a0e09}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px;margin-bottom:44px}
+@media (max-width:800px){.foot-grid{grid-template-columns:1fr}}
+.foot h4{font-family:var(--font-disp);text-transform:uppercase;letter-spacing:.14em;font-size:12.5px;color:var(--ember2);margin-bottom:16px;font-weight:500}
+.foot a{display:block;color:var(--muted);text-decoration:none;font-size:14.5px;padding:4px 0;transition:color .2s}
+.foot a:hover{color:var(--ember2)}
+.foot p{color:var(--muted);font-size:14.5px}
+.disclaimer{border:1px dashed var(--line2);border-radius:12px;padding:18px 22px;font-size:13.5px;color:var(--dim);display:flex;gap:12px}
+.disclaimer .icon{width:18px;height:18px;margin-top:2px;color:var(--ember)}
+.foot-big{font-family:var(--font-stencil);font-size:clamp(60px,12vw,150px);line-height:1;text-align:center;color:transparent;-webkit-text-stroke:1px rgba(232,227,211,.09);user-select:none;margin-top:44px;letter-spacing:.04em}
+.foot-base{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:30px;font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;color:var(--dim)}
+
+/* reveal on scroll — reserved for section headers only */
+.rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+.rv.on{opacity:1;transform:none}
+
+/* back to top */
+.totop{position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:50%;background:var(--pine2);border:1px solid var(--line2);color:var(--muted);display:flex;align-items:center;justify-content:center;z-index:40;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s,color .2s,border-color .2s}
+.totop.show{opacity:1;pointer-events:auto}
+.totop:hover{color:var(--ember);border-color:var(--ember);transform:translateY(-3px)}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- inline icon set -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c1.8 2.7 3.2 4.5 3.2 6.7A3.2 3.2 0 0 1 12 12.8a3.2 3.2 0 0 1-3.2-3.1C7.3 11.3 6.2 13 6.2 15.2a5.8 5.8 0 0 0 11.6 0C17.8 10 15.2 6.6 12 3z"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3.2s6 6.7 6 10.9a6 6 0 0 1-12 0c0-4.2 6-10.9 6-10.9z"/><path d="M9.5 13.5a2.6 2.6 0 0 0 2.5 3"/></symbol>
+    <symbol id="i-tent" viewBox="0 0 24 24"><path d="M12 4 2.5 20h19L12 4z"/><path d="M12 12.5 9.2 20M12 12.5l2.8 7.5"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5.5 18.5C5.5 9.5 12 4.5 20 4.5c0 8-5 14-14.5 14z"/><path d="M5.5 18.5c3-6 7-9 11-11"/></symbol>
+    <symbol id="i-med" viewBox="0 0 24 24"><rect x="3.5" y="7.5" width="17" height="12" rx="2.5"/><path d="M9 7.5V6a1.8 1.8 0 0 1 1.8-1.8h2.4A1.8 1.8 0 0 1 15 6v1.5M12 11v5M9.5 13.5h5"/></symbol>
+    <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><path d="m15.6 8.4-2.1 5.1-5.1 2.1 2.1-5.1z"/></symbol>
+    <symbol id="i-signal" viewBox="0 0 24 24"><circle cx="12" cy="10" r="2.2"/><path d="M12 12.2V21M8.2 6.4a5.4 5.4 0 0 0 0 7.2M15.8 6.4a5.4 5.4 0 0 1 0 7.2M5.4 3.6a9.4 9.4 0 0 0 0 12.8M18.6 3.6a9.4 9.4 0 0 1 0 12.8"/></symbol>
+    <symbol id="i-pack" viewBox="0 0 24 24"><path d="M8.5 7V5.5a3.5 3.5 0 0 1 7 0V7"/><rect x="5" y="7" width="14" height="13" rx="3"/><path d="M9.5 11.5h5v3.5h-5zM9 20v-2M15 20v-2"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 2.8 19.5h18.4L12 3.5z"/><path d="M12 10v4.5M12 17.2h.01"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5.5M6.5 11 12 5.5 17.5 11"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5.5V18M6.5 12.5 12 18l5.5-5.5"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3.5 2.5 5.3 5.7.7-4.2 3.9 1.1 5.6L12 16.2 6.9 19l1.1-5.6-4.2-3.9 5.7-.7L12 3.5z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m4.5 12.5 5 5.5L19.5 6.5"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M18.7 5.3l-1.8 1.8M7.1 16.9l-1.8 1.8"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 5.8v5.4c0 4.4 3 7.9 7 9.8 4-1.9 7-5.4 7-9.8V5.8L12 3z"/><path d="m9 11.6 2.2 2.2 3.8-4"/></symbol>
+    <symbol id="i-wind" viewBox="0 0 24 24"><path d="M3 8.5h9.5a2.7 2.7 0 1 0-2.7-2.7M3 13h14.5a2.7 2.7 0 1 1-2.7 2.7M3 17.5h6"/></symbol>
+    <symbol id="i-brain" viewBox="0 0 24 24"><path d="M9.5 4.5A3 3 0 0 0 6.6 8 3.2 3.2 0 0 0 4 11.2c0 1.3.7 2.4 1.8 3A3.1 3.1 0 0 0 9 19.5c1 0 1.9-.4 2.5-1.1V5.6a3 3 0 0 0-2-1.1zM14.5 4.5A3 3 0 0 1 17.4 8 3.2 3.2 0 0 1 20 11.2c0 1.3-.7 2.4-1.8 3A3.1 3.1 0 0 1 15 19.5c-1 0-1.9-.4-2.5-1.1V5.6a3 3 0 0 1 2-1.1z"/></symbol>
+  </defs>
+</svg>
+
+<div class="progress" id="progress"></div>
+
+<nav class="nav" id="nav">
+  <div class="callout-bar">In a real emergency, call your local emergency number first — <b>911 (US) / 112 (EU)</b><span class="callout-extra">. This guide is for preparedness, not a substitute for training</span>.</div>
+  <div class="nav-inner">
+    <a class="brand" href="#top"><svg class="icon"><use href="#i-flame"/></svg>SURVIVAL<em>FIELD GUIDE</em></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><svg class="icon"><use href="#i-menu"/></svg></button>
+    <div class="nav-links" id="navLinks">
+      <a href="#priorities">Priorities</a>
+      <a href="#shelter">Shelter</a>
+      <a href="#water">Water</a>
+      <a href="#fire">Fire</a>
+      <a href="#food">Food</a>
+      <a href="#firstaid">First Aid</a>
+      <a href="#navigate">Navigate</a>
+      <a href="#signal">Signal</a>
+      <a href="#kit">Kit</a>
+      <a href="#quiz" class="hot">Quiz</a>
+      <a href="#faq">FAQ</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <canvas class="embers" id="embers"></canvas>
+  <div class="hero-glow"></div>
+  <svg class="hero-topo" viewBox="0 0 1440 480" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 460 C 180 420 260 470 420 440 S 700 380 880 420 S 1200 470 1440 430"/>
+    <path d="M0 410 C 200 370 300 430 480 396 S 760 330 940 372 S 1240 420 1440 380"/>
+    <path d="M0 356 C 220 320 340 384 540 350 S 820 282 1000 324 S 1280 368 1440 330"/>
+    <path d="M0 300 C 240 268 380 330 600 296 S 880 232 1060 274 S 1320 314 1440 278"/>
+    <path d="M0 246 C 260 216 420 274 660 242 S 940 184 1120 222 S 1360 258 1440 226"/>
+  </svg>
+  <div class="wrap hero-inner">
+    <div>
+      <div class="hero-kicker">A COMPLETE FIELD MANUAL FOR WHEN THINGS GO WRONG</div>
+      <h1 class="hero-title">Survive<br><span class="outline">Anything,</span><br>Anywhere<span class="amp">.</span></h1>
+      <p class="hero-sub">One page. Everything that matters. The <b>Rule of Threes</b>, shelter, water, fire, food, first aid, navigation, signaling and gear — distilled into the manual you wish you'd packed, written for the moment you need it most.</p>
+      <div class="cta-row">
+        <a class="btn" href="#priorities">Start with priorities <svg class="icon" style="width:15px;height:15px"><use href="#i-down"/></svg></a>
+        <a class="btn ghost" href="#quiz">Test yourself</a>
+      </div>
+      <div class="hero-meta">
+        <span><b>10</b> CHAPTERS</span>
+        <span><b>50+</b> FIELD TECHNIQUES</span>
+        <span><b>0</b> DISTRACTIONS</span>
+        <span>FIELD MANUAL — REV. 2026</span>
+      </div>
+    </div>
+    <div class="compass-wrap" aria-hidden="true">
+      <svg class="compass" viewBox="0 0 300 300">
+        <g class="rose">
+          <circle cx="150" cy="150" r="132" fill="none" stroke="rgba(232,227,211,.25)" stroke-width="1"/>
+          <circle cx="150" cy="150" r="118" fill="none" stroke="rgba(232,227,211,.14)" stroke-width="1" stroke-dasharray="1.5 6.4"/>
+          <circle cx="150" cy="150" r="96" fill="none" stroke="rgba(232,227,211,.18)" stroke-width="1"/>
+          <g fill="rgba(232,227,211,.6)" font-family="Oswald,sans-serif" font-size="15" text-anchor="middle">
+            <text x="150" y="42">N</text><text x="262" y="155">E</text><text x="150" y="272">S</text><text x="38" y="155">W</text>
+          </g>
+          <g fill="rgba(240,125,51,.75)" font-family="IBM Plex Mono,monospace" font-size="8.5" text-anchor="middle">
+            <text x="205" y="80">NE</text><text x="212" y="212">SE</text><text x="96" y="212">SW</text><text x="88" y="80">NW</text>
+          </g>
+        </g>
+        <g class="needle">
+          <path d="M150 62 L162 150 L150 172 L138 150 Z" fill="#f07d33"/>
+          <path d="M150 238 L138 150 L150 128 L162 150 Z" fill="rgba(232,227,211,.5)"/>
+          <circle cx="150" cy="150" r="7" fill="#0c110b" stroke="#f07d33" stroke-width="2"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <div class="scroll-hint">SCROLL</div>
+</header>
+
+<main>
+
+<!-- ================= CH 01 · PRIORITIES ================= -->
+<section class="sec" id="priorities">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="folio"><span class="num">01</span><span class="lab">Priorities</span></div>
+      <h2 class="sec-title">The Rule of Threes<small>When everything feels urgent, this tells you what actually kills first. Work down the list — never up it.</small></h2>
+    </div>
+    <div class="grid cols-4">
+      <div class="stat-card">
+        <div class="big">3</div><div class="unit">Minutes</div>
+        <h3>Without air</h3>
+        <p>Severe bleeding and icy water belong here too. They can kill faster than anything else — handle them immediately.</p>
+      </div>
+      <div class="stat-card">
+        <div class="big">3</div><div class="unit">Hours</div>
+        <h3>Without shelter</h3>
+        <p>In harsh conditions — cold, wet, wind, or extreme heat — exposure becomes lethal before thirst or hunger do.</p>
+      </div>
+      <div class="stat-card">
+        <div class="big">3</div><div class="unit">Days</div>
+        <h3>Without water</h3>
+        <p>Your body is ~60% water. Losing just 2% of it measurably degrades judgment, mood, and physical output.</p>
+      </div>
+      <div class="stat-card">
+        <div class="big">3</div><div class="unit">Weeks</div>
+        <h3>Without food</h3>
+        <p>Food is the last priority. Hunger is uncomfortable, not urgent — don't burn energy chasing it early.</p>
+      </div>
+    </div>
+
+    <div class="sec-head rv" style="margin-top:clamp(56px,7vw,84px);margin-bottom:30px">
+      <h2 class="sec-title" style="font-size:clamp(24px,3vw,32px)">First skill: stop, don't sprint<small>Most survival situations are made fatal by panic within the first hour. Before any technique, run this loop.</small></h2>
+    </div>
+    <div class="stop-row rv">
+      <div class="stop-cell"><div class="ltr">S</div><h3>Stop</h3><p>Sit down. Breathe slowly. Panic makes people abandon gear, walk in circles, and die within a day of safety.</p></div>
+      <div class="stop-cell"><div class="ltr">T</div><h3>Think</h3><p>What do you actually have? Who knows where you are? How long until they expect you back?</p></div>
+      <div class="stop-cell"><div class="ltr">O</div><h3>Observe</h3><p>Scan the terrain, weather, daylight remaining, water sources, and natural shelter before moving a step.</p></div>
+      <div class="stop-cell"><div class="ltr">P</div><h3>Plan</h3><p>Decide one course of action and commit. Conserve energy — sweat is heat loss in cold and water loss in heat.</p></div>
+    </div>
+    <div class="note tip rv">
+      <svg class="icon"><use href="#i-brain"/></svg>
+      <div><b>The survivor's mindset beats the survivor's gear.</b> People with no equipment and a calm plan are rescued every year; people with full packs and panic are not. Your brain is the one tool you always have with you.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CH 02 · SHELTER ================= -->
+<section class="sec alt" id="shelter">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="folio"><span class="num">02</span><span class="lab">Shelter</span></div>
+      <h2 class="sec-title">Shelter — beat the elements<small>Hypothermia is the number-one outdoor killer, and it starts at +10 °C on a wet, windy day. Shelter is your first build, every time.</small></h2>
+    </div>
+    <div class="split">
+      <div>
+        <div class="grid cols-2">
+          <div class="card">
+            <div class="card-icon"><svg class="icon"><use href="#i-tent"/></svg></div>
+            <h3>Debris hut</h3>
+            <p>The all-rounder with no tools. A ridgepole frame draped with sticks, piled under 60–90 cm of dry leaves. Pile leaves <em>inside</em> too — you want to be the filling, not the tent.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><svg class="icon"><use href="#i-shield"/></svg></div>
+            <h3>Lean-to</h3>
+            <p>Fastest windbreak and rain roof, built against a ridgepole between two trees. Reflect a fire's heat into the open side — it shelters from weather, not from cold alone.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><svg class="icon"><use href="#i-tent"/></svg></div>
+            <h3>A-frame</h3>
+            <p>Two poles in an A with ribs along one side. Sheds rain well and blocks wind from one direction. Same rule as all natural shelters: thick debris bedding, small inside volume.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><svg class="icon"><use href="#i-sun"/></svg></div>
+            <h3>Snow cave</h3>
+            <p>Counter-intuitive but true: snow insulates. Dig into a drift or pile and hollow it, keep the roof rounded, and always poke a fist-sized ventilation hole through — not up-slope.</p>
+          </div>
+        </div>
+        <div class="note warn">
+          <svg class="icon"><use href="#i-alert"/></svg>
+          <div><b>Heat escapes downward too.</b> The ground pulls heat out of you faster than the air. A 15 cm mattress of leaves, pine boughs, or grass is not optional — it's half the shelter.</div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-title">Site selection</div>
+        <ul class="ticks">
+          <li><b>Build small.</b> A shelter just bigger than your body keeps its air warm. Big shelters are cold shelters.</li>
+          <li><b>Near materials, near (but not on) water.</b> Carry distance costs calories; building 30 m from a stream avoids cold air pooling and insects.</li>
+          <li><b>Avoid low ground</b> — cold air and water both flow downhill and pool there overnight.</li>
+          <li><b>Avoid ridgelines and open flats</b> — maximum wind exposure.</li>
+          <li><b>Look up before lying down.</b> Dead standing trees and leaning branches — "widowmakers" — fall without warning.</li>
+          <li><b>Check for water courses:</b> a dry wash can become a river in rain you can't yet see or hear.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CH 03 · WATER ================= -->
+<section class="sec" id="water">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="folio"><span class="num">03</span><span class="lab">Water</span></div>
+      <h2 class="sec-title">Water — find it, treat it<small>Plan on 3–4 litres per day, more in heat or at altitude. Finding water is half the job; the other half is making it safe.</small></h2>
+    </div>
+    <div class="split">
+      <div>
+        <div class="panel">
+          <div class="panel-title">Finding water</div>
+          <ul class="ticks">
+            <li><b>Rank your sources:</b> falling rain and snow are safest, then springs, then fast-moving streams, then lakes. Stagnant, foamy, or dead-animal-adjacent water is last resort only.</li>
+            <li><b>Follow the animals.</b> Birds circling at dawn and dusk, converging game trails, and bees all point toward water.</li>
+            <li><b>Dig at the outside bend</b> of a dry riverbed, under the shade side of cliffs, and beneath green vegetation — damp sand means a water table close by.</li>
+            <li><b>Catch it passively:</b> tie a clear plastic bag around a sunlit leafy branch — transpiration yields clean water over hours. Stretch a tarp into a low dish for rain and dew.</li>
+            <li><b>Wipe dew</b> off rocks and grass with an absorbent cloth before sunrise; wring it into a container.</li>
+          </ul>
+          <div class="note warn">
+            <svg class="icon"><use href="#i-alert"/></svg>
+            <div><b>Clear is not clean.</b> Giardia and other pathogens are invisible. Melting snow? Melt it rather than eating it — eating snow chills your core and speeds dehydration.</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="panel" style="background:var(--pine2)">
+          <div class="panel-title">Making it safe</div>
+          <div class="tabs" role="tablist">
+            <button class="tab-btn active" data-tab="w1" role="tab">Boiling</button>
+            <button class="tab-btn" data-tab="w2" role="tab">Filtering</button>
+            <button class="tab-btn" data-tab="w3" role="tab">Chemicals</button>
+            <button class="tab-btn" data-tab="w4" role="tab">Sunlight</button>
+          </div>
+          <div class="tab-panel active" id="w1">
+            <p style="color:var(--muted);font-size:15.5px">The gold standard — kills everything that matters.</p>
+            <ul class="ticks" style="margin-top:12px">
+              <li>Bring water to a <b>rolling boil for 1 minute</b> (3 minutes above 2,000 m / 6,500 ft, where water boils cooler).</li>
+              <li>Boiled water tastes flat because it loses oxygen — <b>shake it hard</b> in a closed bottle to restore taste.</li>
+              <li>This is why your kit needs a <b>metal container</b>, not just plastic bottles.</li>
+            </ul>
+          </div>
+          <div class="tab-panel" id="w2">
+            <p style="color:var(--muted);font-size:15.5px">Removes particles and most bacteria and protozoa — but not all viruses.</p>
+            <ul class="ticks" style="margin-top:12px">
+              <li>Commercial filters rated <b>0.1–0.2 micron</b> handle giardia and most bacteria; pair with chemical treatment where viruses are a risk.</li>
+              <li>Field filter — layered cloth, charcoal, sand, gravel in a cut bottle — <b>improves water, doesn't purify it.</b> Always boil or treat afterwards.</li>
+              <li>Pre-filter cloudy water through cloth first; sediment eats your filter's lifespan.</li>
+            </ul>
+          </div>
+          <div class="tab-panel" id="w3">
+            <p style="color:var(--muted);font-size:15.5px">Lightweight backup that treats what filters miss.</p>
+            <ul class="ticks" style="margin-top:12px">
+              <li>Unscented household bleach: <b>2 drops per litre</b> of clear water (double for cloudy), mix, wait <b>30 minutes</b>. It should smell faintly of chlorine.</li>
+              <li>Chlorine dioxide tablets are the most effective common option — they also kill viruses and cryptosporidium over a 4-hour wait.</li>
+              <li>Iodine works in 30 minutes but is unsafe for pregnant women and thyroid conditions.</li>
+            </ul>
+          </div>
+          <div class="tab-panel" id="w4">
+            <p style="color:var(--muted);font-size:15.5px">SODIS — solar disinfection. Free, slow, weather-dependent.</p>
+            <ul class="ticks" style="margin-top:12px">
+              <li>Fill a <b>clear PET bottle</b>, lay it on a dark surface in full sun for <b>6 hours</b> — two full days if skies are cloudy.</li>
+              <li>Works only with strong sunlight and water already clear enough to read a newspaper through.</li>
+              <li>For salt water or chemically contaminated water, only <b>distillation</b> (a solar still) makes it drinkable.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CH 04 · FIRE ================= -->
+<section class="sec alt" id="fire">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="folio"><span class="num">04</span><span class="lab">Fire</span></div>
+      <h2 class="sec-title">Fire — heat, light, water, rescue<small>One fire does five jobs: warmth, purified water, cooked food, a signal, and the morale to keep going. Build it in this order.</small></h2>
+    </div>
+    <div class="split">
+      <div>
+        <ol class="steps rv">
+          <li class="step">
+            <span class="n">1</span>
+            <h3>Tinder — the spark catcher</h3>
+            <p>Dead-dry material finer than a matchstick: birch bark, fatwood shavings, dry grass, feather-sticked twigs, or charred cloth. <b>Carry tinder even when you can find wood</b> — a zip-lock of dryer lint weighs nothing.</p>
+          </li>
+          <li class="step">
+            <span class="n">2</span>
+            <h3>Kindling — the bridge</h3>
+            <p>Build a ladder of sizes: pencil-lead, pencil, then finger-thick. Dry wood <b>snap-test</b>: it breaks with a crack, not a bend. Gather standing dead branches — anything on damp ground is suspect.</p>
+          </li>
+          <li class="step">
+            <span class="n">3</span>
+            <h3>Fuel — the long burn</h3>
+            <p>Wrist-thick logs added gradually, not dumped on a young flame. <b>Collect twice the wood you think you need</b> — you will be wrong, and night firewood gathering is how people wander off and get lost.</p>
+          </li>
+          <li class="step">
+            <span class="n">4</span>
+            <h3>Ignition — three ways, always</h3>
+            <p>Ferrocerium rod (works soaked, 10,000+ strikes), stormproof matches and lighter (keep one on your body, one in the pack), or friction — bow drill with a spindle, hearth board, bearing block, and bowstring from paracord.</p>
+          </li>
+          <li class="step">
+            <span class="n">5</span>
+            <h3>Lay &amp; tend</h3>
+            <p><b>Teepee</b> for fast flame, <b>log cabin</b> for a long steady burn, <b>star</b> to ration fuel. Light into the wind, feed from the upwind side, and never leave a fire alive.</p>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <div class="panel">
+          <div class="panel-title">Fire site &amp; safety</div>
+          <ul class="ticks">
+            <li>Clear a <b>3-metre circle</b> to bare earth; check overhead for branches and above for a canopy that traps smoke.</li>
+            <li>Shelter the flame from wind but keep it <b>ventilated</b> — fire breathes. Reflect heat toward your shelter with a log or rock wall.</li>
+            <li>On snow or wet ground, build a platform of green logs so the fire doesn't drown in its own melt.</li>
+          </ul>
+        </div>
+        <div class="panel" style="margin-top:16px">
+          <div class="panel-title">Extinguishing — drown, stir, feel</div>
+          <ul class="ticks">
+            <li><b>Drown</b> every ember with water (or smother with soil), <b>stir</b> the ashes, drown again.</li>
+            <li><b>Feel</b> with the back of your hand — if it's too hot to touch, it's too hot to leave.</li>
+            <li>A fire you abandon can smoulder underground for days. This is how wildfires start.</li>
+          </ul>
+        </div>
+        <div class="note tip">
+          <svg class="icon"><use href="#i-flame"/></svg>
+          <div><b>Practice in the rain before you need it.</b> Fire-making under dry, calm conditions teaches you nothing about the day it matters.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CH 05 · FOOD ================= -->
+<section class="sec" id="food">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="folio"><span class="num">05</span><span class="lab">Food &amp; Foraging</span></div>
+      <h2 class="sec-title">Food — the slow problem<small>You can live three weeks without food. Never risk illness, energy, or safety chasing calories in the first days. Food is a last-third problem.</small></h2>
+    </div>
+    <div class="grid cols-3">
+      <div class="card">
+        <div class="card-icon"><svg class="icon"><use href="#i-leaf"/></svg></div>
+        <h3>Forage smart</h3>
+        <p>Learn a handful of abundant, unmistakable plants for your region — dandelion (all parts), cattail (roots, shoots, pollen), pine (needle tea, inner bark), acorns (boil to leach tannins). Positive ID or pass.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg class="icon"><use href="#i-check"/></svg></div>
+        <h3>Fish, don't hunt</h3>
+        <p>Hunting burns calories with low odds. Fishing and trapping work while you rest: hooks improvised from pins, bone, or thorns, baited lines checked at dawn and dusk. Trapping needs practice and legal cover — know before you go.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg class="icon"><use href="#i-flame"/></svg></div>
+        <h3>Cook everything</h3>
+        <p>Heat destroys most parasites and many toxins. Insects (avoid hairy, brightly coloured, or foul-smelling ones), fish, and unfamiliar plants are all safer cooked. Boiling keeps the nutrients in the pot — drink the broth.</p>
+      </div>
+    </div>
+    <div class="split" style="margin-top:16px">
+      <div class="panel">
+        <div class="panel-title">Universal edibility test — when nothing is familiar</div>
+        <p style="color:var(--muted);font-size:15.5px">One plant at a time. Nothing else in your stomach. Water available. Each stage: wait 8 hours before the next.</p>
+        <ol class="steps" style="margin-top:18px">
+          <li class="step" style="padding-bottom:20px"><span class="n">1</span><p><b>Skin:</b> crush a piece, hold it against your inner elbow for 8 hours. Burning, rash, or numbness — reject.</p></li>
+          <li class="step" style="padding-bottom:20px"><span class="n">2</span><p><b>Lips &amp; tongue:</b> touch, hold 15 seconds, wait. Then a tiny taste held in the mouth — bitter, soapy, or numbing, spit and reject.</p></li>
+          <li class="step" style="padding-bottom:20px"><span class="n">3</span><p><b>Swallow a small piece.</b> Wait 8 hours. Any nausea, cramps, or other symptoms — induce nothing, just drink water and reject the plant.</p></li>
+          <li class="step"><span class="n">4</span><p><b>Only then</b> eat a normal portion of that one plant. Introduce new plants the same way, one per day at most.</p></li>
+        </ol>
+      </div>
+      <div>
+        <div class="panel">
+          <div class="panel-title">Reject on sight</div>
+          <ul class="cross">
+            <li>Any plant with <b>milky or discoloured sap</b></li>
+            <li><b>Umbrella-shaped flowers</b> — some resemble deadly hemlock</li>
+            <li>Anything with a <b>soapy or bitter</b> taste after cooking</li>
+            <li><b>Mushrooms of any kind</b> without expert ID — the risk/reward never justifies it</li>
+            <li><b>White and yellow berries</b> — roughly half are toxic; the "birds eat it" test is a myth, birds tolerate toxins humans can't</li>
+          </ul>
+        </div>
+        <div class="note tip">
+          <svg class="icon"><use href="#i-brain"/></svg>
+          <div><b>Calorie maths:</b> an hour of stumbling after game can burn the calories of a day's food. Sitting still, staying warm, and conserving energy <em>is</em> eating.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CH 06 · FIRST AID ================= -->
+<section class="sec alt" id="firstaid">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="folio"><span class="num">06</span><span class="lab">First Aid</span></div>
+      <h2 class="sec-title">First aid — the chapter that saves a life today<small>Everything here is first-response knowledge for when help is hours away. A wilderness first-aid course is the single best weekend you can spend on this page's advice.</small></h2>
+    </div>
+    <div class="grid cols-2">
+      <div class="card">
+        <h3>Severe bleeding</h3>
+        <p><b>1.</b> Firm, direct pressure on the wound with the cleanest cloth available. <b>2.</b> Soak-through? Add layers on top — never remove the first. <b>3.</b> Keep pressure; elevate the limb. <b>4.</b> Tourniquet only for uncontrolled limb bleeding — write down the time it went on.</p>
+      </div>
+      <div class="card">
+        <h3>Not responding</h3>
+        <p><b>Check:</b> Danger → Response → Airway → Breathing. No normal breathing: start CPR — <b>30 compressions to 2 breaths</b>, chest compressed 5–6 cm, at 100–120 per minute. Send someone for help and a defibrillator if there is one.</p>
+      </div>
+      <div class="card">
+        <h3>Hypothermia</h3>
+        <p>Shivering, fumbling, slurring = act. <b>Gentle handling</b> (rough movement can stop a cold heart), strip wet layers, insulate from the ground, wrap including head and neck, warm sweet drinks if fully alert. <b>Never</b> rub the limbs or use direct high heat.</p>
+      </div>
+      <div class="card">
+        <h3>Heat stroke</h3>
+        <p>Hot skin, confusion, collapse — this kills fast. Shade, strip, <b>soak with any cool water</b> and fan continuously; ice packs to neck, armpits, groin. Stop fluids if consciousness drops. Cool first, transport second.</p>
+      </div>
+      <div class="card">
+        <h3>Snakebite</h3>
+        <p>Move away from the snake, keep <b>calm and still</b>, remove rings and watches before swelling, immobilise the limb at or below heart level, and carry the person out if possible. <b>Never</b> cut, suck, ice, or tourniquet a bite — and never chase the snake for ID.</p>
+      </div>
+      <div class="card">
+        <h3>Fractures &amp; sprains</h3>
+        <p>Splint as found — immobilise the joint above and below the injury, padded, without trying to straighten it. Check fingers or toes beyond the splint stay warm and pink. Cold, blue, or numb means loosen.</p>
+      </div>
+    </div>
+    <div class="grid cols-2" style="margin-top:16px">
+      <div class="card">
+        <h3>Choking</h3>
+        <p>Can they cough or speak? Encourage coughing. Cannot: <b>5 firm back blows</b> between the shoulder blades, then <b>5 abdominal thrusts</b>, alternating until the object clears or they collapse — then CPR.</p>
+      </div>
+      <div class="card">
+        <h3>Shock &amp; burns</h3>
+        <p><b>Shock</b> (pale, cold, clammy, weak): lay flat, raise legs, keep warm, nothing by mouth. <b>Burns:</b> cool <b>running</b> water for 20 minutes, remove jewellery early, cover loosely with clean film. No ice, butter, or creams.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CH 07 · NAVIGATION ================= -->
+<section class="sec" id="navigate">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="folio"><span class="num">07</span><span class="lab">Navigation</span></div>
+      <h2 class="sec-title">Navigation — know where you are<small>Getting lost is a thinking error before it's a map error. Know north, know your handrails, and know when to stop moving.</small></h2>
+    </div>
+    <div class="grid cols-3">
+      <div class="card">
+        <div class="card-icon"><svg class="icon"><use href="#i-compass"/></svg></div>
+        <h3>With a compass</h3>
+        <p>Set your bearing, hold the compass level, rotate your body until the red needle sits in the orienting arrow, and walk to the direction-of-travel line. Pick a landmark on that line and walk to it — compasses drift, handrails don't.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg class="icon"><use href="#i-sun"/></svg></div>
+        <h3>With a stick — the sun</h3>
+        <p>Stand a stick in flat ground; mark the shadow tip. Wait 15 minutes, mark again. The line between marks runs <b>west → east</b> (first mark is west). Stand with the west mark to your left: you're facing north. Southern hemisphere, reverse it.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg class="icon"><use href="#i-star"/></svg></div>
+        <h3>With the stars</h3>
+        <p>North: extend the Big Dipper's two pointer stars about five times their gap to reach <b>Polaris</b>. South: lengthen the Southern Cross's long axis 4.5 times and drop straight to the horizon. An analog watch works by day: point the hour hand at the sun — the bisector to 12 is south.</p>
+      </div>
+    </div>
+    <div class="split" style="margin-top:16px">
+      <div class="panel">
+        <div class="panel-title">When you realise you're lost</div>
+        <ol class="steps" style="margin-top:4px">
+          <li class="step" style="padding-bottom:20px"><span class="n">1</span><p><b>S.T.O.P.</b> — exactly as chapter 01. Fear walks people in circles; studies show lost travellers drift reliably to the left.</p></li>
+          <li class="step" style="padding-bottom:20px"><span class="n">2</span><p><b>If people know where you are or you told someone your plan — stay put.</b> A stationary person is a findable person; a signal at a known location beats a track no one can follow.</p></li>
+          <li class="step" style="padding-bottom:20px"><span class="n">3</span><p><b>If you must move</b>, follow handrails: rivers, ridgelines, power lines, fences. Rivers lead downhill, and downhill eventually leads to people, roads, or the coast.</p></li>
+          <li class="step"><span class="n">4</span><p><b>Mark your line of travel</b> — stack cairns, break branches upward — so you can backtrack and searchers can read your direction.</p></li>
+        </ol>
+      </div>
+      <div>
+        <div class="panel">
+          <div class="panel-title">Folk signs — use as hints, never as proof</div>
+          <ul class="cross">
+            <li><b>Moss grows on the north side</b> — sometimes. Shade, moisture, and wind confuse it.</li>
+            <li><b>Snow melts on the south face</b> — only in consistent northern-hemisphere sun.</li>
+            <li><b>Rings on tree stumps</b> are denser on the sunnier side — again, only loosely.</li>
+          </ul>
+          <p style="color:var(--muted);font-size:14.5px;margin-top:12px">These are suggestions, not navigation. One solid celestial method beats all of them combined.</p>
+        </div>
+        <div class="note tip">
+          <svg class="icon"><use href="#i-shield"/></svg>
+          <div><b>The best navigation tool is a habit:</b> every trip, tell someone your route and return time, and look backward every few hundred metres so the way home stays familiar.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CH 08 · SIGNALING ================= -->
+<section class="sec alt" id="signal">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="folio"><span class="num">08</span><span class="lab">Signaling</span></div>
+      <h2 class="sec-title">Signaling — get found<small>Survival ends at rescue, and rescue starts with being findable. The universal rule: <b>three of anything</b> means distress.</small></h2>
+    </div>
+    <div class="split">
+      <div class="panel">
+        <div class="panel-title">The signalling toolkit</div>
+        <table class="table">
+          <tr><th>Method</th><th>How</th></tr>
+          <tr><td>Whistle</td><td>Three blasts, pause, repeat. A whistle carries farther than your voice for a fraction of the energy — keep it on your jacket zip, not in your pack.</td></tr>
+          <tr><td>Signal fire</td><td>Prepare three. Burn green vegetation by day for thick smoke; dry fuel by night for flame. A tire or oil-soaked rag produces a unmistakable black plume.</td></tr>
+          <tr><td>Mirror</td><td>Aim sunlight with the "V-finger" method — reflect onto your fingertips, then onto the target. Sweep the horizon even with no aircraft in sight; a flash is visible for kilometres.</td></tr>
+          <tr><td>Ground signals</td><td>Stomp <b>SOS</b> or an oversized <b>X</b> (need medical help) into snow, sand, or turf — at least 3 m tall, high contrast, in open ground visible from the air.</td></tr>
+          <tr><td>Cloth &amp; colour</td><td>Bright gear spread in an open clearing, a bright panel on a ridge, or an orange marker held up on a ridge line — contrast and movement catch the eye.</td></tr>
+          <tr><td>Radio / phone</td><td>Text before you call — texts queue and send on weak signal. Elevate to high ground for a bar of reception. A PLB or satellite messenger is the gold standard.</td></tr>
+        </table>
+      </div>
+      <div>
+        <div class="panel">
+          <div class="panel-title">SOS — the one message everyone knows</div>
+          <p style="color:var(--muted);font-size:15.5px">Three short, three long, three short — in sound, light, or ground markings. Then a one-minute pause and repeat. Other codes worth knowing:</p>
+          <ul class="ticks" style="margin-top:12px">
+            <li><b>Three fires in a row or triangle</b> = distress.</li>
+            <li><b>One blast</b> = "where are you?" · <b>two</b> = "come here" — distress is always three.</li>
+            <li><b>Arrow of rocks</b> = direction you've travelled, for searchers following your trail.</li>
+          </ul>
+        </div>
+        <div class="note warn">
+          <svg class="icon"><use href="#i-alert"/></svg>
+          <div><b>Signal where aircraft can see it:</b> open ground, high contrast, away from overhangs. The best signal in the world, buried in a forest clearing under canopy, is invisible.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CH 09 · KIT ================= -->
+<section class="sec" id="kit">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="folio"><span class="num">09</span><span class="lab">Gear</span></div>
+      <h2 class="sec-title">The kit — packed, not imagined<small>A checklist you can actually tick off. Your progress saves in this browser — use it to stage a real pack before a real trip.</small></h2>
+    </div>
+    <div class="rv">
+      <div class="kit-top">
+        <span class="kit-count" id="kitCount"></span>
+        <div class="kit-bar"><i id="kitBar"></i></div>
+        <button class="kit-reset" id="kitReset">RESET LIST</button>
+      </div>
+      <div class="kit-grid" id="kitGrid"></div>
+    </div>
+    <div class="note tip rv">
+      <svg class="icon"><use href="#i-pack"/></svg>
+      <div><b>The Ten C's of survivability</b>, in kit form: Cutting, Combustion, Cover, Container, Cordage, Candling (light), Cotton bandana, Compass, Cargo tape, Canvas needle. Everything on this list maps back to one of them.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CH 10 · QUIZ ================= -->
+<section class="sec alt" id="quiz">
+  <div class="wrap">
+    <div class="sec-head rv" style="margin-left:auto;margin-right:auto;text-align:center;max-width:640px">
+      <div class="folio" style="justify-content:center"><span class="num">10</span><span class="lab">Field Exam</span></div>
+      <h2 class="sec-title">Would you make it?<small>Six scenarios. No trick questions — everything is answered somewhere on this page.</small></h2>
+    </div>
+    <div class="quiz-shell rv">
+      <div class="quiz-box" id="quizBox">
+        <div id="qLive">
+          <div class="q-track" id="qTrack"></div>
+          <div class="q-text" id="qText"></div>
+          <div class="q-opts" id="qOpts"></div>
+          <div class="q-explain" id="qExplain"></div>
+          <div class="q-foot"><button class="btn" id="qNext" style="display:none"></button></div>
+        </div>
+        <div class="q-result" id="qResult">
+          <div class="q-score" id="qScore"></div>
+          <div class="q-verdict" id="qVerdict"></div>
+          <p id="qBlurb"></p>
+          <button class="btn" id="qRestart">Run it again</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="sec-head rv" style="margin-left:auto;margin-right:auto;text-align:center;max-width:640px">
+      <div class="folio" style="justify-content:center"><span class="num">＋</span><span class="lab">Appendix</span></div>
+      <h2 class="sec-title">Field questions<small>The things people ask after reading the manual.</small></h2>
+    </div>
+    <div class="faq-list" id="faqList"></div>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#top" style="margin-bottom:16px"><svg class="icon"><use href="#i-flame"/></svg>SURVIVAL<em>FIELD GUIDE</em></a>
+        <p>A single-page field manual on staying alive when conditions turn against you — built on the survival priorities taught by search-and-rescue organisations worldwide, from the Rule of Threes down to the knots and the boils.</p>
+      </div>
+      <div>
+        <h4>Chapters</h4>
+        <a href="#priorities">01 — Priorities</a>
+        <a href="#shelter">02 — Shelter</a>
+        <a href="#water">03 — Water</a>
+        <a href="#fire">04 — Fire</a>
+        <a href="#food">05 — Food &amp; foraging</a>
+        <a href="#firstaid">06 — First aid</a>
+      </div>
+      <div>
+        <h4>&nbsp;</h4>
+        <a href="#navigate">07 — Navigation</a>
+        <a href="#signal">08 — Signaling</a>
+        <a href="#kit">09 — The kit</a>
+        <a href="#quiz">10 — Field exam</a>
+        <a href="#faq">Appendix — FAQ</a>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <svg class="icon"><use href="#i-alert"/></svg>
+      <div><b style="color:var(--bone)">Read this before you rely on it.</b> This guide is general reference material, not training. Life-saving skills come from hands-on instruction — take a certified wilderness first-aid course, practice fire and shelter skills before you need them, and verify local laws on foraging, trapping, and open fires. In any genuine emergency, call your local emergency number immediately: <b style="color:var(--bone)">911 (US &nbsp;·&nbsp; 112 (EU) &nbsp;·&nbsp; 999 (UK) &nbsp;·&nbsp; 000 (AU)</b>.</div>
+    </div>
+    <div class="foot-big" aria-hidden="true">SURVIVE</div>
+    <div class="foot-base">
+      <span>SURVIVAL FIELD GUIDE — REV. 2026</span>
+      <span>BUILT FOR THE DAY YOU HOPE NEVER COMES</span>
+      <span>© <span id="year"></span> · SHARE THE KNOWLEDGE</span>
+    </div>
+  </div>
+</footer>
+
+<button class="totop" id="totop" aria-label="Back to top"><svg class="icon"><use href="#i-up"/></svg></button>
+
+<script>
+/* ---------- helpers ---------- */
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- scroll: progress bar, nav state, back-to-top ---------- */
+const nav=$('#nav'), bar=$('#progress'), totop=$('#totop');
+addEventListener('scroll',()=>{
+  const h=document.documentElement, max=h.scrollHeight-innerHeight;
+  bar.style.width=(max>0?(h.scrollTop/max)*100:0)+'%';
+  nav.classList.toggle('solid',h.scrollTop>40);
+  totop.classList.toggle('show',h.scrollTop>900);
+},{passive:true});
+totop.addEventListener('click',()=>scrollTo({top:0,behavior:reduced?'auto':'smooth'}));
+
+/* ---------- mobile menu ---------- */
+const burger=$('#burger'), links=$('#navLinks');
+burger.addEventListener('click',()=>{
+  const open=links.classList.toggle('open');
+  burger.setAttribute('aria-expanded',open);
+});
+links.addEventListener('click',e=>{if(e.target.tagName==='A')links.classList.remove('open')});
+
+/* ---------- reveal section headers ---------- */
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}
+}),{threshold:.15});
+$$('.rv').forEach(el=>io.observe(el));
+
+/* ---------- nav spy ---------- */
+const spy=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){
+    const id=e.target.id;
+    $$('.nav-links a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+id));
+  }
+}),{rootMargin:'-35% 0px -60% 0px'});
+$$('main section[id]').forEach(s=>spy.observe(s));
+
+/* ---------- tabs ---------- */
+$$('.tab-btn').forEach(btn=>btn.addEventListener('click',()=>{
+  const group=btn.parentElement;
+  group.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const panels=btn.closest('.panel');
+  panels.querySelectorAll('.tab-panel').forEach(p=>p.classList.toggle('active',p.id===btn.dataset.tab));
+}));
+
+/* ---------- gear checklist ---------- */
+const KIT=[
+  {g:'Fire & Light',icon:'i-flame',items:['Lighter (primary)','Stormproof matches','Ferrocerium rod','Tinder cubes or dryer lint','Headlamp + spare batteries']},
+  {g:'Water',icon:'i-drop',items:['Metal bottle (for boiling)','Squeeze or straw filter','Purification tablets','Collapsible container']},
+  {g:'Shelter',icon:'i-tent',items:['Emergency bivy or tarp','550 paracord — 30 m','Space blanket','Rain shell']},
+  {g:'Cutting & Repair',icon:'i-shield',items:['Fixed-blade knife','Folding saw or axe','Multitool','Duct-tape wrap']},
+  {g:'First Aid',icon:'i-med',items:['Trauma dressing','Adhesive bandages','Antiseptic wipes','Painkillers','Personal medication','Blister pads']},
+  {g:'Navigation & Signal',icon:'i-compass',items:['Baseplate compass','Map in waterproof bag','Pealess whistle','Signal mirror','Power bank + cable']},
+  {g:'Food & Extras',icon:'i-leaf',items:['3 days no-cook rations','Electrolyte tablets','Fishing kit','Work gloves','Garbage bags ×2','ID copies + emergency cash']}
+];
+const KEY='fieldguide-kit-v1';
+let packed=new Set(JSON.parse(localStorage.getItem(KEY)||'[]'));
+const kitGrid=$('#kitGrid');
+kitGrid.innerHTML=KIT.map((grp,gi)=>`
+  <div class="kit-group">
+    <h4><svg class="icon"><use href="#${grp.icon}"/></svg>${grp.g}</h4>
+    ${grp.items.map((it,ii)=>`
+      <label class="kit-item"><input type="checkbox" data-id="${gi}-${ii}" ${packed.has(gi+'-'+ii)?'checked':''}><span>${it}</span></label>`).join('')}
+  </div>`).join('');
+function kitUI(){
+  const total=KIT.reduce((n,g)=>n+g.items.length,0);
+  const done=kitGrid.querySelectorAll('input:checked').length;
+  $('#kitCount').innerHTML=`<b>${done}</b> / ${total} PACKED`;
+  $('#kitBar').style.width=(done/total*100)+'%';
+}
+kitGrid.addEventListener('change',e=>{
+  const id=e.target.dataset.id;
+  e.target.checked?packed.add(id):packed.delete(id);
+  localStorage.setItem(KEY,JSON.stringify([...packed]));
+  kitUI();
+});
+$('#kitReset').addEventListener('click',()=>{
+  packed.clear();localStorage.removeItem(KEY);
+  kitGrid.querySelectorAll('input').forEach(i=>i.checked=false);
+  kitUI();
+});
+kitUI();
+
+/* ---------- quiz ---------- */
+const QUIZ=[
+  {q:'Stranded at dusk — cold, damp, and losing light. What do you handle first?',
+   opts:['Find drinking water','Build or find shelter','Start looking for food','Light a big signal fire now'],a:1,
+   why:'The Rule of Threes: exposure can kill in three hours, water in three days, food in three weeks. Warm and dry first.'},
+  {q:'How long must water boil to be safe at sea level?',
+   opts:['30 seconds','1 minute at a rolling boil','5 minutes','10 minutes'],a:1,
+   why:'One minute at a rolling boil — three minutes above 2,000 m / 6,500 ft, where water boils cooler.'},
+  {q:'A companion is bleeding heavily through your first cloth dressing. You should:',
+   opts:['Remove it and clean the wound','Add more layers and keep pressing','Apply a tourniquet immediately','Elevate and wait'],a:1,
+   why:'Never remove soaked dressings — they hold the clot. Add layers on top and maintain firm pressure; a tourniquet is for uncontrolled limb bleeding only.'},
+  {q:'You are lost, but you told someone your route and return time. Best move?',
+   opts:['Walk downhill — rivers lead to people','Follow the sun west','Stay put and make yourself findable','Head for the tallest ridge'],a:2,
+   why:'If searchers know where to look, a stationary, signalled position is the fastest rescue. Walking turns a search into a hunt.'},
+  {q:'In the backcountry, "three of anything" means:',
+   opts:['A meeting point','Distress — need help','A trail marker','Dangerous animals ahead'],a:1,
+   why:'Three whistle blasts, three fires, three flashes — three is the universal distress signal worldwide.'},
+  {q:'Correct response to a venomous snakebite?',
+   opts:['Cut the wound and suck out venom','Ice the bite area','Keep calm and immobilise the limb at heart level','Run back to the trailhead'],a:2,
+   why:'Stillness slows venom spread. Remove rings before swelling, immobilise below heart level, and get help moving toward you. Cutting, sucking, icing, and tourniquets all make it worse.'}
+];
+let qi=0,score=0;
+const KEYS='ABCD';
+function qShow(){
+  const t=QUIZ[qi];
+  $('#qTrack').textContent=`QUESTION ${qi+1} / ${QUIZ.length}`;
+  $('#qText').textContent=t.q;
+  $('#qExplain').className='q-explain';
+  $('#qNext').style.display='none';
+  $('#qOpts').innerHTML=t.opts.map((o,i)=>`<button class="q-opt" data-i="${i}"><span class="key">${KEYS[i]}</span>${o}</button>`).join('');
+  $$('#qOpts .q-opt').forEach(b=>b.addEventListener('click',()=>qAnswer(+b.dataset.i)));
+}
+function qAnswer(i){
+  const t=QUIZ[qi];
+  $$('#qOpts .q-opt').forEach(b=>{
+    b.disabled=true;
+    const bi=+b.dataset.i;
+    if(bi===t.a)b.classList.add('ok');
+    if(bi===i&&i!==t.a)b.classList.add('bad');
+  });
+  if(i===t.a)score++;
+  const ex=$('#qExplain');
+  ex.textContent=(i===t.a?'Correct. ':'Not quite. ')+t.why;
+  ex.classList.add('show');
+  const next=$('#qNext');
+  next.textContent=qi<QUIZ.length-1?'Next question':'See the verdict';
+  next.style.display='inline-flex';
+}
+$('#qNext').addEventListener('click',()=>{
+  qi++;
+  if(qi<QUIZ.length)qShow();
+  else{
+    $('#qLive').style.display='none';
+    $('#qResult').style.display='block';
+    $('#qScore').textContent=`${score}/${QUIZ.length}`;
+    const [v,b]=score===6?['FIELD-READY','You could teach this page. Keep the knowledge sharp — skills fade faster than gear wears out.']:
+      score>=4?['SOLID BASE CAMP','Strong instincts. Revisit the chapters you missed and the gaps close fast.']:
+      score>=2?['PACK MORE KNOWLEDGE','The foundations are there. Reread priorities, water and first aid — then run this again.']:
+      ['READ THE MANUAL','Good thing you found this page. Start at chapter 01 and take the exam again.'];
+    $('#qVerdict').textContent=v;
+    $('#qBlurb').textContent=b;
+  }
+});
+$('#qRestart').addEventListener('click',()=>{qi=0;score=0;$('#qResult').style.display='none';$('#qLive').style.display='block';qShow()});
+qShow();
+
+/* ---------- FAQ ---------- */
+const FAQ=[
+  ['What is the single most important survival skill?','Not a technique — a habit: preparation. Telling someone your route and return time, carrying the chapter-09 kit, and knowing the Rule of Threes before you leave. In real rescues, calm decision-making in the first hour outweighs every gadget in the pack.'],
+  ['How long can a person actually go without water?','The "three days" is a rough average, not a target. In desert heat with exertion, incapacitation can come in hours; at rest in cool shade, people have lasted a week. Performance degrades at just 2% dehydration — drink on a schedule, not on thirst.'],
+  ['Is rainwater safe to drink?','Freshly collected rain is among the safest water there is. Avoid the first minutes of runoff off a dirty surface, any puddle that has stood overnight, and water that has touched decaying matter — then you are in the "still treat it" zone.'],
+  ['If I could carry only one item, what should it be?','The classic and correct answer is a fixed-blade knife — fire, shelter, cordage, and food all run through it. The honest modern answer: a working phone with a charged power bank, since it converts a survival situation into an inconvenience. Carry both.'],
+  ['Are berries safe to eat if birds and animals are eating them?','No — this myth sends people to hospital. Birds tolerate plant toxins that seriously harm humans, and animals eat things that make them sick too. Positive identification or nothing; the universal edibility test in chapter 05 is the only field test that counts.'],
+  ['What should I teach my children first?','Four things: if lost, stay put and stay loud (the "hug a tree" rule); keep a whistle on them and teach three blasts; know your real names and phone number — not just "Mum" and "Dad"; and bright clothing. A child who stays put is usually found within hours.'],
+  ['Does reading this page make me prepared?','It makes you informed — that is step one of about five. Book a certified first-aid course, practice fire and shelter in benign weather, forage with a local expert, and check the laws where you roam. The page gets you from zero to dangerous-with-yourself; training gets you the rest of the way.']
+];
+$('#faqList').innerHTML=FAQ.map(([q,a])=>`
+  <div class="faq-item">
+    <button class="faq-q" aria-expanded="false"><span>${q}</span><span class="pm"></span></button>
+    <div class="faq-a"><p>${a}</p></div>
+  </div>`).join('');
+$$('.faq-item').forEach(item=>{
+  const panel=item.querySelector('.faq-a');
+  item.querySelector('.faq-q').addEventListener('click',()=>{
+    const open=item.classList.contains('open');
+    $$('.faq-item.open').forEach(o=>{
+      o.classList.remove('open');
+      o.querySelector('.faq-a').style.maxHeight='0px';
+      o.querySelector('.faq-q').setAttribute('aria-expanded','false');
+    });
+    if(!open){
+      item.classList.add('open');
+      panel.style.maxHeight=panel.scrollHeight+'px';
+      item.querySelector('.faq-q').setAttribute('aria-expanded','true');
+    }
+  });
+});
+
+/* ---------- ember particles ---------- */
+const cv=$('#embers');
+if(cv&&!reduced){
+  const ctx=cv.getContext('2d');
+  let W,H,ps=[];
+  const N=()=>innerWidth<700?28:64;
+  function size(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight}
+  function spawn(y){return{x:Math.random()*W,y:y!==undefined?y:H+10,r:.6+Math.random()*1.9,s:.2+Math.random()*.7,w:Math.random()*6.28,a:.12+Math.random()*.45,c:Math.random()<.25?'#ffc27a':'#f07d33'}}
+  size();addEventListener('resize',size);
+  for(let i=0;i<N();i++)ps.push(spawn(Math.random()*H));
+  (function loop(){
+    ctx.clearRect(0,0,W,H);
+    for(const p of ps){
+      p.y-=p.s;p.w+=.009;p.x+=Math.sin(p.w)*.35;
+      const fade=Math.min(1,p.y/(H*.3));
+      ctx.globalAlpha=p.a*fade*(.65+.35*Math.sin(p.w*4));
+      ctx.fillStyle=p.c;
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,7);ctx.fill();
+      if(p.y<-12)Object.assign(p,spawn());
+    }
+    ctx.globalAlpha=1;requestAnimationFrame(loop);
+  })();
+}
+
+/* ---------- footer year ---------- */
+$('#year').textContent=new Date().getFullYear();
+</script>
+
+</body>
+</html>
