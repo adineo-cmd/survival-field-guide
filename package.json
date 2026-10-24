@@ -1,0 +1,16 @@
+{
+  "name": "survival-field-guide-site",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "predev": "true",
+    "build": "astro build",
+    "prebuild": "true",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^5.0.0"
+  }
+}
