@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cold-Weather & Alpine Survival — Survival Field Guide</title>
+<meta name="description" content="Heat loss, layering, snow shelters, ice safety and winter travel from the arctic manuals.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><text y='20' font-size='20'>🔥</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&family=Oswald:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="p-cold-weather">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c1.8 2.7 3.2 4.5 3.2 6.7A3.2 3.2 0 0 1 12 12.8a3.2 3.2 0 0 1-3.2-3.1C7.3 11.3 6.2 13 6.2 15.2a5.8 5.8 0 0 0 11.6 0C17.8 10 15.2 6.6 12 3z"/></symbol>
+<symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3.2s6 6.7 6 10.9a6 6 0 0 1-12 0c0-4.2 6-10.9 6-10.9z"/><path d="M9.5 13.5a2.6 2.6 0 0 0 2.5 3"/></symbol>
+<symbol id="i-tent" viewBox="0 0 24 24"><path d="M12 4 2.5 20h19L12 4z"/><path d="M12 12.5 9.2 20M12 12.5l2.8 7.5"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5.5 18.5C5.5 9.5 12 4.5 20 4.5c0 8-5 14-14.5 14z"/><path d="M5.5 18.5c3-6 7-9 11-11"/></symbol>
+<symbol id="i-med" viewBox="0 0 24 24"><rect x="3.5" y="7.5" width="17" height="12" rx="2.5"/><path d="M9 7.5V6a1.8 1.8 0 0 1 1.8-1.8h2.4A1.8 1.8 0 0 1 15 6v1.5M12 11v5M9.5 13.5h5"/></symbol>
+<symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><path d="m15.6 8.4-2.1 5.1-5.1 2.1 2.1-5.1z"/></symbol>
+<symbol id="i-signal" viewBox="0 0 24 24"><circle cx="12" cy="10" r="2.2"/><path d="M12 12.2V21M8.2 6.4a5.4 5.4 0 0 0 0 7.2M15.8 6.4a5.4 5.4 0 0 1 0 7.2M5.4 3.6a9.4 9.4 0 0 0 0 12.8M18.6 3.6a9.4 9.4 0 0 1 0 12.8"/></symbol>
+<symbol id="i-pack" viewBox="0 0 24 24"><path d="M8.5 7V5.5a3.5 3.5 0 0 1 7 0V7"/><rect x="5" y="7" width="14" height="13" rx="3"/><path d="M9.5 11.5h5v3.5h-5zM9 20v-2M15 20v-2"/></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 2.8 19.5h18.4L12 3.5z"/><path d="M12 10v4.5M12 17.2h.01"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+<symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5.5M6.5 11 12 5.5 17.5 11"/></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5.5V18M6.5 12.5 12 18l5.5-5.5"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3.5 2.5 5.3 5.7.7-4.2 3.9 1.1 5.6L12 16.2 6.9 19l1.1-5.6-4.2-3.9 5.7-.7L12 3.5z"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m4.5 12.5 5 5.5L19.5 6.5"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M18.7 5.3l-1.8 1.8M7.1 16.9l-1.8 1.8"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 5.8v5.4c0 4.4 3 7.9 7 9.8 4-1.9 7-5.4 7-9.8V5.8L12 3z"/><path d="m9 11.6 2.2 2.2 3.8-4"/></symbol>
+<symbol id="i-wind" viewBox="0 0 24 24"><path d="M3 8.5h9.5a2.7 2.7 0 1 0-2.7-2.7M3 13h14.5a2.7 2.7 0 1 1-2.7 2.7M3 17.5h6"/></symbol>
+<symbol id="i-brain" viewBox="0 0 24 24"><path d="M9.5 4.5A3 3 0 0 0 6.6 8 3.2 3.2 0 0 0 4 11.2c0 1.3.7 2.4 1.8 3A3.1 3.1 0 0 0 9 19.5c1 0 1.9-.4 2.5-1.1V5.6a3 3 0 0 0-2-1.1zM14.5 4.5A3 3 0 0 1 17.4 8 3.2 3.2 0 0 1 20 11.2c0 1.3-.7 2.4-1.8 3A3.1 3.1 0 0 1 15 19.5c-1 0-1.9-.4-2.5-1.1V5.6a3 3 0 0 1 2-1.1z"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15.5H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"/></symbol>
+</defs></svg>
+
+<div class="progress" id="progress"></div>
+
+<nav class="nav" id="nav">
+  <div class="callout-bar">In a real emergency, call your local emergency number first — <b>911 (US) / 112 (EU)</b><span class="callout-extra">. This guide is for preparedness, not a substitute for training</span>.</div>
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><svg class="icon"><use href="#i-flame"/></svg>SURVIVAL<em>FIELD GUIDE</em></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><svg class="icon"><use href="#i-menu"/></svg></button>
+    <div class="nav-links" id="navLinks">
+      <a href="priorities.html">Priorities</a><a href="shelter.html">Shelter</a><a href="water.html">Water</a><a href="fire.html">Fire</a><a href="food.html">Food</a><a href="plants.html">Plants</a><a href="first-aid.html">First Aid</a><a href="navigate.html">Navigate</a>
+      <div class="nav-more">
+        <button aria-haspopup="true">More <svg class="caret" viewBox="0 0 12 12"><path d="M2 4l4 4 4-4"/></svg></button>
+        <div class="drop-menu"><a href="knots.html">Knots</a><a href="cold-weather.html">Cold Weather</a><a href="bushcraft.html">Bushcraft</a><a href="preparedness.html">Preparedness</a><a href="kit.html">Kit</a><a href="library.html">The Library</a><a href="quiz.html" class="hot">Field Exam</a></div>
+      </div>
+      <a href="quiz.html" class="hot">Exam</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <svg class="hero-topo" viewBox="0 0 1440 480" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 460 C 180 420 260 470 420 440 S 700 380 880 420 S 1200 470 1440 430"/>
+    <path d="M0 410 C 200 370 300 430 480 396 S 760 330 940 372 S 1240 420 1440 380"/>
+    <path d="M0 356 C 220 320 340 384 540 350 S 820 282 1000 324 S 1280 368 1440 330"/>
+    <path d="M0 300 C 240 268 380 330 600 296 S 880 232 1060 274 S 1320 314 1440 278"/>
+    <path d="M0 246 C 260 216 420 274 660 242 S 940 184 1120 222 S 1360 258 1440 226"/>
+  </svg>
+  <div class="wrap ph-inner">
+    <div>
+      <div class="ph-kicker">CHAPTER 10 — COLD WEATHER</div>
+      <h1 class="ph-title">Cold-Weather &amp; Alpine Survival</h1>
+      <p class="ph-lead">Cold is the most lethal wilderness threat and the most survivable — if you respect the physics. Heat loss, layering, snow shelters by type, ice thickness tables and winter travel, from the arctic manuals.</p>
+    </div>
+    <div class="ph-badge"><b>10</b>COLD KILLS<br>THE CARELESS FIRST</div>
+  </div>
+</header>
+
+<main>
+</main>
+
+<!-- distilled from source books: cold-weather -->
+<section class="sec deep" id="cw-physiology">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="folio"><span class="num">10.1</span><span class="lab">Cold Physiology</span></div>
+      <h2 class="sec-title">Cold-wet, cold-dry, and the COLD rule<small>Above −10 °C you fight meltwater as much as cold; below it, the snow turns dry and the wind becomes the enemy. The manuals divide winter this way because the tactics differ.</small></h2>
+    </div>
+    <div class="split">
+      <div>
+        <div class="panel">
+          <div class="panel-title">COLD — the clothing checklist</div>
+          <ul class="ticks">
+            <li><b>Keep it Clean.</b> Dirt and oil pack down fibres and destroy the dead-air insulation your clothes actually are.</li>
+            <li><b>Avoid Overheating.</b> Sweat-soaked clothing is tomorrow's hypothermia — ventilate and shed layers <em>before</em> you sweat, not after; move at a pace you could hold all day.</li>
+            <li><b>Wear it Loose and in Layers.</b> The warmth is the trapped air between layers, not the fabric — tight clothes compress it away and cut circulation to extremities.</li>
+            <li><b>Keep it Dry.</b> Wet clothing conducts heat away many times faster than dry. Moisture comes from two directions: outside (snow, rain, slush) and inside (sweat). Brush snow off before it melts; change wet base layers at once.</li>
+          </ul>
+        </div>
+        <div class="note warn">
+          <svg class="icon"><use href="#i-alert"/></svg>
+          <div><b>The four killers, in the manuals' order:</b> wet, wind, cold and heat — and cold-wet (−10 °C and warmer, melting snow) is deadlier than cold-dry precisely because wet clothing robs heat while you still feel "not that cold". Frostbite risk <em>peaks</em> in the messy temperatures.</div>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <div class="panel-title">Dehydration — the cold's hidden accomplice</div>
+          <ul class="ticks">
+            <li><b>Cold suppresses thirst</b> while heavy clothing makes you sweat more than you think; the frightened, confused lost person dehydrates without noticing, and dehydration directly predisposes hypothermia and frostbite.</li>
+            <li><b>Never eat snow as water:</b> it takes twelve 8-oz glasses of snow to make one glass of water, and eating it chills your core from the inside. Melt first — over a fire, or in a wide-mouth bottle hung under your outer clothing where body heat does the work.</li>
+            <li><b>Sip warm water all day</b> in snow country; a transpiration bag on sunlit broadleaf bushes beats every other field water source when supplies run out.</li>
+            <li><b>When water is short, don't eat:</b> all food requires water to digest.</li>
+          </ul>
+        </div>
+        <div class="panel" style="margin-top:16px">
+          <div class="panel-title">Carbon monoxide — "the breath of death"</div>
+          <ul class="cross">
+            <li>More people have died of CO in a running car in a blizzard than have frozen: <b>never sleep with the engine running</b>; open a window 1 inch each side (leeward 2 if snow blows), clear the tailpipe constantly.</li>
+            <li>A V-8 burns ~1 gallon/hour at idle; 15 minutes on, 15 off <b>doubles</b> your comfortable heat time on the same fuel.</li>
+            <li>Engineless heat: a votive or yahrzeit candle in a coffee can burns ~24 hours. Snow caves and sealed shelters need the same ventilation discipline.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="cw-shelters">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="folio"><span class="num">10.2</span><span class="lab">Snow Shelters</span></div>
+      <h2 class="sec-title">Building with snow<small>Where snow is the only material, snow is the shelter. The quinzee procedure below is the Cold Weather Survival manual's, verbatim in its numbers.</small></h2>
+    </div>
+    <div class="split">
+      <div>
+        <div class="panel">
+          <div class="panel-title">The quinzee — a dome for three or four</div>
+          <ol class="steps" style="margin-top:4px">
+            <li class="step" style="padding-bottom:14px"><span class="n">1</span><p><b>Stir the snow</b> in a 6–8 ft quarry area with a stout staff — stirring destroys the crystal structure so the pile will sinter into strength.</p></li>
+            <li class="step" style="padding-bottom:14px"><span class="n">2</span><p><b>Pile it up</b> around an 8-ft centre marker pole until the mound is <b>6 ft high and 12 ft across</b>. This is the long, easy part — done slowly to avoid sweating.</p></li>
+            <li class="step" style="padding-bottom:14px"><span class="n">3</span><p><b>Let it settle one to two hours.</b> This wait is structural, not optional — dig too early and the roof cuts like sugar.</p></li>
+            <li class="step" style="padding-bottom:14px"><span class="n">4</span><p><b>Insert gauge sticks</b> — 30 or 40 one-foot sticks pushed through the dome's surface, so you leave exactly a 1-ft roof everywhere you dig.</p></li>
+            <li class="step" style="padding-bottom:14px"><span class="n">5</span><p><b>Hollow it out</b> through a 24-inch entrance, digging to the gauge sticks and rotating diggers to avoid overheating; pile spoil around the door as a windbreak.</p></li>
+            <li class="step"><span class="n">6</span><p><b>Vent and door:</b> two or three vents (the centre pole marks the crown); a door plug of evergreen boughs cinched with cord around a toggle stick — pull it into the doorway from inside by its cord.</p></li>
+          </ol>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <div class="panel-title">Other snow shelters</div>
+          <ul class="ticks">
+            <li><b>T-snow cave:</b> dig horizontally into a deep drift at a "T" — the vertical shaft drops cold air out the sleeping level; smooth the ceiling by hand so drip points don't form.</li>
+            <li><b>Snow block shelter:</b> when snow packs, cut blocks and wall a trench or lean-to roof; block-quarrying needs a snow saw or shovel — carry one above the treeline, always.</li>
+            <li><b>Tree well:</b> the wells under dense conifers are dug-out ready-made rooms with a canopy roof — the fastest deep-forest night shelter.</li>
+            <li><b>The pocket shelter:</b> a foil space blanket (56″ × 84″, 4 oz) wrapped foil-side-in over head and shoulders, seated on your pack or fir boughs, clothes-pinned shut — no insulation, but wind and wet are what kill fastest.</li>
+          </ul>
+        </div>
+        <div class="note tip">
+          <svg class="icon"><use href="#i-check"/></svg>
+          <div><b>Fire or no fire?</b> Many have survived the worst weather sitting out a night by a fire — survival is body-heat maintenance, and a fire also signals rescuers. Snow shelter is for when fuel doesn't exist.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="cw-ice">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="folio"><span class="num">10.3</span><span class="lab">Ice Crossings</span></div>
+      <h2 class="sec-title">Reading ice, from the Canadian arctic manual<small>"Ice is at best a product of poor quality control" — the manual's own words. Blue or green ice with few cracks and no cloudy air bubbles is good ice; everything else is suspect at any thickness.</small></h2>
+    </div>
+    <div class="split">
+      <div>
+        <div class="panel">
+          <div class="panel-title">Load-bearing ice, at −18 to −12 °C</div>
+          <table class="table">
+            <tr><th>Load</th><th>Risk (in / cm)</th><th>Normal (in / cm)</th></tr>
+            <tr><td>Single skier</td><td>1⅔ / 4</td><td>2 / 5</td></tr>
+            <tr><td>File of soldiers, 2-pace intervals</td><td>3¼ / 8</td><td>4 / 10</td></tr>
+            <tr><td>¼-ton vehicle</td><td>5 / 13</td><td>8 / 20</td></tr>
+            <tr><td>¾-ton vehicle</td><td>6 / 17</td><td>10 / 25</td></tr>
+            <tr><td>2½-ton vehicle</td><td>13 / 33</td><td>16 / 40</td></tr>
+            <tr><td>5-ton cargo</td><td>18 / 45</td><td>22 / 55</td></tr>
+            <tr><td>5-ton tractor + loaded trailer</td><td>32 / 80</td><td>36 / 90</td></tr>
+          </table>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <div class="panel-title">Where ice lies to you</div>
+          <ul class="cross">
+            <li><b>Stream inlets and outlets</b> — current erodes ice from beneath at any thickness.</li>
+            <li><b>Banks, islands and suspected sandbars</b> — "false ice" frozen to the bottom or bridging air, structurally nothing.</li>
+            <li><b>Decaying vegetation in bogs and muskeg</b> — plant gas rises into the ice and hollows it.</li>
+            <li><b>Candle ice</b> — vertical crystal columns that crumble; never trust it if another route exists.</li>
+            <li><b>Rotten ice</b> — dull, chalky, brittle top or bottom layer with zero carrying capacity.</li>
+          </ul>
+        </div>
+        <div class="note tip">
+          <svg class="icon"><use href="#i-check"/></svg>
+          <div><b>Measure, don't guess:</b> chop a hole, push a pole through to confirm all layers are penetrated, and measure depth every 30 feet with vehicles — more where ice looks wrong. Multi-layer sheets are far weaker than one solid layer of the same total depth.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="cw-injuries">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="folio"><span class="num">10.4</span><span class="lab">Cold Injuries</span></div>
+      <h2 class="sec-title">The cold-injury checklist<small>The TC 21-3 injury list, condensed: what to watch for in yourself and others, in the order the manual lists them.</small></h2>
+    </div>
+    <div class="grid cols-3">
+      <div class="card">
+        <h3>Hypothermia</h3>
+        <p>The core cools: watch the "umbles" — stumbles, mumbles, fumbles, grumbles. Shivering that stops while the victim is still cold is a dire sign. Rewarm gently, horizontally, with insulation from the ground; never rub limbs or use high direct heat.</p>
+      </div>
+      <div class="card">
+        <h3>Frostbite</h3>
+        <p>Frozen tissue is numb, waxy, grey or white. Protect from further cold, never rub with snow (a folk treatment the manuals explicitly reject), never thaw over a fire or stove — rewalk-injured tissue refreezes catastrophically. Warm-water rewarming only if refreezing is impossible.</p>
+      </div>
+      <div class="card">
+        <h3>Trench / immersion foot</h3>
+        <p>Hours of damp above freezing: numb, pale, then swollen and red feet. Dry and elevate; the damage can outlast the emergency. This is the cold-wet injury that ruins more marches than frostbite.</p>
+      </div>
+      <div class="card">
+        <h3>Dehydration</h3>
+        <p>Cold masks thirst while layered clothing sweats. Warm sweet drinks at every halt; check urine colour and volume like equipment.</p>
+      </div>
+      <div class="card">
+        <h3>Carbon monoxide</h3>
+        <p>Headache, confusion, nausea inside sealed shelters and running vehicles. Ventilate before symptoms — CO kills sleepers, and it collects at the level you lie at.</p>
+      </div>
+      <div class="card">
+        <h3>Snow blindness &amp; tent eye</h3>
+        <p>UV glare off snow burns the eyes hours before pain arrives — slit goggles or grease-sooted cloth strips are the field preventives; smoke-filled shelters cause the chronic "tent eye" the manual warns about.</p>
+      </div>
+    </div>
+    <div class="panel" style="margin-top:16px">
+      <div class="panel-title">Winter movement, in brief</div>
+      <ul class="ticks">
+        <li><b>Improvised snowshoes:</b> green boughs bound underfoot (spruce works), or a frame of bent green wood laced with cord — without flotation you posthole, burning ten times the energy and soaking your legs.</li>
+        <li><b>Whiteout:</b> drop to a rope-and-leapfrog method or <b>stop</b>; dead-reckoning by pace count and compass only, or navigate from handrail to handrail.</li>
+        <li><b>River valleys in winter:</b> travel the high benches, not the valley floors — cold air pools low and the ice over currents is never honest.</li>
+        <li><b>Snow-camp routine:</b> bough-cutting areas away from camp, marked water points, snow walls — the bivouac discipline of TC 21-3's Chapter 7 is a checklist worth reading before the first snow.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="panel">
+      <div class="panel-title">Source manuals</div>
+      <ul class="ticks">
+        <li><b>Cold Weather Survival: A Way of Life</b>, Frank Heyl &amp; Harley Sachs (Gerber/Plant Deck, 2005) — kits, quinzee, transpiration bag, CO rules, jelly-bean rations</li>
+        <li><b>TC 21-3, Soldier's Handbook for Operations in Cold Weather Areas</b> — COLD acronym, cold-wet vs cold-dry, injury list</li>
+        <li><b>B-GL 323-003-FP-001, Arctic and Sub-Arctic Survival</b> (Canadian Forces) — ice types, reconnaissance, load tables</li>
+        <li>Cross-checked with <b>FM 31-70 Basic Cold Weather Manual</b>, <b>USMC Winter Survival Course</b>, <b>Alpine Living 2008</b>, and <b>Cold Weather Survival (26pp edition)</b></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<nav class="pager wrap" aria-label="Chapter navigation"><a class="prev" href="knots.html"><span class="dir">← PREVIOUS CHAPTER</span><span class="ttl">Knots, Lashings &amp; Rope Work</span></a><a class="next" href="bushcraft.html"><span class="dir">NEXT CHAPTER →</span><span class="ttl">Bushcraft &amp; Tools</span></a></nav>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:16px"><svg class="icon"><use href="#i-flame"/></svg>SURVIVAL<em>FIELD GUIDE</em></a>
+        <p>A multi-page field manual distilled from 150 survival books — military manuals, classic bushcraft texts, plant guides and wilderness medical references.</p>
+      </div>
+      <div>
+        <h4>Field chapters</h4>
+        <a href="priorities.html">01 — Priorities &amp; mindset</a>
+        <a href="shelter.html">02 — Shelter</a>
+        <a href="water.html">03 — Water</a>
+        <a href="fire.html">04 — Fire</a>
+        <a href="food.html">05 — Food &amp; trapping</a>
+        <a href="plants.html">06 — Plants</a>
+        <a href="first-aid.html">07 — First aid</a>
+        <a href="navigate.html">08 — Navigation &amp; signaling</a>
+      </div>
+      <div>
+        <h4>&nbsp;</h4>
+        <a href="knots.html">09 — Knots</a>
+        <a href="cold-weather.html">10 — Cold weather</a>
+        <a href="bushcraft.html">11 — Bushcraft</a>
+        <a href="preparedness.html">12 — Preparedness</a>
+        <a href="kit.html">13 — The kit</a>
+        <a href="library.html">14 — Source library</a>
+        <a href="quiz.html">15 — Field exam</a>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <svg class="icon"><use href="#i-alert"/></svg>
+      <div><b style="color:var(--bone)">Read this before you rely on it.</b> This guide distills reference books; it is not training, and plant or medicine entries can be wrong for your region or body. Learn hands-on with certified instructors, verify local laws, and in any genuine emergency call your local emergency number immediately: <b style="color:var(--bone)">911 (US) &nbsp;·&nbsp; 112 (EU) &nbsp;·&nbsp; 999 (UK) &nbsp;·&nbsp; 000 (AU)</b>.</div>
+    </div>
+    <div class="foot-big" aria-hidden="true">SURVIVE</div>
+    <div class="foot-base">
+      <span>SURVIVAL FIELD GUIDE — REV. 2026</span>
+      <span>DISTILLED FROM 150 BOOKS</span>
+      <span>© <span id="year"></span> · SHARE THE KNOWLEDGE</span>
+    </div>
+  </div>
+</footer>
+
+<button class="totop" id="totop" aria-label="Back to top"><svg class="icon"><use href="#i-up"/></svg></button>
+<script src="assets/main.js"></script>
+
+</body>
+</html>

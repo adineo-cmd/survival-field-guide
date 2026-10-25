@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food & Trapping — Survival Field Guide</title>
+<meta name="description" content="Snares and deadfalls, game care, preservation and camp cooking with real trail recipes.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><text y='20' font-size='20'>🔥</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&family=Oswald:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="p-food">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c1.8 2.7 3.2 4.5 3.2 6.7A3.2 3.2 0 0 1 12 12.8a3.2 3.2 0 0 1-3.2-3.1C7.3 11.3 6.2 13 6.2 15.2a5.8 5.8 0 0 0 11.6 0C17.8 10 15.2 6.6 12 3z"/></symbol>
+<symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3.2s6 6.7 6 10.9a6 6 0 0 1-12 0c0-4.2 6-10.9 6-10.9z"/><path d="M9.5 13.5a2.6 2.6 0 0 0 2.5 3"/></symbol>
+<symbol id="i-tent" viewBox="0 0 24 24"><path d="M12 4 2.5 20h19L12 4z"/><path d="M12 12.5 9.2 20M12 12.5l2.8 7.5"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5.5 18.5C5.5 9.5 12 4.5 20 4.5c0 8-5 14-14.5 14z"/><path d="M5.5 18.5c3-6 7-9 11-11"/></symbol>
+<symbol id="i-med" viewBox="0 0 24 24"><rect x="3.5" y="7.5" width="17" height="12" rx="2.5"/><path d="M9 7.5V6a1.8 1.8 0 0 1 1.8-1.8h2.4A1.8 1.8 0 0 1 15 6v1.5M12 11v5M9.5 13.5h5"/></symbol>
+<symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><path d="m15.6 8.4-2.1 5.1-5.1 2.1 2.1-5.1z"/></symbol>
+<symbol id="i-signal" viewBox="0 0 24 24"><circle cx="12" cy="10" r="2.2"/><path d="M12 12.2V21M8.2 6.4a5.4 5.4 0 0 0 0 7.2M15.8 6.4a5.4 5.4 0 0 1 0 7.2M5.4 3.6a9.4 9.4 0 0 0 0 12.8M18.6 3.6a9.4 9.4 0 0 1 0 12.8"/></symbol>
+<symbol id="i-pack" viewBox="0 0 24 24"><path d="M8.5 7V5.5a3.5 3.5 0 0 1 7 0V7"/><rect x="5" y="7" width="14" height="13" rx="3"/><path d="M9.5 11.5h5v3.5h-5zM9 20v-2M15 20v-2"/></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 2.8 19.5h18.4L12 3.5z"/><path d="M12 10v4.5M12 17.2h.01"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+<symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5.5M6.5 11 12 5.5 17.5 11"/></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5.5V18M6.5 12.5 12 18l5.5-5.5"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3.5 2.5 5.3 5.7.7-4.2 3.9 1.1 5.6L12 16.2 6.9 19l1.1-5.6-4.2-3.9 5.7-.7L12 3.5z"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m4.5 12.5 5 5.5L19.5 6.5"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M18.7 5.3l-1.8 1.8M7.1 16.9l-1.8 1.8"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 5.8v5.4c0 4.4 3 7.9 7 9.8 4-1.9 7-5.4 7-9.8V5.8L12 3z"/><path d="m9 11.6 2.2 2.2 3.8-4"/></symbol>
+<symbol id="i-wind" viewBox="0 0 24 24"><path d="M3 8.5h9.5a2.7 2.7 0 1 0-2.7-2.7M3 13h14.5a2.7 2.7 0 1 1-2.7 2.7M3 17.5h6"/></symbol>
+<symbol id="i-brain" viewBox="0 0 24 24"><path d="M9.5 4.5A3 3 0 0 0 6.6 8 3.2 3.2 0 0 0 4 11.2c0 1.3.7 2.4 1.8 3A3.1 3.1 0 0 0 9 19.5c1 0 1.9-.4 2.5-1.1V5.6a3 3 0 0 0-2-1.1zM14.5 4.5A3 3 0 0 1 17.4 8 3.2 3.2 0 0 1 20 11.2c0 1.3-.7 2.4-1.8 3A3.1 3.1 0 0 1 15 19.5c-1 0-1.9-.4-2.5-1.1V5.6a3 3 0 0 1 2-1.1z"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15.5H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"/></symbol>
+</defs></svg>
+
+<div class="progress" id="progress"></div>
+
+<nav class="nav" id="nav">
+  <div class="callout-bar">In a real emergency, call your local emergency number first — <b>911 (US) / 112 (EU)</b><span class="callout-extra">. This guide is for preparedness, not a substitute for training</span>.</div>
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><svg class="icon"><use href="#i-flame"/></svg>SURVIVAL<em>FIELD GUIDE</em></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><svg class="icon"><use href="#i-menu"/></svg></button>
+    <div class="nav-links" id="navLinks">
+      <a href="priorities.html">Priorities</a><a href="shelter.html">Shelter</a><a href="water.html">Water</a><a href="fire.html">Fire</a><a href="food.html">Food</a><a href="plants.html">Plants</a><a href="first-aid.html">First Aid</a><a href="navigate.html">Navigate</a>
+      <div class="nav-more">
+        <button aria-haspopup="true">More <svg class="caret" viewBox="0 0 12 12"><path d="M2 4l4 4 4-4"/></svg></button>
+        <div class="drop-menu"><a href="knots.html">Knots</a><a href="cold-weather.html">Cold Weather</a><a href="bushcraft.html">Bushcraft</a><a href="preparedness.html">Preparedness</a><a href="kit.html">Kit</a><a href="library.html">The Library</a><a href="quiz.html" class="hot">Field Exam</a></div>
+      </div>
+      <a href="quiz.html" class="hot">Exam</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <svg class="hero-topo" viewBox="0 0 1440 480" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 460 C 180 420 260 470 420 440 S 700 380 880 420 S 1200 470 1440 430"/>
+    <path d="M0 410 C 200 370 300 430 480 396 S 760 330 940 372 S 1240 420 1440 380"/>
+    <path d="M0 356 C 220 320 340 384 540 350 S 820 282 1000 324 S 1280 368 1440 330"/>
+    <path d="M0 300 C 240 268 380 330 600 296 S 880 232 1060 274 S 1320 314 1440 278"/>
+    <path d="M0 246 C 260 216 420 274 660 242 S 940 184 1120 222 S 1360 258 1440 226"/>
+  </svg>
+  <div class="wrap ph-inner">
+    <div>
+      <div class="ph-kicker">CHAPTER 05 — FOOD</div>
+      <h1 class="ph-title">Food &amp; Trapping</h1>
+      <p class="ph-lead">You can live three weeks without food — so never risk illness or injury chasing calories early. When it is time: the classic trap and snare designs, game care, preservation without refrigeration, and real trail cooking.</p>
+    </div>
+    <div class="ph-badge"><b>05</b>SITTING STILL<br>IS EATING</div>
+  </div>
+</header>
+
+<main>
+<section class="sec" id="food"><div class="wrap">
+    <div class="sec-head rv">
+      <div class="folio"><span class="num">05</span><span class="lab">Food &amp; Foraging</span></div>
+      <h2 class="sec-title">Food — the slow problem<small>You can live three weeks without food. Never risk illness, energy, or safety chasing calories in the first days. Food is a last-third problem.</small></h2>
+    </div>
+    <div class="grid cols-3">
+      <div class="card">
+        <div class="card-icon"><svg class="icon"><use href="#i-leaf"/></svg></div>
+        <h3>Forage smart</h3>
+        <p>Learn a handful of abundant, unmistakable plants for your region — dandelion (all parts), cattail (roots, shoots, pollen), pine (needle tea, inner bark), acorns (boil to leach tannins). Positive ID or pass.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg class="icon"><use href="#i-check"/></svg></div>
+        <h3>Fish, don't hunt</h3>
+        <p>Hunting burns calories with low odds. Fishing and trapping work while you rest: hooks improvised from pins, bone, or thorns, baited lines checked at dawn and dusk. Trapping needs practice and legal cover — know before you go.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg class="icon"><use href="#i-flame"/></svg></div>
+        <h3>Cook everything</h3>
+        <p>Heat destroys most parasites and many toxins. Insects (avoid hairy, brightly coloured, or foul-smelling ones), fish, and unfamiliar plants are all safer cooked. Boiling keeps the nutrients in the pot — drink the broth.</p>
+      </div>
+    </div>
+    <div class="split" style="margin-top:16px">
+      <div class="panel">
+        <div class="panel-title">Universal edibility test — when nothing is familiar</div>
+        <p style="color:var(--muted);font-size:15.5px">One plant at a time. Nothing else in your stomach. Water available. Each stage: wait 8 hours before the next.</p>
+        <ol class="steps" style="margin-top:18px">
+          <li class="step" style="padding-bottom:20px"><span class="n">1</span><p><b>Skin:</b> crush a piece, hold it against your inner elbow for 8 hours. Burning, rash, or numbness — reject.</p></li>
+          <li class="step" style="padding-bottom:20px"><span class="n">2</span><p><b>Lips &amp; tongue:</b> touch, hold 15 seconds, wait. Then a tiny taste held in the mouth — bitter, soapy, or numbing, spit and reject.</p></li>
+          <li class="step" style="padding-bottom:20px"><span class="n">3</span><p><b>Swallow a small piece.</b> Wait 8 hours. Any nausea, cramps, or other symptoms — induce nothing, just drink water and reject the plant.</p></li>
+          <li class="step"><span class="n">4</span><p><b>Only then</b> eat a normal portion of that one plant. Introduce new plants the same way, one per day at most.</p></li>
+        </ol>
+      </div>
+      <div>
+        <div class="panel">
+          <div class="panel-title">Reject on sight</div>
+          <ul class="cross">
+            <li>Any plant with <b>milky or discoloured sap</b></li>
+            <li><b>Umbrella-shaped flowers</b> — some resemble deadly hemlock</li>
+            <li>Anything with a <b>soapy or bitter</b> taste after cooking</li>
+            <li><b>Mushrooms of any kind</b> without expert ID — the risk/reward never justifies it</li>
+            <li><b>White and yellow berries</b> — roughly half are toxic; the "birds eat it" test is a myth, birds tolerate toxins humans can't</li>
+          </ul>
+        </div>
+        <div class="note tip">
+          <svg class="icon"><use href="#i-brain"/></svg>
+          <div><b>Calorie maths:</b> an hour of stumbling after game can burn the calories of a day's food. Sitting still, staying warm, and conserving energy <em>is</em> eating.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- distilled from source books: food-extra -->
+<section class="sec">
+<div class="wrap">
+<div class="sec-head rv"><div class="folio"><span class="num">01</span><span class="lab">Snares &amp; Deadfalls</span></div><h2 class="sec-title">Traps, Snares, and Trigger Mechanics<small>Every set is a small machine: weight, leverage, and a hair-trigger.</small></h2></div>
+
+<p>Gibson's 1880s manual and modern survival notes agree: it is easier to trap small game than to stalk it. The survival rule is <b>tangle, dangle, strangle, or mangle</b> — every trap must do one of the four. Build several sets, run them at dawn and dusk, and be patient: wary animals ignore new objects for days, then accept them. That is when they walk in.</p>
+
+<h3>The Figure-Four Deadfall, Step by Step</h3>
+<p>Three notched sticks hold a heavy flat rock or box aloft; a touch at the bait brings it down. Gibson rates it "very sure and sensitive"; a box can replace the stone to take rabbits alive. For rabbits: square sticks, half an inch thick.</p>
+<ol class="steps">
+<li class="step"><span class="n">1</span><h3>Cut the three sticks</h3><p>Bait stick (a): 9 to 10 inches, one end pointed, the other notched. Upright (b): slightly shorter, one end edged sharp, a square notch a third of an inch deep and half an inch wide cut 3 to 4 inches from the other end. Diagonal (c): 7 to 8 inches, edged at one end, notched on the same side at the other.</p></li>
+<li class="step"><span class="n">2</span><h3>Raise the weight</h3><p>Stand the upright, edged end up. Rest the diagonal's notch on the upright's summit and set the rock on the diagonal's lower end, holding it by hand.</p></li>
+<li class="step"><span class="n">3</span><h3>Hook the bait stick</h3><p>Hook the bait-stick notch over the diagonal's sharpened edge and fit its tip into the upright's square notch so the assembly holds itself. The bait must project beneath the stone.</p></li>
+<li class="step"><span class="n">4</span><h3>Set on firm footing</h3><p>On soft ground rest the upright on a chip or flat stone so it cannot sink and spring itself. Bait with an apple or a "nub" of corn — seldom more than touched before the weight falls.</p></li></ol>
+
+<h3>The Classic Log Deadfall</h3>
+<ul class="ticks">
+<li><b>Build the pen:</b> a rough stick pen with an open front funnels the animal under the log — 7 to 8 feet long, 5 to 6 inches through (a fence rail works), laid across the front, free to fall between two stakes and a short ground log.</li>
+<li><b>Trigger sticks:</b> a foot-long forked bait stick, pointed low, notch squared-side-down above the baited fork; a straight flat-ended stick about 14 inches; a small chip or thin stone.</li>
+<li><b>Leverage is everything:</b> keep the log's weight on the upright, not the bait stick — "a very slight twitch will throw it out of poise." Point the fork sideways so the turning of a seized bait itself knocks the notch loose.</li>
+</ul>
+
+<div class="grid cols-3">
+<div class="card"><h3>Twitch-up snare</h3><p>Bend a slender elastic sapling — hickory is best — over a twig pen 8 to 10 inches across with a sharpened switch arched across its one opening. The wire noose fills the arch; a bait stick inside holds the draw-cord. The quarry puts its head through the noose and is lifted off the ground, killed almost instantly.</p></div><div class="card"><h3>Quail and hedge nooses</h3><p>Fifteen to twenty brass "sucker wire" nooses, four inches across, tied four inches apart to a cord pegged taut between two stakes, corn strewn beneath — Gibson records six quail taken at once on twelve nooses. Grouse run along a low brush hedge hunting a gap rather than flying over: set nooses in the openings.</p></div>
+<div class="card"><h3>Box traps</h3><p>The "Double Ender": four boards two feet by nine inches, hinged lids at both ends held up by knotted strings through an auger hole, released by a bait stick — it falls whichever end is entered. The Self-Setting Trap has both ends open with inward-pivoting stiff wire gates: easy in, no way back out. It resets itself.</p></div>
+</div>
+
+<h3>Placement and Bait</h3>
+<ul class="ticks">
+<li><b>Read the runs:</b> animals travel the same by-paths daily — matted leaves, broken twigs, prints. Set unbaited traps directly in runways; bait is optional where traffic is forced.</li>
+<li><b>Find the funnels:</b> hollow logs, rock crevices, gaps under fallen trees, and stream crossings compress movement into inches. Use what nature built and skip the pen.</li>
+<li><b>Size the loop:</b> for rabbits, a snare loop a fist wide, four fingers above the ground, one hand-width from the obstruction beside the trail, pinned with twigs so it cannot sag.</li>
+<li><b>Bait by species:</b> rabbits crave salt — a salted cotton string can lead them to a box trap. Muskrat, mink, and skunk take fish and strong meat baits. Scatter little; a fed animal does not work the trigger.</li>
+<li><b>Defeat the nose:</b> handle traps with gloves — human scent alone drives keen-nosed game off. Scent "medicines" mask it: fish oil (cut fish or eels bottled in the sun two weeks) draws most fur bearers, oil of anise was the old universal, and castoreum compounded with nutmeg, cloves, cinnamon, a drop of peppermint, and whiskey to a paste was the professional's beaver lure.</li>
+</ul>
+
+<ul class="cross">
+<li><b>Check the law before you set anything.</b> Snares, deadfalls, and kill traps are illegal in most jurisdictions outside a genuine life-or-death survival situation; seasons, trap types, and checking intervals are all regulated.</li>
+<li><b>Check sets early and often.</b> An unchecked trap prolongs suffering, and the catch may be stolen by a predator or struggle free.</li>
+<li><b>Large deadfalls maim people.</b> Keep hands clear of the drop path, keep the mechanism to the side of the trail, and never leave a big deadfall set when you break camp.</li>
+</ul>
+</div>
+</section>
+
+<section class="sec alt">
+<div class="wrap">
+<div class="sec-head rv"><div class="folio"><span class="num">02</span><span class="lab">Fish &amp; Waters</span></div><h2 class="sec-title">Fishing Without a Tackle Box<small>Lines left out overnight work while you sleep.</small></h2></div>
+
+<p>Fish are the trapper's change of diet — protein, fat, and vitamins needing no chase. Every source repeats the discipline: lines out overnight, checked before first light. Bait native to the water is taken most readily — overhanging berries, waterside insects, worms, grubs, fish parts. When you land one, open its stomach and match the next bait to what it was eating.</p>
+
+<div class="grid cols-3">
+<div class="card"><h3>Limb lines &amp; overnight sets</h3><p>Improvised hooks — wire, pin, bone, thorn — hung from overhanging limbs, rooted stakes, or weighted bottles. Fish working the shallows at night hook themselves. Several spaced on a main cord across a narrow channel, with short drop lines, are the poor man's trotline.</p></div>
+<div class="card"><h3>Tip-ups through ice</h3><p>A lath strip with a hole near one end: line tied there, hook baited with tough baits — cow's udder, hog's liver, angle worms, any raw meat — and a branch poked through the lath across the hole. When the far end stands straight up, a fish is on. Ten or fifteen keep one person busy; a limber bush in the ice works as a sentinel.</p></div>
+<div class="card"><h3>Bottle &amp; pipe traps</h3><p>Cut a plastic bottle off below the neck, invert the neck into the body, bait and weight it: small fish swim in and cannot find the mouth. Gibson's stove-pipe trap works like a box snare — a foot of pipe, a baited spindle through a pencil-size hole, a wire noose on a spring rod that snaps the fish mid-body when the bait moves.</p></div></div>
+
+<h3>Spears and Lights</h3>
+<ul class="ticks">
+<li><b>The spear:</b> five or six barbed prongs an inch apart on a heavy handle, as the northern salmon spear was built — multiple points widen the margin of error. Get directly above the fish and strike down swiftly.</li>
+<li><b>Aim low:</b> refraction bends the fish's image at the surface — strike slightly below where it appears, and keep your shadow off the water.</li>
+<li><b>Night fire:</b> salmon trout were historically speared from a boat by torchlight, a pitch-pine and birch-bark fire in a wire "jack" in the bow over the gravel spawning beds.</li>
+</ul>
+<ul class="cross">
+<li><b>Stunning plants are history, not technique.</b> Old accounts describe crushing walnut hulls and the like into pools to stupefy fish. They kill everything in the water, small fish and eggs included, and are illegal everywhere.</li>
+<li><b>Never eat freshwater fish raw.</b> They carry parasites and microorganisms that only thorough cooking destroys. Cook them completely through; dry and smoke the firm ocean fish — tuna, salmon, snapper — listed for fish jerky.</li>
+</ul>
+</div>
+</section>
+
+<section class="sec">
+<div class="wrap">
+<div class="sec-head rv"><div class="folio"><span class="num">03</span><span class="lab">Meat Keeping</span></div><h2 class="sec-title">Game Care and Preservation<small>Cool it fast, then choose: dry it, smoke it, corn it, or pound it into pemmican.</small></h2></div>
+
+<p>The extension service anchors everything else: <b>only properly butchered and thoroughly cooled meat should be preserved.</b> Heat is the enemy — every minute a carcass stays warm is spoilage buying time.</p>
+
+<ol class="steps">
+<li class="step"><span class="n">1</span><h3>Field dress immediately</h3><p>Open the body cavity and remove the entrails as soon as the animal is dead. For fish, slit the belly, pull the gills, and scrape the kidney line along the spine. Do not rinse with stagnant water; wipe dry.</p></li>
+<li class="step"><span class="n">2</span><h3>Cool and air the meat</h3><p>Get air moving around the carcass, out of the sun — shade, elevation on sticks, night air drop it toward the ideal 38 degrees F. In warm weather, bone it out and quarter it so it cools to the core.</p></li>
+<li class="step"><span class="n">3</span><h3>Trim for keeping</h3><p>Fat and connective tissue turn rancid first. Trim every trace for jerky; intact pieces go to brine or the smokehouse.</p></li>
+</ol>
+
+<h3>Jerky: Slice, Marinate, Dry</h3>
+<ul class="ticks">
+<li><b>Slice thin, across the grain,</b> about a quarter inch, from lean round or flank; remove all fat and gristle. Partially frozen meat slices cleanest.</li>
+<li><b>Marinate overnight</b> in a sealed bag: soy sauce, Tabasco or cayenne, a quarter teaspoon of salt, pepper, a minced garlic clove — or Worcestershire and liquid smoke layered over the strips 6 to 12 hours.</li>
+<li><b>Dry hot enough, with airflow:</b> oven at 140 to 160 degrees F, door propped ajar, strips on racks without touching, 6 to 12 hours; or a dehydrator at 140 to 145 degrees until a strip cracks but does not break. Hold temperature steady by thermometer.</li>
+<li><b>Know the yield:</b> five pounds of fresh meat ends up about two pounds of jerky. Store airtight.</li>
+</ul>
+
+<h3>Smokehouse Schedule</h3>
+<table class="table">
+<thead><tr><th>Stage</th><th>Temperature</th><th>Target</th></tr></thead>
+<tbody>
+<tr><td>Initial smoke</td><td>110 to 125 degrees F</td><td>Meat turns golden brown</td></tr>
+<tr><td>Finish smoke</td><td>170 degrees F smokehouse</td><td>Internal 137 degrees F minimum, usually 141</td></tr>
+<tr><td>Wood</td><td>Hardwood only</td><td>Hickory, maple, chokecherry, oak, apple — never pine (resin taints meat)</td></tr>
+<tr><td>Curing hold</td><td>38 degrees F</td><td>Curing action stops below 34 degrees F</td></tr>
+</tbody>
+</table>
+
+<div class="panel">
+<div class="panel-title">Pemmican — the original ration bar</div>
+<p>Equal parts dried pulverized meat, dried berries, and melted fat — the trail food of the Plains nations, carried by Lewis and Clark and Peary. The Crow bound it with crushed chokecherries and kidney tallow warmed with a little chokecherry juice.</p>
+<ul class="ticks">
+<li><b>Traditional:</b> 2 pounds dried meat minced to a pulp, 1 cup raisins plus half cup yellow raisins chopped through, melted suet poured over — only enough to bind. Cool and cut into bars 1 inch wide, 4 long; keeps months sealed.</li>
+<li><b>Modern batch:</b> 8 ounces jerky pounded to powder, 8 ounces raisins or dried apricots, 8 ounces unroasted peanuts or pecans; bind with 4 tablespoons peanut butter and 2 tablespoons honey warmed together, pinch of cayenne. Keeps indefinitely, cool and dry.</li>
+</ul>
+</div>
+
+<h3>Corning and Brining by the Numbers</h3>
+<ul class="ticks">
+<li><b>Dry cure per 100 lb meat:</b> 6 pounds salt, 3 pounds sugar, 3 ounces sodium nitrate (or 1 ounce nitrite) — a third rubbed on day 1, day 7, and day 14; hold flat, uncovered, at 38 degrees F, two days per pound of leg.</li>
+<li><b>Corning liquid, 6 gallons:</b> 3 pounds salt, 10 ounces sugar, 2 ounces sodium nitrate, half ounce nitrite, 3 teaspoons pepper, 3 teaspoons cloves, 6 bay leaves, 4 tablespoons pickling spice. Meat stays under 15 days, turned and restirred on days 5 and 10.</li>
+<li><b>Brine strength without a scale:</b> add salt until a raw egg floats.</li>
+<li><b>Hot-weather rule:</b> add one-third more salt for every 15 degrees F above 38 — at 83 degrees the corning liquid takes double. Cooked corned meat keeps a week at 38, a month frozen.</li>
+</ul>
+</div>
+</section>
+
+<section class="sec alt">
+<div class="wrap">
+<div class="sec-head rv"><div class="folio"><span class="num">04</span><span class="lab">Fire &amp; Iron</span></div><h2 class="sec-title">Camp Cooking Methods and Recipes<small>Count coals, seal the foil, and prop the bread beside the fire.</small></h2></div>
+
+<p>All dutch oven cooking is done over hot coals, never flame. Hardwoods — oak, hickory — burn to long-lived coals; limbs one and a half to two inches thick make the best bed, ready 30 to 40 minutes after lighting. Judge heat with the back of your hand over the coals, counting the seconds.</p><table class="table">
+<thead><tr><th>Heat</th><th>Temperature</th><th>Seconds over coals</th><th>8-inch, under / top</th><th>12-inch, under / top</th></tr></thead>
+<tbody>
+<tr><td>Slow</td><td>250 to 325 degrees F</td><td>6 to 8</td><td>2 / 4</td><td>3 / 5</td></tr>
+<tr><td>Medium</td><td>325 to 400 degrees F</td><td>4 to 5</td><td>3 / 5</td><td>4 / 6</td></tr>
+<tr><td>Hot</td><td>400 to 500 degrees F</td><td>2 to 3</td><td>4 / 6</td><td>5 / 7</td></tr>
+<tr><td>Very hot</td><td>above 500 degrees F</td><td>1</td><td>5 / 7</td><td>6 / 8</td></tr>
+</tbody>
+</table>
+
+<div class="grid cols-3">
+<div class="card"><h3>Baking — 1 to 3</h3><p>More heat on top than below: one coal under for every three on the lid. Rotate the lid a quarter turn now and then to even out hot spots.</p></div>
+<div class="card"><h3>Roasting — 1 to 1</h3><p>Equal coals above and below; meats roast surrounded rather than seared.</p></div>
+<div class="card"><h3>Stewing — 4 to 1</h3><p>Almost all heat below; frying and boiling take coals underneath only. The inverted lid doubles as a griddle — its shallow bowl keeps pancakes and eggs centered.</p></div>
+</div>
+
+<ul class="ticks">
+<li><b>Cast iron care:</b> never soap it, never soak it, never cold liquid into a hot oven, never an empty oven over a fire. Scrub hot, dry over heat, wipe with oil.</li>
+<li><b>Weather:</b> wind and cold steal heat — add coals and shelter the oven. Aluminum needs more coals than iron and swings hotter and colder; iron holds steady.</li>
+</ul>
+
+<h3>The Drugstore Foil Wrap</h3><ol class="steps">
+<li class="step"><span class="n">1</span><h3>Cut and fill</h3><p>Two sheets of lightweight foil — or one heavy-duty — twice the circumference of the food. Food in the middle, shiny side in; it must be moist, or add four tablespoons of fluid.</p></li>
+<li class="step"><span class="n">2</span><h3>Seal the seam</h3><p>Bring opposite sides together, fold half an inch, repeat down to the food; flatten the top.</p></li>
+<li class="step"><span class="n">3</span><h3>Roll the ends</h3><p>Fold the open-end corners in and roll the ends in small folds to the center. The seal traps the steam that cooks the meal.</p></li>
+<li class="step"><span class="n">4</span><h3>Cook on the coals</h3><p>On embers or at their edge, turning: vegetables about 45 minutes, fish and thin meats 10 to 20, breads longer and slower.</p></li>
+</ol>
+
+<h3>Reflector and Stick Breads</h3>
+<p>Trail bread needs no oven. Fry bannock slowly in a little oil, turning often, then <b>prop the pan upright before the flames to brown the top</b> — the reflector principle that toasts any bread set beside, never over, a bank of coals. Steam it instead in a freezer bag on a rack in a covered pot of boiling water. Or wrap dough loosely in greased double foil, set it at the coals' edge, and turn every ten minutes for about an hour and a half — leave room for the dough to rise or the package bursts.</p>
+
+<div class="grid cols-3">
+<div class="card"><h3>Trail bannock</h3><p>1 cup flour, 1 teaspoon baking powder, dash salt, bagged at home. In camp add a little oil and enough water to make a dough; flatten and fry slowly until golden.</p></div>
+<div class="card"><h3>Foil trout on rice</h3><p>Stuff cleaned 9-inch trout (gills and kidney removed, slime left on) with boiled rice mixed with oregano, parsley, rosemary, salt, and olive oil. Bed rice under and over, roll the seam tight with air room, cook on coals about 10 minutes.</p></div>
+<div class="card"><h3>Mountain brook trout</h3><p>1 trout, 2 tablespoons butter, 1 teaspoon lemon juice, 1 teaspoon garlic, half teaspoon dill, 3 bacon strips. Seal in double foil and cook over medium coals, turning, until sizzling — about 20 minutes; the bacon fat keeps the fish from burning.</p></div>
+<div class="card"><h3>Boy Scout potatoes</h3><p>Potato, carrot, and small onion per person, sliced thin, with salt, pepper, a dollop of margarine, and a tablespoon of water in a drugstore wrap. On the coals 45 minutes to an hour.</p></div>
+<div class="card"><h3>Stick drumsticks</h3><p>1 pound hamburger, 1 cup crushed cornflakes, 1 egg, half a chopped onion, salt, pepper, 1 teaspoon mustard, 1 tablespoon ketchup. Mold handfuls around a green stick, wrap in foil, turn over a coal bed 20 to 30 minutes.</p></div>
+<div class="card"><h3>Ham and green bean bake</h3><p>1 and a third cups minute rice, 1 cup diced ham, an 8-ounce can drained green beans, a third cup mayonnaise, 2 teaspoons dried onion, stirred into 1 and a third cups hot bouillon. Seal in a triple-thickness foil bowl over coals 30 minutes.</p></div>
+<div class="card"><h3>Devil's Thumb stew</h3><p>Boil 4 cups water with a package of vegetable-beef soup mix and a box of macaroni; when nearly done stir in the cheese packet, a can of tuna, then a cup of instant rice. Four servings, one pot.</p></div>
+</div>
+</div>
+</section>
+
+<section class="sec">
+<div class="wrap">
+<div class="sec-head rv"><div class="folio"><span class="num">05</span><span class="lab">Rations &amp; Safety</span></div><h2 class="sec-title">No-Cook Rations and Food Safety<small>Plan the menu grid before you leave; cook wild meat all the way through.</small></h2></div>
+
+<p>Plan food the way the backcountry cookbooks do: one or two small meals and one main meal a day, with trail snacks between. Draw a grid — days down the side, breakfast, lunch, dinner across — and fill each box. Allow one to two and a half pounds of food per person per day, more in cold weather.</p>
+
+<h3>The No-Cook Larder</h3>
+<ul class="ticks">
+<li><b>Proteins that keep:</b> hard salami, small tins of tuna, sardines, and chicken, hard cheeses (they only age), peanut butter.</li>
+<li><b>Fuels:</b> dense breads — pumpernickel, whole wheat, unsliced until the trail — plus bagels, crackers, dried fruit, granola, fruit leathers.</li>
+<li><b>Dairy tricks:</b> evaporated milk creams coffee full strength or cuts fifty-fifty for milk; yogurt survives only about 48 hours.</li>
+<li><b>Cut weight ten ways:</b> shortest-cooking recipes, one-pot meals, letting covered pots finish off the flame, eating heavy foods (cans, fresh eggs, rice) first, dried soups, make-ahead meals, strict pounds-per-person limits.</li>
+<li><b>Package by meal:</b> premeasure mixes into self-locking bags, label each with day and meal, tuck written instructions inside; boiling water into a freezer bag of instant rice or potatoes is dinner with no pot to scrub.</li>
+<li><b>Protect the food:</b> isolate it from soap, fuel, and repellent — bottles burst at altitude — and carry foil out; it never burns completely.</li>
+</ul>
+
+<ul class="cross">
+<li><b>Trichinosis:</b> bear and pork-family meat can carry Trichinella. Army standards require a minimum internal temperature of 150 degrees F; 170 degrees F is recommended for a uniformly safe product. Never eat wild pig or bear on the rare side.</li>
+<li><b>Parasites in fish:</b> cook freshwater fish thoroughly through; drying and smoking without a real heat step do not make raw fish safe.</li>
+<li><b>Dried meat:</b> hold drying temperature steady by thermometer and check stored jerky often the first month — insufficiently dry, it molds.</li>
+<li><b>Canning wild meat</b> requires a pressure canner; a water bath cannot make low-acid meat safe.</li>
+<li><b>Legality, again:</b> trapping without license, landowner permission, and season compliance can be a crime even when the technique is sound.</li>
+</ul>
+<div class="panel">
+<div class="panel-title">Sources</div>
+<ul class="ticks">
+<li><b>Camp Life in the Woods and the Tricks of Trapping and Trap Making</b> (W. Hamilton Gibson) — snares, deadfalls, triggers, scent baits, box traps, fish traps, spearing, tip-ups.</li>
+<li><b>Traps and Snares — Tangle, Dangle, Strangle or Mangle</b> — survival trapping principles, loop sizing, fishing without gear, legality.</li>
+<li><b>Preserving Game Meats</b> (Clemson HGIC; SDSU/NDSU "Wild Side of the Menu") — curing, corning, smoking, jerky checklists.</li>
+<li><b>The Jerky Chef</b> (VJJE Publishing) — marinades, oven and dehydrator temperatures, fish jerky.</li>
+<li><b>The Back-Country Recipe Book</b> — trail jerky and pemmican, ration planning, foil trout, one-pot meals.</li>
+<li><b>Philmont Trail Recipes</b> (Boy Scout cookbook) — dutch oven coal counts, foil wrap, bannock, one-pot dinners.</li>
+<li><b>Dutch Oven Cooking</b> (Scout cookbook) — coal ratios, cast iron care, Indian Pemmican.</li>
+<li><b>Basic Food Preparation</b> (Army Recipe Service) — trichinella destruction temperatures.</li>
+<li><b>Crow Indian Recipes and Herbal Medicines</b> — traditional pemmican of meat, chokecherries, and kidney tallow.</li>
+</ul>
+</div>
+</div>
+</section>
+<nav class="pager wrap" aria-label="Chapter navigation"><a class="prev" href="fire.html"><span class="dir">← PREVIOUS CHAPTER</span><span class="ttl">Fire</span></a><a class="next" href="plants.html"><span class="dir">NEXT CHAPTER →</span><span class="ttl">Edible &amp; Medicinal Plants</span></a></nav>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:16px"><svg class="icon"><use href="#i-flame"/></svg>SURVIVAL<em>FIELD GUIDE</em></a>
+        <p>A multi-page field manual distilled from 150 survival books — military manuals, classic bushcraft texts, plant guides and wilderness medical references.</p>
+      </div>
+      <div>
+        <h4>Field chapters</h4>
+        <a href="priorities.html">01 — Priorities &amp; mindset</a>
+        <a href="shelter.html">02 — Shelter</a>
+        <a href="water.html">03 — Water</a>
+        <a href="fire.html">04 — Fire</a>
+        <a href="food.html">05 — Food &amp; trapping</a>
+        <a href="plants.html">06 — Plants</a>
+        <a href="first-aid.html">07 — First aid</a>
+        <a href="navigate.html">08 — Navigation &amp; signaling</a>
+      </div>
+      <div>
+        <h4>&nbsp;</h4>
+        <a href="knots.html">09 — Knots</a>
+        <a href="cold-weather.html">10 — Cold weather</a>
+        <a href="bushcraft.html">11 — Bushcraft</a>
+        <a href="preparedness.html">12 — Preparedness</a>
+        <a href="kit.html">13 — The kit</a>
+        <a href="library.html">14 — Source library</a>
+        <a href="quiz.html">15 — Field exam</a>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <svg class="icon"><use href="#i-alert"/></svg>
+      <div><b style="color:var(--bone)">Read this before you rely on it.</b> This guide distills reference books; it is not training, and plant or medicine entries can be wrong for your region or body. Learn hands-on with certified instructors, verify local laws, and in any genuine emergency call your local emergency number immediately: <b style="color:var(--bone)">911 (US) &nbsp;·&nbsp; 112 (EU) &nbsp;·&nbsp; 999 (UK) &nbsp;·&nbsp; 000 (AU)</b>.</div>
+    </div>
+    <div class="foot-big" aria-hidden="true">SURVIVE</div>
+    <div class="foot-base">
+      <span>SURVIVAL FIELD GUIDE — REV. 2026</span>
+      <span>DISTILLED FROM 150 BOOKS</span>
+      <span>© <span id="year"></span> · SHARE THE KNOWLEDGE</span>
+    </div>
+  </div>
+</footer>
+
+<button class="totop" id="totop" aria-label="Back to top"><svg class="icon"><use href="#i-up"/></svg></button>
+<script src="assets/main.js"></script>
+
+</body>
+</html>

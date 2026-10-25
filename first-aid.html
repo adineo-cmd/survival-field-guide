@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>First Aid & Wilderness Medicine — Survival Field Guide</title>
+<meta name="description" content="Bleeding control, wound closure, environmental casualties and improvised dental care.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><text y='20' font-size='20'>🔥</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&family=Oswald:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="p-first-aid">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c1.8 2.7 3.2 4.5 3.2 6.7A3.2 3.2 0 0 1 12 12.8a3.2 3.2 0 0 1-3.2-3.1C7.3 11.3 6.2 13 6.2 15.2a5.8 5.8 0 0 0 11.6 0C17.8 10 15.2 6.6 12 3z"/></symbol>
+<symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3.2s6 6.7 6 10.9a6 6 0 0 1-12 0c0-4.2 6-10.9 6-10.9z"/><path d="M9.5 13.5a2.6 2.6 0 0 0 2.5 3"/></symbol>
+<symbol id="i-tent" viewBox="0 0 24 24"><path d="M12 4 2.5 20h19L12 4z"/><path d="M12 12.5 9.2 20M12 12.5l2.8 7.5"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5.5 18.5C5.5 9.5 12 4.5 20 4.5c0 8-5 14-14.5 14z"/><path d="M5.5 18.5c3-6 7-9 11-11"/></symbol>
+<symbol id="i-med" viewBox="0 0 24 24"><rect x="3.5" y="7.5" width="17" height="12" rx="2.5"/><path d="M9 7.5V6a1.8 1.8 0 0 1 1.8-1.8h2.4A1.8 1.8 0 0 1 15 6v1.5M12 11v5M9.5 13.5h5"/></symbol>
+<symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><path d="m15.6 8.4-2.1 5.1-5.1 2.1 2.1-5.1z"/></symbol>
+<symbol id="i-signal" viewBox="0 0 24 24"><circle cx="12" cy="10" r="2.2"/><path d="M12 12.2V21M8.2 6.4a5.4 5.4 0 0 0 0 7.2M15.8 6.4a5.4 5.4 0 0 1 0 7.2M5.4 3.6a9.4 9.4 0 0 0 0 12.8M18.6 3.6a9.4 9.4 0 0 1 0 12.8"/></symbol>
+<symbol id="i-pack" viewBox="0 0 24 24"><path d="M8.5 7V5.5a3.5 3.5 0 0 1 7 0V7"/><rect x="5" y="7" width="14" height="13" rx="3"/><path d="M9.5 11.5h5v3.5h-5zM9 20v-2M15 20v-2"/></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 2.8 19.5h18.4L12 3.5z"/><path d="M12 10v4.5M12 17.2h.01"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+<symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5.5M6.5 11 12 5.5 17.5 11"/></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5.5V18M6.5 12.5 12 18l5.5-5.5"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3.5 2.5 5.3 5.7.7-4.2 3.9 1.1 5.6L12 16.2 6.9 19l1.1-5.6-4.2-3.9 5.7-.7L12 3.5z"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m4.5 12.5 5 5.5L19.5 6.5"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M18.7 5.3l-1.8 1.8M7.1 16.9l-1.8 1.8"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 5.8v5.4c0 4.4 3 7.9 7 9.8 4-1.9 7-5.4 7-9.8V5.8L12 3z"/><path d="m9 11.6 2.2 2.2 3.8-4"/></symbol>
+<symbol id="i-wind" viewBox="0 0 24 24"><path d="M3 8.5h9.5a2.7 2.7 0 1 0-2.7-2.7M3 13h14.5a2.7 2.7 0 1 1-2.7 2.7M3 17.5h6"/></symbol>
+<symbol id="i-brain" viewBox="0 0 24 24"><path d="M9.5 4.5A3 3 0 0 0 6.6 8 3.2 3.2 0 0 0 4 11.2c0 1.3.7 2.4 1.8 3A3.1 3.1 0 0 0 9 19.5c1 0 1.9-.4 2.5-1.1V5.6a3 3 0 0 0-2-1.1zM14.5 4.5A3 3 0 0 1 17.4 8 3.2 3.2 0 0 1 20 11.2c0 1.3-.7 2.4-1.8 3A3.1 3.1 0 0 1 15 19.5c-1 0-1.9-.4-2.5-1.1V5.6a3 3 0 0 1 2-1.1z"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15.5H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"/></symbol>
+</defs></svg>
+
+<div class="progress" id="progress"></div>
+
+<nav class="nav" id="nav">
+  <div class="callout-bar">In a real emergency, call your local emergency number first — <b>911 (US) / 112 (EU)</b><span class="callout-extra">. This guide is for preparedness, not a substitute for training</span>.</div>
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><svg class="icon"><use href="#i-flame"/></svg>SURVIVAL<em>FIELD GUIDE</em></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><svg class="icon"><use href="#i-menu"/></svg></button>
+    <div class="nav-links" id="navLinks">
+      <a href="priorities.html">Priorities</a><a href="shelter.html">Shelter</a><a href="water.html">Water</a><a href="fire.html">Fire</a><a href="food.html">Food</a><a href="plants.html">Plants</a><a href="first-aid.html">First Aid</a><a href="navigate.html">Navigate</a>
+      <div class="nav-more">
+        <button aria-haspopup="true">More <svg class="caret" viewBox="0 0 12 12"><path d="M2 4l4 4 4-4"/></svg></button>
+        <div class="drop-menu"><a href="knots.html">Knots</a><a href="cold-weather.html">Cold Weather</a><a href="bushcraft.html">Bushcraft</a><a href="preparedness.html">Preparedness</a><a href="kit.html">Kit</a><a href="library.html">The Library</a><a href="quiz.html" class="hot">Field Exam</a></div>
+      </div>
+      <a href="quiz.html" class="hot">Exam</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <svg class="hero-topo" viewBox="0 0 1440 480" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 460 C 180 420 260 470 420 440 S 700 380 880 420 S 1200 470 1440 430"/>
+    <path d="M0 410 C 200 370 300 430 480 396 S 760 330 940 372 S 1240 420 1440 380"/>
+    <path d="M0 356 C 220 320 340 384 540 350 S 820 282 1000 324 S 1280 368 1440 330"/>
+    <path d="M0 300 C 240 268 380 330 600 296 S 880 232 1060 274 S 1320 314 1440 278"/>
+    <path d="M0 246 C 260 216 420 274 660 242 S 940 184 1120 222 S 1360 258 1440 226"/>
+  </svg>
+  <div class="wrap ph-inner">
+    <div>
+      <div class="ph-kicker">CHAPTER 07 — FIRST AID</div>
+      <h1 class="ph-title">First Aid &amp; Wilderness Medicine</h1>
+      <p class="ph-lead">For when help is hours or days away: haemorrhage control escalation, when to close a wound and when to leave it open, environmental casualties, and improvised dentistry from the wilderness medical references.</p>
+    </div>
+    <div class="ph-badge"><b>07</b>SCENE SAFETY<br>FIRST — ALWAYS</div>
+  </div>
+</header>
+
+<main>
+<section class="sec" id="firstaid"><div class="wrap">
+    <div class="sec-head rv">
+      <div class="folio"><span class="num">06</span><span class="lab">First Aid</span></div>
+      <h2 class="sec-title">First aid — the chapter that saves a life today<small>Everything here is first-response knowledge for when help is hours away. A wilderness first-aid course is the single best weekend you can spend on this page's advice.</small></h2>
+    </div>
+    <div class="grid cols-2">
+      <div class="card">
+        <h3>Severe bleeding</h3>
+        <p><b>1.</b> Firm, direct pressure on the wound with the cleanest cloth available. <b>2.</b> Soak-through? Add layers on top — never remove the first. <b>3.</b> Keep pressure; elevate the limb. <b>4.</b> Tourniquet only for uncontrolled limb bleeding — write down the time it went on.</p>
+      </div>
+      <div class="card">
+        <h3>Not responding</h3>
+        <p><b>Check:</b> Danger → Response → Airway → Breathing. No normal breathing: start CPR — <b>30 compressions to 2 breaths</b>, chest compressed 5–6 cm, at 100–120 per minute. Send someone for help and a defibrillator if there is one.</p>
+      </div>
+      <div class="card">
+        <h3>Hypothermia</h3>
+        <p>Shivering, fumbling, slurring = act. <b>Gentle handling</b> (rough movement can stop a cold heart), strip wet layers, insulate from the ground, wrap including head and neck, warm sweet drinks if fully alert. <b>Never</b> rub the limbs or use direct high heat.</p>
+      </div>
+      <div class="card">
+        <h3>Heat stroke</h3>
+        <p>Hot skin, confusion, collapse — this kills fast. Shade, strip, <b>soak with any cool water</b> and fan continuously; ice packs to neck, armpits, groin. Stop fluids if consciousness drops. Cool first, transport second.</p>
+      </div>
+      <div class="card">
+        <h3>Snakebite</h3>
+        <p>Move away from the snake, keep <b>calm and still</b>, remove rings and watches before swelling, immobilise the limb at or below heart level, and carry the person out if possible. <b>Never</b> cut, suck, ice, or tourniquet a bite — and never chase the snake for ID.</p>
+      </div>
+      <div class="card">
+        <h3>Fractures &amp; sprains</h3>
+        <p>Splint as found — immobilise the joint above and below the injury, padded, without trying to straighten it. Check fingers or toes beyond the splint stay warm and pink. Cold, blue, or numb means loosen.</p>
+      </div>
+    </div>
+    <div class="grid cols-2" style="margin-top:16px">
+      <div class="card">
+        <h3>Choking</h3>
+        <p>Can they cough or speak? Encourage coughing. Cannot: <b>5 firm back blows</b> between the shoulder blades, then <b>5 abdominal thrusts</b>, alternating until the object clears or they collapse — then CPR.</p>
+      </div>
+      <div class="card">
+        <h3>Shock &amp; burns</h3>
+        <p><b>Shock</b> (pale, cold, clammy, weak): lay flat, raise legs, keep warm, nothing by mouth. <b>Burns:</b> cool <b>running</b> water for 20 minutes, remove jewellery early, cover loosely with clean film. No ice, butter, or creams.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- distilled from source books: firstaid-extra -->
+<section class="sec">
+<div class="wrap">
+<div class="sec-head rv"><div class="folio"><span class="num">01</span><span class="lab">Assess &amp; Arrest</span></div><h2 class="sec-title">Primary Survey and Hemorrhage Control<small>Work the problem in order: exsanguination kills first.</small></h2></div>
+
+<div class="note warn"><b>Read this first.</b> This page distills military and wilderness medical manuals for situations where professional help is hours or days away. It is not a substitute for certified training — take a hands-on wilderness first aid, WFR, or WEMT course before you need these skills, and get professional care whenever it is reachable.</div>
+
+<p>In tactical and wilderness medicine the classic ABCDE survey is reordered: <b>XABCDE</b> — the X stands for exsanguinating hemorrhage. Emergency War Surgery is blunt about why: hemorrhage is the leading cause of preventable death in the field, roughly half of preventable combat deaths bleed out, and about one in five bleeds from an extremity a well-applied tourniquet or pressure dressing could have saved.</p>
+
+<ol class="steps">
+<li class="step"><span class="n">1</span><h3>X — Exsanguinating bleed</h3><p>Before anything else, find and stop massive external bleeding. Under threat, a tourniquet is the first move, not the last resort.</p></li>
+<li class="step"><span class="n">2</span><h3>A — Airway</h3><p>The tongue is the most common airway obstruction. Open with head-tilt/chin-lift; if a neck injury is suspected, use the jaw-thrust, which works without extending the neck. Remove visible vomitus or debris with a quick finger sweep — do not spend excessive time on it.</p></li>
+<li class="step"><span class="n">3</span><h3>B — Breathing</h3><p>Look, listen, and feel for chest rise over 3 to 5 seconds. Often the act of opening the airway restores breathing on its own.</p></li>
+<li class="step"><span class="n">4</span><h3>C — Circulation</h3><p>Check the carotid pulse (never with your thumb — it has its own pulse). If absent in a hypothermic victim, search for a pulse for a full 30 to 45 seconds before starting CPR; cold hearts are slow and hard to feel.</p></li>
+<li class="step"><span class="n">5</span><h3>D — Disability, E — Exposure</h3><p>Assess level of consciousness, then expose and inspect the whole body for hidden wounds — then cover the patient back up. Heat loss compounds every other injury.</p></li>
+</ol>
+
+<h3>The Hemorrhage Escalation Ladder</h3>
+<ul class="ticks">
+<li><b>Direct pressure:</b> the most effective first method. Press firmly and hold at least 5 minutes before looking. A bandage alone is not pressure — it wicks and hides blood. If the dressing soaks through, reinforce on top; removing it tears off forming clot.</li>
+<li><b>Elevation:</b> raising the limb above heart level decreases most bleeding — an under-appreciated, free technique.</li>
+<li><b>Pressure points:</b> if direct pressure fails, compress the artery above the wound — brachial for the forearm, femoral below the groin crease, popliteal behind the knee. Hold up to 20 minutes.</li>
+<li><b>Tourniquet:</b> apply early rather than allow ongoing blood loss. Place on the upper arm, or the thigh if a leg tourniquet fails — vessels between the paired bones of forearm and calf resist compression. Improvised windlasses (belt, torn cloth, rope with a stick) work. Tighten until bleeding stops and the distal pulse is gone.</li>
+<li><b>Hemostatic gauze:</b> for junctional and deep wounds a tourniquet cannot reach. Pack the wound and hold firm pressure for the full manufacturer-indicated time (commonly 3 minutes), then leave it in place for transport.</li>
+</ul>
+
+<div class="note tip"><b>Mark the time.</b> Write the tourniquet application time on the casualty's forehead or the tourniquet itself. Application beyond roughly 2 hours raises limb-loss risk — but do not avoid a tourniquet to save a limb and then lose a life. Do not loosen it in the field; reassess only in capable hands.</div>
+
+<h3>Airway, CPR, and Shock Numbers</h3>
+<div class="grid cols-3">
+<div class="card"><h3>Recovery position</h3><p>An unconscious casualty who is breathing goes on their side, head turned slightly down, keeping the tongue forward and letting vomitus drain. Kneel at the shoulders, support head and neck, and roll as a unit so the spine stays aligned. Recheck breathing about every minute.</p></div>
+<div class="card"><h3>CPR (adult, current guidelines)</h3><p>30 compressions to 2 breaths, 100 to 120 compressions per minute, 5 to 6 cm (about 2 inches) depth, full recoil between compressions. Older manuals cite 15:2 — the principle is unchanged: compress early, hard, and without interruption.</p></div>
+<div class="card"><h3>Treating for shock</h3><p>Assume every serious casualty is going into shock. Lay them flat, loosen clothing at neck and waist, maintain body temperature (blanket over and under), calm them, give nothing by mouth. Elevate the feet 15 to 30 cm — unless there is a head injury, abdominal injury, or unsplinted leg fracture.</p></div>
+</div>
+<p>FM 4-25.11 lists the warning signs: clammy skin, weak rapid pulse, restlessness, thirst, confusion, rapid breathing, bluish skin around the mouth, nausea. Assume shock in every serious casualty; treat before the signs arrive.</p>
+</div>
+</section>
+
+<section class="sec alt">
+<div class="wrap">
+<div class="sec-head rv"><div class="folio"><span class="num">02</span><span class="lab">Wounds</span></div><h2 class="sec-title">Wound Care, Closure, and Infection<small>Clean well, close selectively, and know when to leave it open.</small></h2></div>
+
+<p>The battlefield lesson that transfers straight to the backcountry: <b>all wounds are contaminated</b>. Contamination (bacteria present but outnumbered by tissue defenses) becomes infection at roughly one million bacteria per gram of tissue — and that can happen within about 6 hours of injury. That window is the classic "golden period" for cleaning and closing.</p>
+
+<h3>Irrigation First</h3>
+<ul class="ticks">
+<li><b>Pressure matters:</b> high-pressure irrigation with clean water dislodges debris far better than pouring. A syringe with an 18 to 20 gauge catheter, or a punctured plastic bag squeezed hard, provides usable pressure.</li>
+<li><b>Volume matters:</b> irrigate until the wound runs clear — as a working rule, at least 100 mL per centimeter of wound length, 500 mL to a liter for dirty or crushed tissue. "Copious" is the operative word in every manual.</li>
+<li><b>Pick out debris</b> with flame-sterilized forceps. Never probe blind — and never remove an impaled object, which may be tamponading the bleed beneath it.</li>
+</ul>
+
+<h3>Close or Leave Open?</h3>
+<div class="grid cols-3">
+<div class="card"><h3>Close it</h3><p>Clean, fresh, low-tissue-damage lacerations (within the golden period, well irrigated, edges that come together without tension). Use closure strips, topical adhesive, staples, or sutures.</p></div>
+<div class="card"><h3>Leave it open</h3><p>Animal bites, puncture wounds, crush injuries, wounds over 6 hours old, and anything grossly contaminated. The Wilderness Medicine Course is categorical: "Copious irrigation, and antibiotic, do not close." Pack loosely, cover, and let it drain.</p></div>
+<div class="card"><h3>Delayed primary closure</h3><p>The military's proven answer for high-risk wounds: debride, leave open with packing changed twice daily, and close at 3 to 5 days if the wound shows healthy red granulation tissue and no infection. The closure manual notes results comparable to primary closure.</p></div>
+</div>
+
+<h3>Field Closure Techniques</h3>
+<div class="grid cols-3">
+<div class="card"><h3>Closure strips</h3><p>Steri-strips for minor clean lacerations. Paint benzoin on dried skin first — in wet weather nothing sticks without it. Strips can also hold pre-placed, untied sutures for later delayed closure.</p></div>
+<div class="card"><h3>Simple interrupted sutures</h3><p>The workhorse: each stitch placed, tied, and cut separately. If one breaks the rest hold, and with no continuous thread for bacteria to travel along, interrupted is the pattern of choice for any wound with infection risk. Place deep stitches first to remove tension, then approximate the skin edges.</p></div>
+<div class="card"><h3>Tissue glue</h3><p>Cyanoacrylate adhesive (e.g., Dermabond) suits low-tension wounds only. Dry the wound, hold edges together, apply 2 to 3 thin layers 30 seconds apart, keep dry, and let the film slough off in 5 to 10 days. No ointments on top — they dissolve the film.</p></div>
+</div>
+
+<h3>Infection: Recognize and Respond</h3>
+<p>Emergency War Surgery gives field diagnosis as the four "-ors": <b>dolor, rubor, calor, tumor</b> — pain, redness, warmth, swelling — plus discharge, fever, or unexplained rapid heart rate. Danger signs demanding aggressive action: crepitus or gas in the tissue, gray "dishwater" drainage, necrotic skin (gas gangrene), or red streaks running toward the heart.</p>
+<ul class="ticks">
+<li><b>Local care:</b> open the wound, remove sutures or strips over the infected segment, irrigate again, and pack open with moist sterile gauze changed at least twice daily.</li>
+<li><b>Warm soaks:</b> for small abscesses, warm moist compresses 15 to 20 minutes, 4 to 6 times daily, increase circulation and help the collection "point."</li>
+<li><b>The abscess point:</b> when a collection becomes fluctuant and points, drain it — open with a sharp sterile blade to release the pus, then dress and keep clean. Pressure, not the pus itself, causes most of the pain.</li>
+<li><b>Antibiotics:</b> dirty wounds, bites, and established infection justify oral antibiotics when available. Dose and drug selection must follow professional direction or the kit's printed protocol.</li>
+</ul>
+</div>
+</section>
+
+<section class="sec">
+<div class="wrap">
+<div class="sec-head rv"><div class="folio"><span class="num">03</span><span class="lab">Environment</span></div><h2 class="sec-title">Cold, Heat, Altitude, and Water<small>The four environmental killers and their field protocols.</small></h2></div>
+
+<h3>Hypothermia Staging and Rewarming</h3>
+<p>Hypothermia is a core temperature of 95&deg;F (35&deg;C) or below — and over half of cases occur at ambient temperatures above 50&deg;F, in wind and rain, not blizzards. Mortality exceeds 50% in severe cases; the usual cause of death is ventricular fibrillation triggered by rough handling. Move hypothermic casualties gently.</p>
+<table class="table">
+<thead><tr><th>Core temp</th><th>Stage</th><th>What you see</th><th>Field response</th></tr></thead>
+<tbody>
+<tr><td>98&ndash;95&deg;F</td><td>Mild</td><td>Shivering, cold sensation, clumsy fine motor control</td><td>Dry clothes, insulation, sweet warm drinks if fully alert, activity</td></tr>
+<tr><td>95&ndash;92&deg;F</td><td>Moderate</td><td>Violent shivering, slurred speech, poor judgment, amnesia</td><td>Stop heat loss, rewarm, evacuate; keep horizontal</td></tr>
+<tr><td>92&ndash;86&deg;F</td><td>Severe</td><td>Shivering stops, muscle rigidity, blue puffy skin, dulled consciousness</td><td>Handle gently, full vapor-barrier wrap, active external rewarming, urgent evacuation</td></tr>
+<tr><td>85&ndash;81&deg;F</td><td>Profound</td><td>Coma, absent reflexes, ventricular arrhythmias</td><td>Treat as a rewarming emergency; check pulse 30&ndash;45 sec before CPR</td></tr>
+<tr><td>Below 78&deg;F</td><td>Terminal</td><td>Ventricular fibrillation, apnea</td><td>CPR and rapid core rewarming; survivors documented after hours of arrest</td></tr>
+</tbody>
+</table>
+<ul class="ticks">
+<li><b>Passive external rewarming:</b> dry clothing, sleeping bag, shelter — for mild cases that can still shiver. Shivering is a furnace; feed it calories.</li>
+<li><b>Active external:</b> pre-warmed sleeping bag with a volunteer on each side (a cold bag steals heat by conduction); insulated heat packs at neck, armpits, groin, and behind the knees, with a barrier to prevent burns.</li>
+<li><b>Water bath rewarming:</b> the field-proven standard for severe cases — immerse the trunk in circulating water at 104&ndash;108&deg;F, head and extremities out to limit "afterdrop," replenishing warm water constantly.</li>
+<li><b>Never:</b> alcohol (a vasodilator that accelerates heat loss), rubbing limbs, or rewarming a part you cannot keep warm — refreezing thawed tissue is worse than leaving it frozen.</li>
+</ul>
+
+<h3>Frostbite</h3>
+<p>Frostbite is actual freezing of tissue — white, waxy, bloodless skin that no longer glides over the bone beneath, numbness replacing pain. Rewarm only when refreezing is impossible: immerse in circulating water at 104&ndash;108&deg;F for 40 to 60 minutes, until soft and pliable. Thawing hurts — analgesics help. Leave blisters intact, use no ointments, forbid tobacco (nicotine constricts the vessels you are trying to open), and never rub with snow or thaw before a fire. Mountain rule: if the victim must walk out on frostbitten feet, let him walk before you thaw — once thawed, he is a litter case.</p>
+
+<h3>Heat Casualties</h3>
+<div class="grid cols-3">
+<div class="card"><h3>Heat cramps</h3><p>Painful spasms in muscles worked hard in heat, from salt loss. Rest in shade, stretch and massage, sip a salt solution: 1/4 to 1/2 teaspoon of salt per quart of water. Salt tablets are out — they irritate the stomach.</p></div>
+<div class="card"><h3>Heat exhaustion</h3><p>Headache, nausea, profuse sweating, dizziness, normal-to-raised temperature; develops over days of dehydration. Cool shade, wet and fan the skin, and if alert give cool fluids — 2 liters over the first 2 hours — with rest for 24 to 36 hours.</p></div>
+<div class="card"><h3>Heat stroke</h3><p>Core temperature above 104&deg;F with altered mental status — confusion, aggression, combativeness, collapse. Sweat may still be present. Cool aggressively by any means: water, fanning, ice packs at neck, armpits, groin; stop active cooling at 102&deg;F. A true emergency — evacuate.</p></div>
+</div>
+<p>Prevention numbers: 6 to 8 quarts of water per day in hot working conditions, and drink ahead of thirst — thirst is a late and unreliable gauge of hydration.</p>
+
+<h3>Altitude Illness</h3>
+<ul class="ticks">
+<li><b>AMS:</b> hits about 42% of those ascending rapidly above 10,000 ft. Headache is mandatory for the diagnosis, with nausea, dizziness, fatigue, poor sleep. Stop ascending, treat symptoms (aspirin or acetaminophen; acetazolamide 125 mg twice daily speeds acclimatization — as directed by a professional), descend 1,000 to 3,000 ft if not improving.</li>
+<li><b>HACE:</b> the killer progression — ataxia (cannot walk a straight line) and mental status change. Dexamethasone 4 mg every 6 hours (10 mg initially if available), oxygen, immediate descent. A portable hyperbaric bag simulates a 5,000 to 6,000 ft descent when weather blocks escape.</li>
+<li><b>HAPE:</b> fluid in the lungs above about 12,000 ft, usually within 2 to 4 days of ascent: dry night cough, breathlessness at rest, pink frothy sputum late. Minimize exertion (even walking raises pulmonary pressure), sit upright, oxygen, descend 2,000 to 3,000 ft immediately — descent is the definitive treatment for both HACE and HAPE.</li>
+<li><b>Prevention:</b> climb no faster than 3,000 ft/day above 10,000 ft, sleep lower than you climb, avoid alcohol and sedatives the first two nights, stay hydrated on a high-carbohydrate diet.</li>
+</ul>
+
+<h3>Submersion</h3>
+<p>The Wilderness Medicine Course states the field rule plainly: treat every submersion casualty as hypothermic, start resuscitation on all who appear dead regardless of submersion time or water temperature — <b>no one is dead until they are warm and dead</b>. Survivals beyond an hour under cold water are documented because rapid cooling slashes the brain's oxygen demand. Protect the cervical spine (shallow dives fracture necks), oxygenate aggressively, and watch every near-drowning for delayed lung trouble for 24 hours.</p>
+</div>
+</section>
+
+<section class="sec alt">
+<div class="wrap">
+<div class="sec-head rv"><div class="folio"><span class="num">04</span><span class="lab">Dental</span></div><h2 class="sec-title">Dental Emergencies<small>Field dentistry from Where There Is No Dentist.</small></h2></div>
+
+<p>A bad tooth can end an expedition faster than a broken leg. Murray Dickson's Where There Is No Dentist is built for exactly the situation a wilderness party faces: no dentist, limited supplies, a problem that will not wait.</p>
+
+<h3>Reading a Toothache</h3>
+<table class="table">
+<thead><tr><th>What they report</th><th>Likely cause</th><th>Field response</th></tr></thead>
+<tbody>
+<tr><td>Hurts only after eating or drinking; cavity present, not tender to tapping</td><td>Cavity or lost filling</td><td>Clean and place a temporary filling; eugenol for pain</td></tr>
+<tr><td>Hurts constantly, even at night; tender and slightly loose when tapped; gum bubble or facial swelling</td><td>Abscess at the root</td><td>Antibiotics, warm holds, drain if pointing; arrange extraction</td></tr>
+<tr><td>Several upper teeth ache, worse when tapped, with a head cold</td><td>Infected sinus</td><td>Treat the cold; warm compresses on the sinus; not a tooth problem</td></tr>
+<tr><td>Sharp pain on cold air, tooth recently struck</td><td>Cracked or bruised tooth</td><td>Rest the tooth, avoid hot and cold; watch for color change</td></tr>
+</tbody>
+</table>
+
+<h3>The Lost Filling Dressing: Zinc Oxide and Clove Oil</h3>
+<p>Every commercial temporary filling is the same two ingredients: <b>zinc oxide powder and oil of cloves (eugenol)</b> — and eugenol directly quiets pain from exposed dentin. Keep the cavity dry with cotton rolls between cheek and gum; lift soft decay from the walls (cover rather than chase deep decay — digging to the bottom risks the nerve); mix powder into a few drops of eugenol on smooth glass until thick and no longer sticky; press into the cavity against the sides and wipe away excess. With no cement, press plain cotton into the hole to keep food out and paint it with clove oil for pain.</p>
+
+<h3>Knocked-Out (Avulsed) Teeth</h3>
+<ol class="steps">
+<li class="step"><span class="n">1</span><h3>Baby or permanent?</h3><p>Never reimplant a baby tooth — bite on cotton to stop bleeding and let the permanent tooth come in. A permanent tooth is worth saving.</p></li>
+<li class="step"><span class="n">2</span><h3>Check the clock</h3><p>Reimplantation is possible within about 12 hours; within the first hour the tooth has a far better chance of reattaching. Do not wait.</p></li>
+<li class="step"><span class="n">3</span><h3>Handle with respect</h3><p>Rinse gently in clean water — never scrape the root or socket. The ligament cells clinging to the root are what will reattach.</p></li>
+<li class="step"><span class="n">4</span><h3>Replant and splint</h3><p>Push the tooth into the socket with a gentle back-and-forth turning motion until the biting edge sits level with its neighbors, holding finger pressure about 5 minutes. Splint with softened beeswax rolls bonded to the two teeth on each side, front and back, or foil taped in place.</p></li>
+</ol>
+<div class="note tip"><b>Dental first-aid kit:</b> Dickson's supply list is short and cheap — cotton gauze and rolls, oil of cloves (50 mL), zinc oxide powder, salt and hydrogen peroxide for rinses, plus analgesics: aspirin 300 mg or acetaminophen 500 mg every 6 hours for adults (children: acetaminophen only). Add dental wax or foil for splinting.</div>
+<div class="note warn"><b>Abscess with facial swelling</b> is a systemic threat: penicillin by mouth is first choice (500 mg for adults and children over 25 kg, 250 mg under, every 6 hours — empty stomach, finish the full course even after improvement). If the swelling points, open it with a sharp sterile instrument to release pus and dress it. Deep facial swelling or fever means evacuation.</div>
+</div>
+</section>
+
+<section class="sec">
+<div class="wrap">
+<div class="sec-head rv"><div class="folio"><span class="num">05</span><span class="lab">The Kit</span></div><h2 class="sec-title">The Wilderness Medical Kit and Its Improvised Doubles<small>Pack from the WEMSI list; improvise what you forgot.</small></h2></div>
+
+<p>The Wilderness EMS Institute's Personal Wilderness Medical Kit list is built on a hard rule worth adopting: <b>every item must justify its weight</b>, and whatever can be improvised from gear you already carry, should be. The result handles wounds, infection, pain, and prolonged care in a fist-size package.</p>
+
+<div class="grid cols-3">
+<div class="card"><h3>Dressings &amp; bandaging</h3><p>3&times;3 gauze pads, 3-inch roller gauze and elastic wrap (5 yards each), 1-inch waterproof tape (10 yards — enough to tape an ankle), tincture of benzoin so dressings stick in rain and sweat, clear film dressings, and OB-type compressed tampons: tiny, sterile, extremely absorbent.</p></div>
+<div class="card"><h3>Wound care &amp; instruments</h3><p>Povidone-iodine solution (15 mL), antibiotic ointment packets, sterile scalpel blades (drain an abscess; heat a paper clip to trephine a blackened nail), a small skin stapler for scalp and simple lacerations, and fine forceps flame-sterilized before use.</p></div>
+<div class="card"><h3>Medications &amp; monitoring</h3><p>Ibuprofen and acetaminophen for pain, an oral antibiotic (erythromycin or similar) for wound and dental infection, an antihistamine for stings, oral rehydration salts, a digital thermometer, exam gloves, a pocket CPR shield. Prescription items — epinephrine, narcotics, injectables — only with training and authority.</p></div>
+</div>
+
+<h3>Improvised Alternatives</h3>
+<ul class="ticks">
+<li><b>Sanitary pad as trauma dressing:</b> WEMSI includes compressed tampons precisely because they are compact, sterile, and very absorbent; a sanitary pad taped over gauze makes a bulky dressing for scalp and heavily draining wounds.</li>
+<li><b>Tampon for nosebleed:</b> compressed cotton expands to press from inside — commercially this is exactly the epistaxis-tampon concept. Insert along the floor of the nostril, leave the string visible.</li>
+<li><b>Triangular bandage:</b> deliberately omitted from the WEMSI list — tear the tail of a shirt, or fold and pin any square of cloth. A cravat becomes an arm sling, head dressing, or soft collar.</li>
+<li><b>Splints:</b> sleeping pad, ski or trekking pole, or bound sticks padded with clothing and secured with the elastic wrap or tape. Splint the joints above and below a suspected fracture; check pulse and sensation before and after, and leave fingers and toes exposed to watch.</li>
+<li><b>Vapor barrier:</b> two heavy-duty plastic bags or bubble wrap make the hypothermia wrap the Marine course calls ideal — insulation inside, windproof and waterproof outside.</li>
+<li><b>Wound irrigation:</b> a squeeze bottle with a small hole, syringe barrel, or punctured zip-lock bag supplies the pressure wound washing requires; a freezer bag doubles as a glove cover or ice pack.</li>
+</ul>
+
+<div class="note warn"><b>The last word.</b> Every technique on this page exists for the moment EMS is unreachable — days out, infrastructure down, evacuation impossible. Protocols change and the doses here are the manuals' reference points, not a prescription: use only as directed by a medical professional whenever one can be reached. Get trained before the trip, not during the emergency.</div>
+
+<div class="panel">
+<div class="panel-title">Sources</div>
+<ul class="cross">
+<li><b>Full First Aid Manual (FM 4-25.11 / FM 21-11)</b> — US Army, Navy, and Air Force first aid doctrine: primary survey, airway maneuvers, bleeding control, shock management.</li>
+<li><b>Wilderness Medicine Course (FMST)</b> — US Marine Corps Mountain Warfare Training Center handouts: hypothermia, frostbite, heat casualties, altitude illness, submersion, wound care.</li>
+<li><b>Emergency War Surgery</b> — Borden Institute / US Army: hemorrhage control escalation, tourniquet doctrine, wound infection diagnosis and management.</li>
+<li><b>Medical Survival Wound Closure Manual</b> — wound healing classes, the 6-hour contamination window, suture techniques, closure of contaminated wounds.</li>
+<li><b>Personal Wilderness Medical Kit (v1.2)</b> — Wilderness EMS Institute, Keith Conover MD: kit selection philosophy, contents, improvised substitutes.</li>
+<li><b>Where There Is No Dentist</b> — Murray Dickson (Hesperian Foundation): toothache diagnosis, temporary fillings, abscess management, avulsed teeth, dental kit list.</li>
+</ul>
+</div>
+</div>
+</section>
+<nav class="pager wrap" aria-label="Chapter navigation"><a class="prev" href="plants.html"><span class="dir">← PREVIOUS CHAPTER</span><span class="ttl">Edible &amp; Medicinal Plants</span></a><a class="next" href="navigate.html"><span class="dir">NEXT CHAPTER →</span><span class="ttl">Navigation &amp; Signaling</span></a></nav>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:16px"><svg class="icon"><use href="#i-flame"/></svg>SURVIVAL<em>FIELD GUIDE</em></a>
+        <p>A multi-page field manual distilled from 150 survival books — military manuals, classic bushcraft texts, plant guides and wilderness medical references.</p>
+      </div>
+      <div>
+        <h4>Field chapters</h4>
+        <a href="priorities.html">01 — Priorities &amp; mindset</a>
+        <a href="shelter.html">02 — Shelter</a>
+        <a href="water.html">03 — Water</a>
+        <a href="fire.html">04 — Fire</a>
+        <a href="food.html">05 — Food &amp; trapping</a>
+        <a href="plants.html">06 — Plants</a>
+        <a href="first-aid.html">07 — First aid</a>
+        <a href="navigate.html">08 — Navigation &amp; signaling</a>
+      </div>
+      <div>
+        <h4>&nbsp;</h4>
+        <a href="knots.html">09 — Knots</a>
+        <a href="cold-weather.html">10 — Cold weather</a>
+        <a href="bushcraft.html">11 — Bushcraft</a>
+        <a href="preparedness.html">12 — Preparedness</a>
+        <a href="kit.html">13 — The kit</a>
+        <a href="library.html">14 — Source library</a>
+        <a href="quiz.html">15 — Field exam</a>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <svg class="icon"><use href="#i-alert"/></svg>
+      <div><b style="color:var(--bone)">Read this before you rely on it.</b> This guide distills reference books; it is not training, and plant or medicine entries can be wrong for your region or body. Learn hands-on with certified instructors, verify local laws, and in any genuine emergency call your local emergency number immediately: <b style="color:var(--bone)">911 (US) &nbsp;·&nbsp; 112 (EU) &nbsp;·&nbsp; 999 (UK) &nbsp;·&nbsp; 000 (AU)</b>.</div>
+    </div>
+    <div class="foot-big" aria-hidden="true">SURVIVE</div>
+    <div class="foot-base">
+      <span>SURVIVAL FIELD GUIDE — REV. 2026</span>
+      <span>DISTILLED FROM 150 BOOKS</span>
+      <span>© <span id="year"></span> · SHARE THE KNOWLEDGE</span>
+    </div>
+  </div>
+</footer>
+
+<button class="totop" id="totop" aria-label="Back to top"><svg class="icon"><use href="#i-up"/></svg></button>
+<script src="assets/main.js"></script>
+
+</body>
+</html>

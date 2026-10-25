@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigation & Signaling — Survival Field Guide</title>
+<meta name="description" content="Map and compass craft, GPS-free methods, and the full rescue-signalling toolkit.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><text y='20' font-size='20'>🔥</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&family=Oswald:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="p-navigate">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c1.8 2.7 3.2 4.5 3.2 6.7A3.2 3.2 0 0 1 12 12.8a3.2 3.2 0 0 1-3.2-3.1C7.3 11.3 6.2 13 6.2 15.2a5.8 5.8 0 0 0 11.6 0C17.8 10 15.2 6.6 12 3z"/></symbol>
+<symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3.2s6 6.7 6 10.9a6 6 0 0 1-12 0c0-4.2 6-10.9 6-10.9z"/><path d="M9.5 13.5a2.6 2.6 0 0 0 2.5 3"/></symbol>
+<symbol id="i-tent" viewBox="0 0 24 24"><path d="M12 4 2.5 20h19L12 4z"/><path d="M12 12.5 9.2 20M12 12.5l2.8 7.5"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5.5 18.5C5.5 9.5 12 4.5 20 4.5c0 8-5 14-14.5 14z"/><path d="M5.5 18.5c3-6 7-9 11-11"/></symbol>
+<symbol id="i-med" viewBox="0 0 24 24"><rect x="3.5" y="7.5" width="17" height="12" rx="2.5"/><path d="M9 7.5V6a1.8 1.8 0 0 1 1.8-1.8h2.4A1.8 1.8 0 0 1 15 6v1.5M12 11v5M9.5 13.5h5"/></symbol>
+<symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><path d="m15.6 8.4-2.1 5.1-5.1 2.1 2.1-5.1z"/></symbol>
+<symbol id="i-signal" viewBox="0 0 24 24"><circle cx="12" cy="10" r="2.2"/><path d="M12 12.2V21M8.2 6.4a5.4 5.4 0 0 0 0 7.2M15.8 6.4a5.4 5.4 0 0 1 0 7.2M5.4 3.6a9.4 9.4 0 0 0 0 12.8M18.6 3.6a9.4 9.4 0 0 1 0 12.8"/></symbol>
+<symbol id="i-pack" viewBox="0 0 24 24"><path d="M8.5 7V5.5a3.5 3.5 0 0 1 7 0V7"/><rect x="5" y="7" width="14" height="13" rx="3"/><path d="M9.5 11.5h5v3.5h-5zM9 20v-2M15 20v-2"/></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 2.8 19.5h18.4L12 3.5z"/><path d="M12 10v4.5M12 17.2h.01"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+<symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5.5M6.5 11 12 5.5 17.5 11"/></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5.5V18M6.5 12.5 12 18l5.5-5.5"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3.5 2.5 5.3 5.7.7-4.2 3.9 1.1 5.6L12 16.2 6.9 19l1.1-5.6-4.2-3.9 5.7-.7L12 3.5z"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m4.5 12.5 5 5.5L19.5 6.5"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M18.7 5.3l-1.8 1.8M7.1 16.9l-1.8 1.8"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 5.8v5.4c0 4.4 3 7.9 7 9.8 4-1.9 7-5.4 7-9.8V5.8L12 3z"/><path d="m9 11.6 2.2 2.2 3.8-4"/></symbol>
+<symbol id="i-wind" viewBox="0 0 24 24"><path d="M3 8.5h9.5a2.7 2.7 0 1 0-2.7-2.7M3 13h14.5a2.7 2.7 0 1 1-2.7 2.7M3 17.5h6"/></symbol>
+<symbol id="i-brain" viewBox="0 0 24 24"><path d="M9.5 4.5A3 3 0 0 0 6.6 8 3.2 3.2 0 0 0 4 11.2c0 1.3.7 2.4 1.8 3A3.1 3.1 0 0 0 9 19.5c1 0 1.9-.4 2.5-1.1V5.6a3 3 0 0 0-2-1.1zM14.5 4.5A3 3 0 0 1 17.4 8 3.2 3.2 0 0 1 20 11.2c0 1.3-.7 2.4-1.8 3A3.1 3.1 0 0 1 15 19.5c-1 0-1.9-.4-2.5-1.1V5.6a3 3 0 0 1 2-1.1z"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15.5H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"/></symbol>
+</defs></svg>
+
+<div class="progress" id="progress"></div>
+
+<nav class="nav" id="nav">
+  <div class="callout-bar">In a real emergency, call your local emergency number first — <b>911 (US) / 112 (EU)</b><span class="callout-extra">. This guide is for preparedness, not a substitute for training</span>.</div>
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><svg class="icon"><use href="#i-flame"/></svg>SURVIVAL<em>FIELD GUIDE</em></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><svg class="icon"><use href="#i-menu"/></svg></button>
+    <div class="nav-links" id="navLinks">
+      <a href="priorities.html">Priorities</a><a href="shelter.html">Shelter</a><a href="water.html">Water</a><a href="fire.html">Fire</a><a href="food.html">Food</a><a href="plants.html">Plants</a><a href="first-aid.html">First Aid</a><a href="navigate.html">Navigate</a>
+      <div class="nav-more">
+        <button aria-haspopup="true">More <svg class="caret" viewBox="0 0 12 12"><path d="M2 4l4 4 4-4"/></svg></button>
+        <div class="drop-menu"><a href="knots.html">Knots</a><a href="cold-weather.html">Cold Weather</a><a href="bushcraft.html">Bushcraft</a><a href="preparedness.html">Preparedness</a><a href="kit.html">Kit</a><a href="library.html">The Library</a><a href="quiz.html" class="hot">Field Exam</a></div>
+      </div>
+      <a href="quiz.html" class="hot">Exam</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <svg class="hero-topo" viewBox="0 0 1440 480" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 460 C 180 420 260 470 420 440 S 700 380 880 420 S 1200 470 1440 430"/>
+    <path d="M0 410 C 200 370 300 430 480 396 S 760 330 940 372 S 1240 420 1440 380"/>
+    <path d="M0 356 C 220 320 340 384 540 350 S 820 282 1000 324 S 1280 368 1440 330"/>
+    <path d="M0 300 C 240 268 380 330 600 296 S 880 232 1060 274 S 1320 314 1440 278"/>
+    <path d="M0 246 C 260 216 420 274 660 242 S 940 184 1120 222 S 1360 258 1440 226"/>
+  </svg>
+  <div class="wrap ph-inner">
+    <div>
+      <div class="ph-kicker">CHAPTER 08 — NAVIGATION</div>
+      <h1 class="ph-title">Navigation &amp; Signaling</h1>
+      <p class="ph-lead">Getting lost is a thinking error before it is a map error. Map and compass craft, the sun and star methods, terrain association — and the full signalling toolkit that turns survival into rescue.</p>
+    </div>
+    <div class="ph-badge"><b>08</b>THREE OF ANYTHING<br>MEANS DISTRESS</div>
+  </div>
+</header>
+
+<main>
+<section class="sec" id="navigate"><div class="wrap">
+    <div class="sec-head rv">
+      <div class="folio"><span class="num">07</span><span class="lab">Navigation</span></div>
+      <h2 class="sec-title">Navigation — know where you are<small>Getting lost is a thinking error before it's a map error. Know north, know your handrails, and know when to stop moving.</small></h2>
+    </div>
+    <div class="grid cols-3">
+      <div class="card">
+        <div class="card-icon"><svg class="icon"><use href="#i-compass"/></svg></div>
+        <h3>With a compass</h3>
+        <p>Set your bearing, hold the compass level, rotate your body until the red needle sits in the orienting arrow, and walk to the direction-of-travel line. Pick a landmark on that line and walk to it — compasses drift, handrails don't.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg class="icon"><use href="#i-sun"/></svg></div>
+        <h3>With a stick — the sun</h3>
+        <p>Stand a stick in flat ground; mark the shadow tip. Wait 15 minutes, mark again. The line between marks runs <b>west → east</b> (first mark is west). Stand with the west mark to your left: you're facing north. Southern hemisphere, reverse it.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg class="icon"><use href="#i-star"/></svg></div>
+        <h3>With the stars</h3>
+        <p>North: extend the Big Dipper's two pointer stars about five times their gap to reach <b>Polaris</b>. South: lengthen the Southern Cross's long axis 4.5 times and drop straight to the horizon. An analog watch works by day: point the hour hand at the sun — the bisector to 12 is south.</p>
+      </div>
+    </div>
+    <div class="split" style="margin-top:16px">
+      <div class="panel">
+        <div class="panel-title">When you realise you're lost</div>
+        <ol class="steps" style="margin-top:4px">
+          <li class="step" style="padding-bottom:20px"><span class="n">1</span><p><b>S.T.O.P.</b> — exactly as chapter 01. Fear walks people in circles; studies show lost travellers drift reliably to the left.</p></li>
+          <li class="step" style="padding-bottom:20px"><span class="n">2</span><p><b>If people know where you are or you told someone your plan — stay put.</b> A stationary person is a findable person; a signal at a known location beats a track no one can follow.</p></li>
+          <li class="step" style="padding-bottom:20px"><span class="n">3</span><p><b>If you must move</b>, follow handrails: rivers, ridgelines, power lines, fences. Rivers lead downhill, and downhill eventually leads to people, roads, or the coast.</p></li>
+          <li class="step"><span class="n">4</span><p><b>Mark your line of travel</b> — stack cairns, break branches upward — so you can backtrack and searchers can read your direction.</p></li>
+        </ol>
+      </div>
+      <div>
+        <div class="panel">
+          <div class="panel-title">Folk signs — use as hints, never as proof</div>
+          <ul class="cross">
+            <li><b>Moss grows on the north side</b> — sometimes. Shade, moisture, and wind confuse it.</li>
+            <li><b>Snow melts on the south face</b> — only in consistent northern-hemisphere sun.</li>
+            <li><b>Rings on tree stumps</b> are denser on the sunnier side — again, only loosely.</li>
+          </ul>
+          <p style="color:var(--muted);font-size:14.5px;margin-top:12px">These are suggestions, not navigation. One solid celestial method beats all of them combined.</p>
+        </div>
+        <div class="note tip">
+          <svg class="icon"><use href="#i-shield"/></svg>
+          <div><b>The best navigation tool is a habit:</b> every trip, tell someone your route and return time, and look backward every few hundred metres so the way home stays familiar.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- distilled from source books: navigation-extra -->
+<section class="sec deep" id="nav-fundamentals">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="folio"><span class="num">08.4</span><span class="lab">Map &amp; Compass</span></div>
+      <h2 class="sec-title">Map and compass, the Army way<small>From GTA 05-02-013, the soldier's pocket map-reading course: coordinates, distance by pacing, azimuths, and the G-M angle that reconciles map with compass.</small></h2>
+    </div>
+    <div class="split">
+      <div>
+        <div class="panel">
+          <div class="panel-title">Coordinates — never be lost, by definition</div>
+          <ul class="ticks">
+            <li>Military maps are overlaid with a numbered grid; a position is read <b>right, then up</b>: halfway between vertical lines 11 and 12 gives "115"; two-tenths between horizontal lines 81 and 82 gives "812". Your six-digit coordinate: <b>115812</b>.</li>
+            <li>"If you always know your coordinates, you can never be lost" — you may be unable to <em>reach</em> where you're going, but you always know where you are.</li>
+            <li>A clear-plastic <b>coordinate scale and protractor</b> reads the position inside a grid square exactly and measures azimuths; improvised, the edge of a radio antenna or a ration-box side does the straightedge work.</li>
+          </ul>
+        </div>
+        <div class="panel" style="margin-top:16px">
+          <div class="panel-title">Distance — the pacing method</div>
+          <ul class="ticks">
+            <li>The average person takes <b>116 paces per 100 m on level ground</b> — and about <b>148 cross-country</b>, where slopes steal distance. Calibrate your own numbers over a known 600 m before trusting them.</li>
+            <li><b>Count with pebbles:</b> ten pebbles in the right pocket; move one left for every 100 m walked. Empty right pocket = 1 kilometre. (Knots in a string work too.)</li>
+            <li><b>Map distance:</b> tick the map distance on a paper edge, hold against the bar scale printed on the map. Around curves, pivot the paper at each bend, marking as you go.</li>
+            <li>At night, <b>untrained walkers circle</b> — pace counts are only straight if the compass governs the line.</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <div class="panel-title">Azimuths — direction as a number</div>
+          <ul class="ticks">
+            <li>Direction clockwise from north: east 90°, south 180°, west 270°, north 360°. Plot it by drawing the line and reading a protractor aligned to the grid.</li>
+            <li><b>Back azimuth</b> (to return): subtract 180° if the azimuth is over 180°, add it if under. 223° back = 43°. A sign error here is the classic way soldiers walk <em>away</em> from their unit at night.</li>
+            <li><b>Three norths:</b> grid north (map lines), magnetic north (the needle), true north (the Pole). The map's declination diagram gives the <b>G-M angle</b> between the first two, with the conversion rule printed beside it — add or subtract as the diagram instructs, and in high-declination regions failing to convert turns a perfect compass walk into a parallel error of hundreds of metres per kilometre.</li>
+            <li><b>Compass discipline:</b> the needle loves metal — rifles, vehicles, helmets, power lines. Step clear before shooting an azimuth.</li>
+          </ul>
+        </div>
+        <div class="panel" style="margin-top:16px">
+          <div class="panel-title">Two ways to hold a lensatic compass</div>
+          <ul class="ticks">
+            <li><b>Center-hold</b> (faster, works at night): cover folded flat in line with the base, thumbs through the loop, elbows locked into your sides, compass at chin height — turn your whole body toward the object and read under the index line.</li>
+            <li><b>Compass-to-cheek</b> (most precise): cover vertical, rear sight folded slightly forward, sight the wire on the object through the slot, then glance down the lens for the azimuth.</li>
+            <li>Move <b>object to object</b>: shoot an azimuth to a distinct steering mark, walk to it, repeat. Stopping occasionally to re-shoot the azimuth is what keeps the line straight.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="nav-expedient">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="folio"><span class="num">08.5</span><span class="lab">No Compass</span></div>
+      <h2 class="sec-title">Finding direction without a compass<small>The GTA's field-expedient methods, in its own order of accuracy: shadow-tip first, watch second, stars third — plus the reasons "the sun rises in the east" is only almost true.</small></h2>
+    </div>
+    <div class="grid cols-3">
+      <div class="card">
+        <h3>Shadow-tip method</h3>
+        <p>Plant a stick in level ground and mark the shadow tip — <b>first mark is always west</b>. Wait 10–15 minutes; the tip moves a few inches; mark it again — <b>second mark is always east</b>. A line through both is your west–east axis; stand with the west mark to your left and you face north, east right, south behind. Quick, easy, very accurate, either hemisphere.</p>
+      </div>
+      <div class="card">
+        <h3>Watch method</h3>
+        <p><b>Northern temperate zone:</b> point the hour hand at the sun; south lies midway between it and 12 o'clock (13:00 on daylight saving). <b>Southern temperate:</b> point the 12 at the sun; north is midway to the hour hand. If unsure which end is north, remember the sun sits east before noon, west after.</p>
+      </div>
+      <div class="card">
+        <h3>Star method — Polaris</h3>
+        <p>Find the Big Dipper; the last two stars of its cup point directly at the North Star, about five times their separation. Face Polaris and you face due north, east on your right. The manuals' honest caveat: "the sun rises in the east" is a pretty good rule that is seldom exactly right — sunrise point shifts with season and latitude.</p>
+      </div>
+    </div>
+
+    <div class="sec-head rv" style="margin-top:clamp(48px,6vw,64px);margin-bottom:26px">
+      <h2 class="sec-title" style="font-size:clamp(24px,3vw,32px)">Finding your position on the map<small>Orient the map first — north on paper matching north on the ground — then one known feature is a line, two are a point.</small></h2>
+    </div>
+    <div class="split">
+      <div class="panel">
+        <div class="panel-title">Resection — you have no idea where you are</div>
+        <ol class="steps" style="margin-top:4px">
+          <li class="step" style="padding-bottom:14px"><span class="n">1</span><p><b>Orient the map</b> (compass is best) and don't move it again.</p></li>
+          <li class="step" style="padding-bottom:14px"><span class="n">2</span><p><b>Pick a feature</b> you can see and find on the map — a water tower, a distinct hilltop. Lay a straightedge against its map symbol and pivot until the edge points at the real feature; draw the line.</p></li>
+          <li class="step" style="padding-bottom:14px"><span class="n">3</span><p><b>Repeat with a second feature.</b> Where the lines cross is where you stand. A third line is the accuracy check — with good work all three cross in one spot.</p></li>
+        </ol>
+      </div>
+      <div class="panel">
+        <div class="panel-title">Modified resection — you know the line you're on</div>
+        <p style="color:var(--muted);font-size:15.5px">On a road, riverbank, ridge or trail, your position is somewhere along a known line — one sighting pins it.</p>
+        <ul class="ticks" style="margin-top:10px">
+          <li>Orient the map, sight a single known feature as above, and draw the line; <b>where it crosses your linear feature is your position.</b></li>
+          <li>The manual's improvisations for the straightedge: a rifle cleaning rod, a radio antenna section, the edge of a ration box.</li>
+          <li><b>Intersection</b> is resection inverted — sighting two known points from an unknown <em>target</em> locates the target on the map; the forward observer's method, and equally good for plotting a distant wildfire or a fallen aircraft.</li>
+        </ul>
+        <div class="note tip">
+          <svg class="icon"><use href="#i-compass"/></svg>
+          <div><b>Terrain association is the skill under it all:</b> contour shapes read as hills, saddles, draws and spurs; matching the country you see to the paper in your hand is faster than any construction — the constructions exist to <em>check</em> it.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="panel">
+      <div class="panel-title">Source manuals</div>
+      <ul class="ticks">
+        <li><b>GTA 05-02-013, How to Find Your Way</b> (US Army, 2006) — coordinates, pacing, azimuths, G-M angle, expedient methods, resection</li>
+        <li><b>FM 3-25.26, Map Reading and Land Navigation</b> — the full doctrine behind the GTA</li>
+        <li><b>Marine Land Navigation</b> and <b>Topographic Operations / Terrain Analysis</b> — terrain-feature reading and terrain association</li>
+        <li>Signaling cross-checked with <b>FM 3-05.70 (FM 21-76)</b> recovery chapter</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<nav class="pager wrap" aria-label="Chapter navigation"><a class="prev" href="first-aid.html"><span class="dir">← PREVIOUS CHAPTER</span><span class="ttl">First Aid &amp; Wilderness Medicine</span></a><a class="next" href="knots.html"><span class="dir">NEXT CHAPTER →</span><span class="ttl">Knots, Lashings &amp; Rope Work</span></a></nav>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:16px"><svg class="icon"><use href="#i-flame"/></svg>SURVIVAL<em>FIELD GUIDE</em></a>
+        <p>A multi-page field manual distilled from 150 survival books — military manuals, classic bushcraft texts, plant guides and wilderness medical references.</p>
+      </div>
+      <div>
+        <h4>Field chapters</h4>
+        <a href="priorities.html">01 — Priorities &amp; mindset</a>
+        <a href="shelter.html">02 — Shelter</a>
+        <a href="water.html">03 — Water</a>
+        <a href="fire.html">04 — Fire</a>
+        <a href="food.html">05 — Food &amp; trapping</a>
+        <a href="plants.html">06 — Plants</a>
+        <a href="first-aid.html">07 — First aid</a>
+        <a href="navigate.html">08 — Navigation &amp; signaling</a>
+      </div>
+      <div>
+        <h4>&nbsp;</h4>
+        <a href="knots.html">09 — Knots</a>
+        <a href="cold-weather.html">10 — Cold weather</a>
+        <a href="bushcraft.html">11 — Bushcraft</a>
+        <a href="preparedness.html">12 — Preparedness</a>
+        <a href="kit.html">13 — The kit</a>
+        <a href="library.html">14 — Source library</a>
+        <a href="quiz.html">15 — Field exam</a>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <svg class="icon"><use href="#i-alert"/></svg>
+      <div><b style="color:var(--bone)">Read this before you rely on it.</b> This guide distills reference books; it is not training, and plant or medicine entries can be wrong for your region or body. Learn hands-on with certified instructors, verify local laws, and in any genuine emergency call your local emergency number immediately: <b style="color:var(--bone)">911 (US) &nbsp;·&nbsp; 112 (EU) &nbsp;·&nbsp; 999 (UK) &nbsp;·&nbsp; 000 (AU)</b>.</div>
+    </div>
+    <div class="foot-big" aria-hidden="true">SURVIVE</div>
+    <div class="foot-base">
+      <span>SURVIVAL FIELD GUIDE — REV. 2026</span>
+      <span>DISTILLED FROM 150 BOOKS</span>
+      <span>© <span id="year"></span> · SHARE THE KNOWLEDGE</span>
+    </div>
+  </div>
+</footer>
+
+<button class="totop" id="totop" aria-label="Back to top"><svg class="icon"><use href="#i-up"/></svg></button>
+<script src="assets/main.js"></script>
+
+</body>
+</html>

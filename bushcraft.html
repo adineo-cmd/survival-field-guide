@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bushcraft & Tools — Survival Field Guide</title>
+<meta name="description" content="Axecraft, cordage, containers, flintknapping, leather work and caching.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><text y='20' font-size='20'>🔥</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&family=Oswald:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="p-bushcraft">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c1.8 2.7 3.2 4.5 3.2 6.7A3.2 3.2 0 0 1 12 12.8a3.2 3.2 0 0 1-3.2-3.1C7.3 11.3 6.2 13 6.2 15.2a5.8 5.8 0 0 0 11.6 0C17.8 10 15.2 6.6 12 3z"/></symbol>
+<symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3.2s6 6.7 6 10.9a6 6 0 0 1-12 0c0-4.2 6-10.9 6-10.9z"/><path d="M9.5 13.5a2.6 2.6 0 0 0 2.5 3"/></symbol>
+<symbol id="i-tent" viewBox="0 0 24 24"><path d="M12 4 2.5 20h19L12 4z"/><path d="M12 12.5 9.2 20M12 12.5l2.8 7.5"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5.5 18.5C5.5 9.5 12 4.5 20 4.5c0 8-5 14-14.5 14z"/><path d="M5.5 18.5c3-6 7-9 11-11"/></symbol>
+<symbol id="i-med" viewBox="0 0 24 24"><rect x="3.5" y="7.5" width="17" height="12" rx="2.5"/><path d="M9 7.5V6a1.8 1.8 0 0 1 1.8-1.8h2.4A1.8 1.8 0 0 1 15 6v1.5M12 11v5M9.5 13.5h5"/></symbol>
+<symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><path d="m15.6 8.4-2.1 5.1-5.1 2.1 2.1-5.1z"/></symbol>
+<symbol id="i-signal" viewBox="0 0 24 24"><circle cx="12" cy="10" r="2.2"/><path d="M12 12.2V21M8.2 6.4a5.4 5.4 0 0 0 0 7.2M15.8 6.4a5.4 5.4 0 0 1 0 7.2M5.4 3.6a9.4 9.4 0 0 0 0 12.8M18.6 3.6a9.4 9.4 0 0 1 0 12.8"/></symbol>
+<symbol id="i-pack" viewBox="0 0 24 24"><path d="M8.5 7V5.5a3.5 3.5 0 0 1 7 0V7"/><rect x="5" y="7" width="14" height="13" rx="3"/><path d="M9.5 11.5h5v3.5h-5zM9 20v-2M15 20v-2"/></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 2.8 19.5h18.4L12 3.5z"/><path d="M12 10v4.5M12 17.2h.01"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+<symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5.5M6.5 11 12 5.5 17.5 11"/></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5.5V18M6.5 12.5 12 18l5.5-5.5"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3.5 2.5 5.3 5.7.7-4.2 3.9 1.1 5.6L12 16.2 6.9 19l1.1-5.6-4.2-3.9 5.7-.7L12 3.5z"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m4.5 12.5 5 5.5L19.5 6.5"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M18.7 5.3l-1.8 1.8M7.1 16.9l-1.8 1.8"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 5.8v5.4c0 4.4 3 7.9 7 9.8 4-1.9 7-5.4 7-9.8V5.8L12 3z"/><path d="m9 11.6 2.2 2.2 3.8-4"/></symbol>
+<symbol id="i-wind" viewBox="0 0 24 24"><path d="M3 8.5h9.5a2.7 2.7 0 1 0-2.7-2.7M3 13h14.5a2.7 2.7 0 1 1-2.7 2.7M3 17.5h6"/></symbol>
+<symbol id="i-brain" viewBox="0 0 24 24"><path d="M9.5 4.5A3 3 0 0 0 6.6 8 3.2 3.2 0 0 0 4 11.2c0 1.3.7 2.4 1.8 3A3.1 3.1 0 0 0 9 19.5c1 0 1.9-.4 2.5-1.1V5.6a3 3 0 0 0-2-1.1zM14.5 4.5A3 3 0 0 1 17.4 8 3.2 3.2 0 0 1 20 11.2c0 1.3-.7 2.4-1.8 3A3.1 3.1 0 0 1 15 19.5c-1 0-1.9-.4-2.5-1.1V5.6a3 3 0 0 1 2-1.1z"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15.5H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"/></symbol>
+</defs></svg>
+
+<div class="progress" id="progress"></div>
+
+<nav class="nav" id="nav">
+  <div class="callout-bar">In a real emergency, call your local emergency number first — <b>911 (US) / 112 (EU)</b><span class="callout-extra">. This guide is for preparedness, not a substitute for training</span>.</div>
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><svg class="icon"><use href="#i-flame"/></svg>SURVIVAL<em>FIELD GUIDE</em></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><svg class="icon"><use href="#i-menu"/></svg></button>
+    <div class="nav-links" id="navLinks">
+      <a href="priorities.html">Priorities</a><a href="shelter.html">Shelter</a><a href="water.html">Water</a><a href="fire.html">Fire</a><a href="food.html">Food</a><a href="plants.html">Plants</a><a href="first-aid.html">First Aid</a><a href="navigate.html">Navigate</a>
+      <div class="nav-more">
+        <button aria-haspopup="true">More <svg class="caret" viewBox="0 0 12 12"><path d="M2 4l4 4 4-4"/></svg></button>
+        <div class="drop-menu"><a href="knots.html">Knots</a><a href="cold-weather.html">Cold Weather</a><a href="bushcraft.html">Bushcraft</a><a href="preparedness.html">Preparedness</a><a href="kit.html">Kit</a><a href="library.html">The Library</a><a href="quiz.html" class="hot">Field Exam</a></div>
+      </div>
+      <a href="quiz.html" class="hot">Exam</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <svg class="hero-topo" viewBox="0 0 1440 480" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 460 C 180 420 260 470 420 440 S 700 380 880 420 S 1200 470 1440 430"/>
+    <path d="M0 410 C 200 370 300 430 480 396 S 760 330 940 372 S 1240 420 1440 380"/>
+    <path d="M0 356 C 220 320 340 384 540 350 S 820 282 1000 324 S 1280 368 1440 330"/>
+    <path d="M0 300 C 240 268 380 330 600 296 S 880 232 1060 274 S 1320 314 1440 278"/>
+    <path d="M0 246 C 260 216 420 274 660 242 S 940 184 1120 222 S 1360 258 1440 226"/>
+  </svg>
+  <div class="wrap ph-inner">
+    <div>
+      <div class="ph-kicker">CHAPTER 11 — BUSHCRAFT</div>
+      <h1 class="ph-title">Bushcraft &amp; Tools</h1>
+      <p class="ph-lead">The skills that turn surviving into living: axecraft with the safety rules the old books drew diagrams for, cordage from bark and sinew, containers, flintknapping, leather work, and the Special Forces guide to caching.</p>
+    </div>
+    <div class="ph-badge"><b>11</b>SKILLS WEIGH<br>NOTHING TO CARRY</div>
+  </div>
+</header>
+
+<main>
+</main>
+
+<!-- distilled from source books: bushcraft -->
+<section class="sec deep" id="bc-cordage">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="folio"><span class="num">11.1</span><span class="lab">Rope From Nothing</span></div>
+      <h2 class="sec-title">Cordage from the bush<small>Graves' full rope-making chapter: the three-fibre test, the materials table with breaking strains, and the reverse-twist method that turns any fibrous plant into rope — the same stages, he notes, as a modern rope factory.</small></h2>
+    </div>
+    <div class="split">
+      <div>
+        <div class="panel">
+          <div class="panel-title">Is the material any good? Three tests</div>
+          <ol class="steps" style="margin-top:4px">
+            <li class="step" style="padding-bottom:14px"><span class="n">1</span><p><b>Pull it.</b> Strength first: a straight, steady pull on a length of the material.</p></li>
+            <li class="step" style="padding-bottom:14px"><span class="n">2</span><p><b>Roll and twist it.</b> Between the fingers — if the rolled fibres hold together without snapping apart, it passes.</p></li>
+            <li class="step"><span class="n">3</span><p><b>Tie a thumb knot and tighten it.</b> If the material doesn't cut itself and the knot pulls taut — and the fibres "bite" rather than slip — it will make rope. Stiff green material can be passed briefly through hot flame to burst the sap cells and make it pliable.</p></li>
+          </ol>
+        </div>
+        <div class="panel" style="margin-top:16px">
+          <div class="panel-title">Spinning cord by hand</div>
+          <ul class="ticks">
+            <li>Gather fibres into loose strands of even thickness, roughly <b>15–20 fibres per strand</b> at 3 mm or less. Twist each strand <b>clockwise</b> — the twist itself holds the fibres.</li>
+            <li>Lay two, three or four strands together with an <b>anti-clockwise</b> twist while the individual strands keep their clockwise twist — opposing twists lock the rope together. This is the whole secret; strand twist and lay twist must oppose.</li>
+            <li>Keep tension equal on every strand and the lay even — one strand wrapping the others instead of lying beside them is the beginner's tell.</li>
+            <li>One person works alone by <b>rolling fibre along the thigh</b>, feeding new fibre in with the free hand. For serious lengths (50–90 m), set a <b>rope walk</b>: crank spinners, feeders under each arm, and crossbars every 2–3 m so spun strands never touch the ground.</li>
+            <li>Fine cord of under 1 mm, carefully spun, holds 10–15 kg — snare and fishing-line grade.</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <div class="panel-title">Breaking strains — 1-inch three-lay rope</div>
+          <table class="table">
+            <tr><th>Material</th><th>Breaking strain</th></tr>
+            <tr><td>Green grass</td><td>45–115 kg</td></tr>
+            <tr><td>Bark fibre</td><td>225–680 kg</td></tr>
+            <tr><td>Palm fibre</td><td>295–905 kg</td></tr>
+            <tr><td>Lianas (monkey rope)</td><td>245–320 kg</td></tr>
+            <tr><td>Lawyer vine, ½″</td><td>545 kg</td></tr>
+            <tr><td>Sedges</td><td>905–1,135 kg</td></tr>
+          </table>
+          <p style="color:var(--muted);font-size:14.5px;margin-top:10px"><b>Double the diameter, quadruple the strength; halve it, quarter it.</b> For safety, Graves says, always assume the lowest figure for a material until you've load-tested your own rope for its actual job.</p>
+        </div>
+        <div class="panel" style="margin-top:16px">
+          <div class="panel-title">Harvesting rules</div>
+          <ul class="ticks">
+            <li><b>Cut, never pull</b> grasses, sedges and rushes — cutting above ground is pruning, pulling is destruction; take from the biggest clumps over a wide area.</li>
+            <li><b>Inner bark</b> works best from dead or half-dead branches (the gum has dried and teasings out as powder). Only ever cut a branch here and there — <b>never fell a tree for cordage</b>.</li>
+            <li><b>Palm fibre</b> is free harvest at the leaf/trunk junction and beneath standing palms.</li>
+            <li>Soak, boil, or dry-and-tease materials heavy with vegetable gum before spinning.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="bc-containers">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="folio"><span class="num">11.2</span><span class="lab">Containers &amp; Cooking</span></div>
+      <h2 class="sec-title">Cooking without a pot<small>Graves' utensil-free kitchen: a hole in the ground, a piece of bark, and a fire's worth of honest stones.</small></h2>
+    </div>
+    <div class="split">
+      <div>
+        <div class="panel">
+          <div class="panel-title">Hot-stone boiling</div>
+          <ol class="steps" style="margin-top:4px">
+            <li class="step" style="padding-bottom:14px"><span class="n">1</span><p><b>Scoop a shallow bowl</b> in the ground and line it with groundsheet, paper, a shirt, or bark — anything that holds water.</p></li>
+            <li class="step" style="padding-bottom:14px"><span class="n">2</span><p><b>Heat 20–30 stones, each 5–7.5 cm across</b>, in a quick fire of small sticks until nearly red hot — at least ten minutes. <b>Never take them from a creek bed:</b> waterlogged stones explode in fire.</p></li>
+            <li class="step" style="padding-bottom:14px"><span class="n">3</span><p><b>Fill the hole with water, then lift the stones in one at a time with fire tongs.</b> The stones will not scorch the cloth or paper; five or six bring a couple of quarts to a boil in two or three minutes.</p></li>
+            <li class="step"><span class="n">4</span><p><b>Maintain the boil by swapping stones singly</b> — hot in, cold out — indefinitely.</p></li>
+          </ol>
+        </div>
+        <div class="note tip">
+          <svg class="icon"><use href="#i-flame"/></svg>
+          <div><b>Two more from the same chapter:</b> a kerosene-soaked first-aid bandage is a fire-starter that still serves as a bandage; and a flat stone heated nearly red in the fire, dusted clean, grills meat perfectly.</div>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <div class="panel-title">The coolamin — a bark dish</div>
+          <ul class="ticks">
+            <li>Take a flat piece of bark from a species that doesn't split easily — fig family bark is the classic; <b>test by stripping a small piece from a branch first</b>.</li>
+            <li>Soften the green bark in your hands, fold up the two ends, and pin them with thin sharpened pegs or tie them — a waterproof dish for hot-stone cooking.</li>
+            <li><b>Sap warning:</b> if the sap is coloured — especially white or whitish — keep it out of your eyes; many saps burn skin or blind temporarily.</li>
+            <li>A forked stick with sharpened prongs is the grill; the coolamin is the pot. Between them, a shirt-lined hole is the stew pot of last resort.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="bc-flint">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="folio"><span class="num">11.3</span><span class="lab">Stone Work</span></div>
+      <h2 class="sec-title">Flintknapping — the short course<small>From the knappers' own tutorial collection: how glass-hard stone actually breaks, and the two ways to remove a flake on purpose.</small></h2>
+    </div>
+    <div class="grid cols-2">
+      <div class="panel">
+        <div class="panel-title">The physics</div>
+        <ul class="ticks">
+          <li><b>Conchoidal fracture:</b> fine stone (flint, chert, obsidian, even bottle glass) breaks in a characteristic curved shell — a Hertzian cone radiating from the point of impact. Every knapped edge is an arrangement of these cones and their scars.</li>
+          <li><b>Below the centerline concept:</b> flakes only detach when force enters <em>below</em> the platform's centerline of mass. Strike or press above it and the stone absorbs the blow. This single idea separates knapping from breaking rocks.</li>
+          <li><b>Platform preparation:</b> the edge you strike is everything — isolated, ground, and angled so the blow lands below centerline and travels out to a termination. A battered, crushed platform means your angle or force was wrong.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <div class="panel-title">The two techniques</div>
+        <ul class="ticks">
+          <li><b>Percussion</b> — striking with a soft billet (antler, copper, hard wood; <b>rawhide mallets</b> are the classic) to remove large flakes and thin a preform. Soft hammers bite and shear; hard stone hammers crush platforms.</li>
+          <li><b>Pressure flaking</b> — pushing flakes off with an antler tine or copper tip, braced against the leg or a pad; for edges, notching, and the final point shape.</li>
+          <li><b>Safety, non-negotiable:</b> obsidian and flint dust is amorphous silica — knap outdoors, wear a respirator for long sessions, and never in camp near food. Leather pads for the holding hand; flakes are surgical.</li>
+          <li>A beginner's sequence: a thick flake for a blank, edge platform, percussion-thin from both faces, pressure-flake the margin, notch last.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="split" style="margin-top:16px">
+      <div class="panel">
+        <div class="panel-title">Leather &amp; sinew, in brief</div>
+        <ul class="ticks">
+          <li><b>Rawhide</b> — dried, dehaired skin — becomes the toughest natural lashings and containers when wet-wrapped and dried in place.</li>
+          <li><b>Sinew</b> — the tendon along a animal's back and legs — separates into fibres, twists into bowstrings and thread, and self-glues when wetted: the original sewing thread, wrapped and dried under tension.</li>
+          <li><b>Stitches to know:</b> the running stitch and the whipstitch (over-and-over through the edge — the strongest simple leather seam, especially with sinew through awl holes).</li>
+          <li>A scraped, smoked hide or a bark-tanned one makes sheaths, mocassins, and pack straps; the Foxfire books carry the full processes at length.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <div class="panel-title">Improvising tools</div>
+        <ul class="ticks">
+          <li><b>Bone:</b> fresh long bones split into blanks — awls, fish hooks, scrapers; bake or boil to harden edges.</li>
+          <li><b>Stone:</b> any flake with a sharp margin is a knife; a fist-sized cobble with a working edge is a chopper; grind and hone on wet sandstone.</li>
+          <li><b>Wood:</b> fire-hardened (charring the point of green wood) makes digging sticks and spear points serviceable; charcoal plus sand on hide makes an abrasive.</li>
+          <li>The MacGyver handbook in the library catalogues hundreds more improvised-device patterns from common materials.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="bc-caching">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="folio"><span class="num">11.4</span><span class="lab">Caching</span></div>
+      <h2 class="sec-title">Caching supplies — the Special Forces method<small>TC 31-29A's planning doctrine, translated to civilian terms: pre-positioning supplies so that future-you can recover them exactly, when it matters.</small></h2>
+    </div>
+    <div class="split">
+      <div>
+        <div class="panel">
+          <div class="panel-title">The seven planning factors</div>
+          <ul class="ticks">
+            <li><b>Purpose and contents</b> — what goes in decides where it goes: shelf-life items need rotation access; bulky items need isolation.</li>
+            <li><b>Who might find it</b> — in civilian terms: will construction, new owners, or curious neighbours unearth it? Observe the site and its people before committing.</li>
+            <li><b>Local activity</b> — normal life (a new building, a cleared trail) is the main discovery risk; imagine the site across seasons.</li>
+            <li><b>One site, one purpose</b> — don't stack secrets on the same spot; one discovery compromises everything.</li>
+            <li><b>Packaging</b> — burial demands a genuinely waterproof container: sealed steel or plastic, desiccant inside, and wrapping that survives soil acid and years.</li>
+            <li><b>Fewest possible people</b> — everyone who knows is a risk vector; emplace and recover alone or in the smallest pair.</li>
+            <li><b>Method</b> — burial is default (concealment, stable temperature); submersion almost never justifies its recovery difficulty.</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="panel">
+          <div class="panel-title">Site selection — the three tests</div>
+          <ul class="ticks">
+            <li><b>Can it be found again from written instructions alone</b> — by someone who has never been there? No distinct permanent landmarks within measurable distance, no cache.</li>
+            <li><b>Two secure routes in and out</b> — primary and alternate, both with natural concealment.</li>
+            <li><b>Workable in all seasons</b> — snow holds trails and frozen ground doubles digging time; summer foliage that exposes the site rules it out.</li>
+          </ul>
+        </div>
+        <div class="panel" style="margin-top:16px">
+          <div class="panel-title">Marking — the final reference point</div>
+          <ul class="ticks">
+            <li>Instructions run <b>general area → immediate reference point → final reference point (FRP) → cache</b>, each step unmistakable ("the only bridge on the named road between X and Y").</li>
+            <li>The FRP must be <b>identifiable, permanent, close enough for precise linear measurement</b> to the cache, and reachable by a simple route description.</li>
+            <li>Measure with metal — a knotted wire line. <b>Cloth tape and twine stretch and shrink</b> when wet; the manual is emphatic.</li>
+            <li>Bury below frost and root action, restore the ground so it photographs as untouched, and record recovery bearings to two landmarks in your own cache notes — stored away from the site.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="panel">
+      <div class="panel-title">Source manuals</div>
+      <ul class="ticks">
+        <li><b>Richard Graves, The Ten Bushcraft Books</b> — rope and cordage chapter (tests, strains, spinning), utensil-free cooking, coolamin</li>
+        <li><b>TC 31-29A, Special Forces Caching Techniques</b> — planning factors, site criteria, FRP doctrine</li>
+        <li><b>Flintknapping: Articles, Tips, and Tutorials</b> (Michael Lynn, ed.) — fracture mechanics, platform theory, technique and safety</li>
+        <li><b>Bushcraft Leather Work</b> and <b>Foxfire One</b> — rawhide, sinew, tanning and hide craft</li>
+        <li>Cross-checked with <b>Australian Bushcraft</b> (319pp)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<nav class="pager wrap" aria-label="Chapter navigation"><a class="prev" href="cold-weather.html"><span class="dir">← PREVIOUS CHAPTER</span><span class="ttl">Cold-Weather &amp; Alpine Survival</span></a><a class="next" href="preparedness.html"><span class="dir">NEXT CHAPTER →</span><span class="ttl">Home &amp; Urban Preparedness</span></a></nav>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:16px"><svg class="icon"><use href="#i-flame"/></svg>SURVIVAL<em>FIELD GUIDE</em></a>
+        <p>A multi-page field manual distilled from 150 survival books — military manuals, classic bushcraft texts, plant guides and wilderness medical references.</p>
+      </div>
+      <div>
+        <h4>Field chapters</h4>
+        <a href="priorities.html">01 — Priorities &amp; mindset</a>
+        <a href="shelter.html">02 — Shelter</a>
+        <a href="water.html">03 — Water</a>
+        <a href="fire.html">04 — Fire</a>
+        <a href="food.html">05 — Food &amp; trapping</a>
+        <a href="plants.html">06 — Plants</a>
+        <a href="first-aid.html">07 — First aid</a>
+        <a href="navigate.html">08 — Navigation &amp; signaling</a>
+      </div>
+      <div>
+        <h4>&nbsp;</h4>
+        <a href="knots.html">09 — Knots</a>
+        <a href="cold-weather.html">10 — Cold weather</a>
+        <a href="bushcraft.html">11 — Bushcraft</a>
+        <a href="preparedness.html">12 — Preparedness</a>
+        <a href="kit.html">13 — The kit</a>
+        <a href="library.html">14 — Source library</a>
+        <a href="quiz.html">15 — Field exam</a>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <svg class="icon"><use href="#i-alert"/></svg>
+      <div><b style="color:var(--bone)">Read this before you rely on it.</b> This guide distills reference books; it is not training, and plant or medicine entries can be wrong for your region or body. Learn hands-on with certified instructors, verify local laws, and in any genuine emergency call your local emergency number immediately: <b style="color:var(--bone)">911 (US) &nbsp;·&nbsp; 112 (EU) &nbsp;·&nbsp; 999 (UK) &nbsp;·&nbsp; 000 (AU)</b>.</div>
+    </div>
+    <div class="foot-big" aria-hidden="true">SURVIVE</div>
+    <div class="foot-base">
+      <span>SURVIVAL FIELD GUIDE — REV. 2026</span>
+      <span>DISTILLED FROM 150 BOOKS</span>
+      <span>© <span id="year"></span> · SHARE THE KNOWLEDGE</span>
+    </div>
+  </div>
+</footer>
+
+<button class="totop" id="totop" aria-label="Back to top"><svg class="icon"><use href="#i-up"/></svg></button>
+<script src="assets/main.js"></script>
+
+</body>
+</html>
